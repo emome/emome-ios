@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90BC22A51BB3004600A35C1B /* EMRecommendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC22A41BB3004600A35C1B /* EMRecommendsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
 		90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */; };
 		90C6FD4D1BB0B5CF009F9FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90BC22A41BB3004600A35C1B /* EMRecommendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMRecommendsTableViewController.swift; sourceTree = "<group>"; };
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */,
 				90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */,
 				90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */,
+				90BC22A41BB3004600A35C1B /* EMRecommendsTableViewController.swift */,
 				90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */,
 				90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */,
 				90C6FD531BB0B5CF009F9FB3 /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */,
 				90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */,
+				90BC22A51BB3004600A35C1B /* EMRecommendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 				90C6FD581BB0B5CF009F9FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
