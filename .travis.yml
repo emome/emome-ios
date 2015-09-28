@@ -5,9 +5,9 @@ branches:
  - master
     
 xcode_workspace: Emome.xcworkspace
-xcode_scheme: EmomeTests,EmomeUITests 
+xcode_scheme: EmomeTests
 osx_image: xcode7
 xcode_sdk: iphonesimulator9.0
 
 script:
-- xctool clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk iphonesimulator9.0 ONLY_ACTIVE_ARCH=NO
+- xcodebuild clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk iphonesimulator9.0 dONLY_ACTIVE_ARCH=NO

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Emotion Selection View Controller-->
@@ -20,15 +21,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-cZ-4xY">
+                                <rect key="frame" x="79" y="500" width="443" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dre-TX-OAg"/>
+                                </constraints>
+                                <state key="normal" title="What can I do?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0H-ht-57g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xIL-cZ-4xY" secondAttribute="trailing" constant="58" id="0ER-L0-OwB"/>
+                            <constraint firstItem="xIL-cZ-4xY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="58j-Sv-0Yg"/>
+                            <constraint firstItem="xIL-cZ-4xY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-12" id="DXA-ix-SEX"/>
                             <constraint firstItem="mab-MD-LDR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwx-K7-K6F"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xIL-cZ-4xY" secondAttribute="bottom" constant="60" id="Ky0-Us-3UG"/>
                             <constraint firstItem="mab-MD-LDR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hK4-tB-nV1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xIL-cZ-4xY" secondAttribute="trailing" constant="-12" id="hdD-m6-g7M"/>
+                            <constraint firstItem="xIL-cZ-4xY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lIV-lQ-Mrr"/>
                             <constraint firstItem="mab-MD-LDR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tZx-lT-URT"/>
                             <constraint firstItem="mab-MD-LDR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="xDL-sl-8du"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DXA-ix-SEX"/>
+                                <exclude reference="hdD-m6-g7M"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="JdS-vN-HXS"/>
                     <connections>
