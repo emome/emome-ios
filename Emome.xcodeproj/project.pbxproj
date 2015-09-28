@@ -491,6 +491,7 @@
 				907EDB021BB9990E00E49E34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90C6FD3F1BB0B5CE009F9FB3 /* Build configuration list for PBXProject "Emome" */ = {
 			isa = XCConfigurationList;
