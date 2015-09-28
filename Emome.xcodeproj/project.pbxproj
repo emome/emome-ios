@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		900148541BB8726200EB992C /* EmomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900148531BB8726200EB992C /* EmomeTests.swift */; };
+		9001486D1BB984CE00EB992C /* EMOSelectEmotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOSelectEmotionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
-		90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */; };
+		90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */; };
 		90C6FD4D1BB0B5CF009F9FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
 		90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */; };
@@ -29,9 +30,10 @@
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148531BB8726200EB992C /* EmomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomeTests.swift; sourceTree = "<group>"; };
 		900148551BB8726200EB992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9001486C1BB984CE00EB992C /* EMOSelectEmotionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSelectEmotionTests.swift; sourceTree = "<group>"; };
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOEmotionSelectionViewController.swift; sourceTree = "<group>"; };
 		90C6FD4C1BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				900148531BB8726200EB992C /* EmomeTests.swift */,
+				9001486C1BB984CE00EB992C /* EMOSelectEmotionTests.swift */,
 				900148551BB8726200EB992C /* Info.plist */,
 			);
 			path = EmomeTests;
@@ -87,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */,
-				90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */,
+				90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */,
 				90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */,
 				90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */,
 				90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900148541BB8726200EB992C /* EmomeTests.swift in Sources */,
+				9001486D1BB984CE00EB992C /* EMOSelectEmotionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */,
+				90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */,
 				90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
