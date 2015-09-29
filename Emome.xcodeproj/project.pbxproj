@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		900148541BB8726200EB992C /* EmomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900148531BB8726200EB992C /* EmomeTests.swift */; };
+		9001486D1BB984CE00EB992C /* EMOEmotionSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */; settings = {ASSET_TAGS = (); }; };
+		907EDAFD1BB9990E00E49E34 /* EmomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
-		90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */; };
+		90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */; };
 		90C6FD4D1BB0B5CF009F9FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
 		90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */; };
@@ -23,15 +25,26 @@
 			remoteGlobalIDString = 90C6FD431BB0B5CE009F9FB3;
 			remoteInfo = Emome;
 		};
+		907EDAFF1BB9990E00E49E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90C6FD3C1BB0B5CE009F9FB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90C6FD431BB0B5CE009F9FB3;
+			remoteInfo = Emome;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148531BB8726200EB992C /* EmomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomeTests.swift; sourceTree = "<group>"; };
 		900148551BB8726200EB992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionSelectionTests.swift; sourceTree = "<group>"; };
+		907EDAFA1BB9990E00E49E34 /* EmomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomeUITests.swift; sourceTree = "<group>"; };
+		907EDAFE1BB9990E00E49E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOEmotionSelectionViewController.swift; sourceTree = "<group>"; };
 		90C6FD4C1BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +53,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9001484E1BB8726200EB992C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907EDAF71BB9990E00E49E34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,9 +80,19 @@
 			isa = PBXGroup;
 			children = (
 				900148531BB8726200EB992C /* EmomeTests.swift */,
+				9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */,
 				900148551BB8726200EB992C /* Info.plist */,
 			);
 			path = EmomeTests;
+			sourceTree = "<group>";
+		};
+		907EDAFB1BB9990E00E49E34 /* EmomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */,
+				907EDAFE1BB9990E00E49E34 /* Info.plist */,
+			);
+			path = EmomeUITests;
 			sourceTree = "<group>";
 		};
 		90C6FD3B1BB0B5CE009F9FB3 = {
@@ -70,6 +100,7 @@
 			children = (
 				90C6FD461BB0B5CF009F9FB3 /* Emome */,
 				900148521BB8726200EB992C /* EmomeTests */,
+				907EDAFB1BB9990E00E49E34 /* EmomeUITests */,
 				90C6FD451BB0B5CE009F9FB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +110,7 @@
 			children = (
 				90C6FD441BB0B5CE009F9FB3 /* Emome.app */,
 				900148511BB8726200EB992C /* EmomeTests.xctest */,
+				907EDAFA1BB9990E00E49E34 /* EmomeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */,
-				90C6FD491BB0B5CF009F9FB3 /* ViewController.swift */,
+				90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */,
 				90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */,
 				90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */,
 				90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */,
@@ -116,6 +148,24 @@
 			productName = EmomeTests;
 			productReference = 900148511BB8726200EB992C /* EmomeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		907EDAF91BB9990E00E49E34 /* EmomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907EDB031BB9990E00E49E34 /* Build configuration list for PBXNativeTarget "EmomeUITests" */;
+			buildPhases = (
+				907EDAF61BB9990E00E49E34 /* Sources */,
+				907EDAF71BB9990E00E49E34 /* Frameworks */,
+				907EDAF81BB9990E00E49E34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				907EDB001BB9990E00E49E34 /* PBXTargetDependency */,
+			);
+			name = EmomeUITests;
+			productName = EmomeUITests;
+			productReference = 907EDAFA1BB9990E00E49E34 /* EmomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		90C6FD431BB0B5CE009F9FB3 /* Emome */ = {
 			isa = PBXNativeTarget;
@@ -148,6 +198,11 @@
 						DevelopmentTeam = 5LEMESW6GH;
 						TestTargetID = 90C6FD431BB0B5CE009F9FB3;
 					};
+					907EDAF91BB9990E00E49E34 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5LEMESW6GH;
+						TestTargetID = 90C6FD431BB0B5CE009F9FB3;
+					};
 					90C6FD431BB0B5CE009F9FB3 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -168,12 +223,20 @@
 			targets = (
 				90C6FD431BB0B5CE009F9FB3 /* Emome */,
 				900148501BB8726200EB992C /* EmomeTests */,
+				907EDAF91BB9990E00E49E34 /* EmomeUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9001484F1BB8726200EB992C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907EDAF81BB9990E00E49E34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,6 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				900148541BB8726200EB992C /* EmomeTests.swift in Sources */,
+				9001486D1BB984CE00EB992C /* EMOEmotionSelectionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		907EDAF61BB9990E00E49E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				907EDAFD1BB9990E00E49E34 /* EmomeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C6FD4A1BB0B5CF009F9FB3 /* ViewController.swift in Sources */,
+				90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */,
 				90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +289,11 @@
 			isa = PBXTargetDependency;
 			target = 90C6FD431BB0B5CE009F9FB3 /* Emome */;
 			targetProxy = 900148561BB8726200EB992C /* PBXContainerItemProxy */;
+		};
+		907EDB001BB9990E00E49E34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90C6FD431BB0B5CE009F9FB3 /* Emome */;
+			targetProxy = 907EDAFF1BB9990E00E49E34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -261,6 +338,30 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.emome.EmomeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emome.app/Emome";
+			};
+			name = Release;
+		};
+		907EDB011BB9990E00E49E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EmomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emome.EmomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Emome;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		907EDB021BB9990E00E49E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EmomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.emome.EmomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Emome;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -379,6 +480,15 @@
 			buildConfigurations = (
 				900148581BB8726200EB992C /* Debug */,
 				900148591BB8726200EB992C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		907EDB031BB9990E00E49E34 /* Build configuration list for PBXNativeTarget "EmomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				907EDB011BB9990E00E49E34 /* Debug */,
+				907EDB021BB9990E00E49E34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
