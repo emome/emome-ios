@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-PROJECT=EMOME
+PROJECT=Emome
 SCHEME=EmomeTests
 ARCHIVE_PATH=`pwd`/archive
 IPA_NAME=${PROJECT}
