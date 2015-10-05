@@ -1,9 +1,8 @@
 machine:
-
-  timezone:
-    America/New_York
   xcode:
     version: "7.0"
+  timezone:
+    America/New_York
 
 test:
   override:
