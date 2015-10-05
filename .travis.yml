@@ -9,9 +9,8 @@ xcode_sdk: iphonesimulator9.0
 script:
 - xcodebuild clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk
   iphonesimulator9.0 dONLY_ACTIVE_ARCH=NO
-after_success:
-- ./Pods/Crashlytics/Crashlytics.framework/submit $FABRIC_API_KEY $FABRIC_BUILD_SECRET -notesPath ~/Notes/ReleaseNotes.txt -groupAliases ﻿early-birds
-env:
-  global:
-  - secure: SlfXBs0kCLhpCsR0LZ3ySeDwzj6Pko7VJ3JsdRHVPHfV3YCp92eJE7GjnBkccx+SZyqwm2Vb4PpGBH5zFzQZQCmxalpicX6t2kKzVqxjWZER7NcXgEk0XToJteVQiB43KSYZNOH0drtTKUjR1UbWh0CuC7wzMvssYawrgvjn+u22m6uHCAZv4Duy11gQaGprfczcioqcn+Py3RW0HCgJIvGU03MLwRgoY39Y3XCO6oi8I/gDOPkjKcq39W2U1RCdfGiDbd4KPWWTf8+w8qVFUnkqW+2qOgxmCOqJlyAK7UMnimIvK1RQrZoUm4+9OmlqFBiF0mcBkwd1rPwcRO9O5J6crLMnilz3YyOGRC1eWs+Fdv60CsU+rUw3JcBMotTa/Ugqq8MYH3cZO1pd5Qt55Zczu2F4Q8sXioyONa6k2HNAyWfTEmbvoyxlcVbY5Neafcvcivy0NAbiNm6e3cDD5F+njzd3r9JzbG92tvqRjG2Z4M2MXorw/NJJE7mewg+I/Md3cYiSR/4T9R/KqHUc1MIot2hTKLbelm5bxaQhorZAADUVFyCpqdtKz946sG7bU+InlWCxkddp3aMhKyF0m1FoIfnOzzFCDUtbt3aC678SZndnCFFFzPxmn6uzzKfUqeLfIZ9G6MPWCgZknxxPIXShcvNX49HSvvCiO84dlpI=
-  - secure: KY8kklLG0OyA64HOFfc6IMZvIPm+bKoIffv7Kf7XFviqfRJ4bvZ63OFtnAW+tgt5kp4luBY7ibk/NcAIaPoSYxKYS97q+6/OznHKR7V+fsVudORoI/FXDfcLF+xOeODfvMgdoBVPMgfKGdV/60XM2A/+bSeWqWnP8c2AeJFRLAXZq4Vl646V87+6g3+e9B66sBtrLsxgqWbfMaxN2BI841TkRmvtScPqA4zdQSBzZqgomPaVSQUXdAUGTxK6d3G6W7hVZsWoPgQ8s+PeIQgMZv5d1kQa59Ybsl90TS3ZOhC3KASIv19WsFjLi5xHXgm8XzBZDV1PA17PXxcptJ/q08Kp6cG1uSFeW+RY4NIBYoJ9MH1rLjXAaEHrR8W/UuiD976Rvrb39k2SUR6Lb+nz0hXqOs43+TLYVtXXNY/K6rlJ4Rfd+e/E1SE6YqF3FEJXf9ql0s8Y8S5Mnw5xtZnPfMuqqPIakUXHfFVywhOcZ7zz6y73d/Efb9W0/t9BVblzxBhaUkoaVqT3xd/c1JTf5kw5PLcja6Po9zyzcJylL7LlGmK+acZZqS0u3uNjIlMR7ElmAzguTKV7I1jg6AI98nPUcsvHDb5GKaqb2gzDPvEsO2Z5xlos63nITFR4IxtAgAw++aREU0lz0hEXDgrm79Qo542/nOK3If/PQElWn+c=
+before_deploy:
+- xcodebuild -workspace Emome.xcworkspace -scheme EmomeTests archive -archivePath "./archive/Emome.xcarchive"
+- xcodebuild -exportArchive -exportFormat ipa -archivePath "./archive/Emome.xcarchive" -exportPath "./archive/Emome.ipa"
+deploy:
+- ./Pods/Crashlytics/Crashlytics.framework/submit $FABRIC_API_KEY $FABRIC_BUILD_SECRET -groupAliases ﻿"early-birds" -ipaPath "./archive/Emome.ipa"
