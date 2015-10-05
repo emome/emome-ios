@@ -6,43 +6,163 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45546A49C1D9D33DF6E3080D3E2D045D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFADF40935ECB673A34FAB25F6DFF9B3 /* Foundation.framework */; };
+		513B72CF5425D9965D00101DA17435C4 /* Pods-Emome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E3254EC5ED7CB564C63AD9ADA11530 /* Pods-Emome-dummy.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		00BA37ACC1E13F3F4B449746C38D9DD0 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		5D56DBAE034CE79188C4BC25013DD994 /* libPods-Emome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D86918678591A63C632049E1D4E5DC3 /* Pods-Emome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Emome-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8F5B9BC7AF35CE60C05CC6AF5E7A48A3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		9197897FE6923D21DDB50570076470E9 /* Pods-Emome-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emome-resources.sh"; sourceTree = "<group>"; };
+		9E939A4CD47BA469CB817E81335B4E2C /* Pods-Emome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emome.debug.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BFADF40935ECB673A34FAB25F6DFF9B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D5E3254EC5ED7CB564C63AD9ADA11530 /* Pods-Emome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Emome-dummy.m"; sourceTree = "<group>"; };
+		DD6FA82EE63A9117C001969C4E89D7F5 /* Pods-Emome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Emome-acknowledgements.plist"; sourceTree = "<group>"; };
+		E98539572A6BF217549CDDE0E480E86F /* Pods-Emome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		613E9998EA82A08B4E713C5D419D55D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45546A49C1D9D33DF6E3080D3E2D045D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		0FBADD4C4C312933525779355B4A728B /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
+				15E523726C28200B5F13DC712FE358E5 /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		15E523726C28200B5F13DC712FE358E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F5B9BC7AF35CE60C05CC6AF5E7A48A3 /* Crashlytics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DF7B8E8EC04019122F08AA5D3BBDAC1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				47452721D088AFA42599190FC9718B2B /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		47452721D088AFA42599190FC9718B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00BA37ACC1E13F3F4B449746C38D9DD0 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FBADD4C4C312933525779355B4A728B /* Crashlytics */,
+				D521363D3F36F2ABB10B4C264BC52A76 /* Fabric */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52AF5279E112D134190656D3E4151BDF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDF09E254B5CDAC6A66F70A8586EF191 /* Pods-Emome */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BFADF40935ECB673A34FAB25F6DFF9B3 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				4C01CE7C97A1F4AA2AA6283DCBF4679A /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */,
+				52AF5279E112D134190656D3E4151BDF /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDF09E254B5CDAC6A66F70A8586EF191 /* Pods-Emome */ = {
+			isa = PBXGroup;
+			children = (
+				5D86918678591A63C632049E1D4E5DC3 /* Pods-Emome-acknowledgements.markdown */,
+				DD6FA82EE63A9117C001969C4E89D7F5 /* Pods-Emome-acknowledgements.plist */,
+				D5E3254EC5ED7CB564C63AD9ADA11530 /* Pods-Emome-dummy.m */,
+				9197897FE6923D21DDB50570076470E9 /* Pods-Emome-resources.sh */,
+				9E939A4CD47BA469CB817E81335B4E2C /* Pods-Emome.debug.xcconfig */,
+				E98539572A6BF217549CDDE0E480E86F /* Pods-Emome.release.xcconfig */,
+			);
+			name = "Pods-Emome";
+			path = "Target Support Files/Pods-Emome";
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				5D56DBAE034CE79188C4BC25013DD994 /* libPods-Emome.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6CCA5D896907CE7506C37FD31FC265A /* Targets Support Files */ = {
+		D521363D3F36F2ABB10B4C264BC52A76 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
+				2DF7B8E8EC04019122F08AA5D3BBDAC1 /* Base */,
 			);
-			name = "Targets Support Files";
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6B86319A7E299394B29E3D2E3D78495 /* Pods-Emome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF8706CE50549BED921C5970B89F287 /* Build configuration list for PBXNativeTarget "Pods-Emome" */;
+			buildPhases = (
+				AF314E7B65395F55C5FEFE6629DFC111 /* Sources */,
+				613E9998EA82A08B4E713C5D419D55D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Emome";
+			productName = "Pods-Emome";
+			productReference = 5D56DBAE034CE79188C4BC25013DD994 /* libPods-Emome.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
@@ -63,11 +183,39 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F6B86319A7E299394B29E3D2E3D78495 /* Pods-Emome */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		AF314E7B65395F55C5FEFE6629DFC111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				513B72CF5425D9965D00101DA17435C4 /* Pods-Emome-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
 /* Begin XCBuildConfiguration section */
+		0E8971605246B4D3BEFA446F65ACAE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E98539572A6BF217549CDDE0E480E86F /* Pods-Emome.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -141,6 +289,22 @@
 			};
 			name = Release;
 		};
+		C807F077E7D4098562E614C2B2A605AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E939A4CD47BA469CB817E81335B4E2C /* Pods-Emome.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -149,6 +313,15 @@
 			buildConfigurations = (
 				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
 				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF8706CE50549BED921C5970B89F287 /* Build configuration list for PBXNativeTarget "Pods-Emome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C807F077E7D4098562E614C2B2A605AE /* Debug */,
+				0E8971605246B4D3BEFA446F65ACAE3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
