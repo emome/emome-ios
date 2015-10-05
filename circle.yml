@@ -4,6 +4,10 @@ machine:
   timezone:
     America/New_York
 
+dependencies:
+  pre:
+    - brew uninstall xctool; brew update && brew install xctool
+
 test:
   override:
   - xctool
