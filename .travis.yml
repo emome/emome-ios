@@ -13,7 +13,5 @@ script:
 - xctool clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk
   iphonesimulator9.0 dONLY_ACTIVE_ARCH=NO
 after_success:
-- xctool clean -workspace Emome.xcworkspace/ -scheme EmomeTests
-- xctool -workspace Emome.xcworkspace -scheme EmomeTests archive -archivePath "./archive/Emome.xcarchive" ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-- xcodebuild -exportArchive -exportFormat ipa -archivePath "./archive/Emome.xcarchive" -exportPath "./archive/Emome.ipa"
+- /bin/bash ./archive.sh
 - ./Pods/Crashlytics/Crashlytics.framework/submit $FABRIC_API_KEY $FABRIC_BUILD_SECRET -groupAliases ﻿"early-birds" -ipaPath "./archive/Emome.ipa"
