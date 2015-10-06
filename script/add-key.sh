@@ -8,8 +8,8 @@ if [[ "$TRAVIS_BRANCH" != "master" ]]; then
   exit 0
 fi
 
-openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.cer.enc -d -a -out cert/developer.cer
-openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.cer.enc -d -a -out cert/developer.cer
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.cer.enc -d -a -out ./script/cert/developer.cer
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.cer.enc -d -a -out ./script/cert/developer.cer
 
 security create-keychain -p travis ios-build.keychain
 security import ./script/cert/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
