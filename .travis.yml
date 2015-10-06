@@ -10,8 +10,6 @@ before_install:
 - brew update
 - brew uninstall xctool && brew install --HEAD xctool
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in script/cert/developer.cer.enc -d -a -out script/cert/developer.cer
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in script/cert/developer.p12.enc -d -a -out script/cert/developer.p12
 - ./script/add-key.sh
 script:
 - xctool clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk iphonesimulator9.0 dONLY_ACTIVE_ARCH=NO
