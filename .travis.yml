@@ -9,11 +9,10 @@ xcode_sdk: iphonesimulator9.0
 before_install:
 - brew update
 - brew uninstall xctool && brew install --HEAD xctool
-before_script:
-- ./script/add-key.sh
 script:
 - xctool clean build test -workspace Emome.xcworkspace -scheme EmomeTests -sdk iphonesimulator9.0 dONLY_ACTIVE_ARCH=NO
 after_success:
+- ./script/add-key.sh
 - ./script/dist-fabric-io.sh
 after_script:
 - ./script/remove-key.sh
