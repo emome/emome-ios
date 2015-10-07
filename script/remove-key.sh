@@ -9,3 +9,4 @@ if [[ "$TRAVIS_BRANCH" != "master" ]]; then
 fi
 
 security delete-keychain ios-build.keychain
+rm -f ~/Library/MobileDevice/Provisioning\ Profiles/*

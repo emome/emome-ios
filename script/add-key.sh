@@ -34,3 +34,7 @@ security set-keychain-settings -lut 7200 ios-build.keychain
 
 echo "Add keychain to keychain-list"
 security list-keychains -s ios-build.keychain
+
+echo "Add Provisioning Profiles"
+mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+cp ./script/profile/* ~/Library/MobileDevice/Provisioning\ Profiles/
