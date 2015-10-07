@@ -25,3 +25,12 @@ echo "**********************************"
 echo "*  Identities After Adding Keys *"
 echo "**********************************"
 security find-identity
+
+echo "Unlock keychain"
+security unlock-keychain -p secret ios-build.keychain
+
+echo "Increase keychain unlock timeout"
+security set-keychain-settings -lut 7200 ios-build.keychain
+
+echo "Add keychain to keychain-list"
+security list-keychains -s ios-build.keychain
