@@ -1,6 +1,14 @@
 # emome-ios
 [![Build Status](https://travis-ci.org/emome/emome-ios.svg?branch=master)](https://travis-ci.org/emome/emome-ios)
 
+Emome aims to improve people's mental health with a lightweight group therapy experience. When you feel stressed, depressed, or frustrated, we help you recover more quickly by offering what other people did when they were in the same boat.
+
+---
+
+
+### Become A Beta Tester
+Please [sign up here](https://betas.to/HsfAvUL8) to get access to the latest build on your device.
+
 ### CocoaPods
 We use [CocoaPods](https://cocoapods.org/) for iOS package management.
 
@@ -8,6 +16,9 @@ We use [CocoaPods](https://cocoapods.org/) for iOS package management.
 2. Use `pod install` to install all the package dependencies.
 3. Open Emome.xcworkspace from now on.
 
+### Dev-Ops
+- Continuous Integration: [Travis CI](http://travis-ci.org/emome/emome-ios)
+- Continuous Deployment: [Fabric.io](https://fabric.io)
 
 ### Suggestions from db:
 
