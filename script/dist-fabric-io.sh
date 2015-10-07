@@ -22,7 +22,7 @@ security find-identity
 echo "*************************"
 echo "*  Archiving Workspace  *"
 echo "*************************"
-xctool -workspace ${WORKSPACE} -scheme ${SCHEME} archive -archivePath "${ARCHIVE_PATH}/${APP_NAME}" ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY="iPhone Developer: HUAI-CHE LU (FN63DK6AQV)" 
+xctool -configuration Debug -workspace ${WORKSPACE} -scheme ${SCHEME} archive -archivePath "${ARCHIVE_PATH}/${APP_NAME}" ONLY_ACTIVE_ARCH=NO CODE_SIGN_REQUIRED=YES CODE_SIGN_IDENTITY="iPhone Developer: HUAI-CHE LU (FN63DK6AQV)"
 
 echo "*******************"
 echo "*  Packaging IPA  *"
