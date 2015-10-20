@@ -1,8 +1,10 @@
-# Uncomment this line to define a global platform for your project
+use_frameworks!
+
 platform :ios,'9.0'
 
 target 'Emome' do
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'XCGLogger'
 end
 
