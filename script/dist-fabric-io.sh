@@ -14,11 +14,6 @@ echo "*  Cleaning  *"
 echo "**************"
 xctool clean -workspace ${WORKSPACE} -scheme ${SCHEME}
 
-echo "****************"
-echo "*  Identities  *"
-echo "****************"
-security find-identity
-
 echo "*************************"
 echo "*  Archiving Workspace  *"
 echo "*************************"
