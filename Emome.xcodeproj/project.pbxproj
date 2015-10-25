@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D877DB4BCF26A4AAE1129BF /* libPods-Emome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF24BBEF12B9BC40A966740 /* libPods-Emome.a */; };
+		85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */; };
 		900148541BB8726200EB992C /* EmomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900148531BB8726200EB992C /* EmomeTests.swift */; };
 		9001486D1BB984CE00EB992C /* EMOEmotionSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */; settings = {ASSET_TAGS = (); }; };
 		907EDAFD1BB9990E00E49E34 /* EmomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */; };
@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2B023C10DB84DBFEFD98AC98 /* Pods-Emome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.release.xcconfig"; sourceTree = "<group>"; };
 		46D4581E639FC267AAA9CFD7 /* Pods-Emome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.debug.xcconfig"; sourceTree = "<group>"; };
+		85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148531BB8726200EB992C /* EmomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomeTests.swift; sourceTree = "<group>"; };
 		900148551BB8726200EB992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C6FD531BB0B5CF009F9FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAF24BBEF12B9BC40A966740 /* libPods-Emome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Emome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D877DB4BCF26A4AAE1129BF /* libPods-Emome.a in Frameworks */,
+				85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +147,7 @@
 		A1E2B34085E0F8003C70AC32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAF24BBEF12B9BC40A966740 /* libPods-Emome.a */,
+				85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +201,7 @@
 				90C6FD421BB0B5CE009F9FB3 /* Resources */,
 				B2791DD055E3E5CDD6723CDD /* Copy Pods Resources */,
 				906C8BF61BC208B00037C41D /* ShellScript */,
+				502D4649E3AAC7DC8BB34806 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +284,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		502D4649E3AAC7DC8BB34806 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emome/Pods-Emome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		872D6FE1342027DA090C7FBE /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
