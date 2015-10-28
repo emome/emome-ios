@@ -79,7 +79,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, I know it's a long day.  How are you feeling right now?" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-Yf-ecZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hey, I know it's a long day. how are you feeling right now?" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-Yf-ecZ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -93,7 +93,8 @@
                                         <exclude reference="Axx-lo-Knk"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="45" width="633" height="80"/>
                                     <mask key="constraints">
                                         <include reference="Axx-lo-Knk"/>
                                     </mask>
@@ -541,27 +542,23 @@
                                     <segue destination="0To-b1-aPH" kind="showDetail" action="showViewController:sender:" id="iWX-3n-UoS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scenario Selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS8-oF-eCg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="what made this bad day?" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8P-Vu-Dmj">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="PMW-UH-nIl"/>
-                                    <constraint firstAttribute="width" constant="300" id="zwc-qo-JgM"/>
+                                    <constraint firstAttribute="height" constant="80" id="MEb-Z3-occ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="PMW-UH-nIl"/>
-                                        <exclude reference="zwc-qo-JgM"/>
+                                        <exclude reference="MEb-Z3-occ"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="56" y="289" width="300" height="21"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="PMW-UH-nIl"/>
-                                        <include reference="zwc-qo-JgM"/>
+                                        <include reference="MEb-Z3-occ"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -569,36 +566,39 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hS8-oF-eCg" firstAttribute="centerY" secondItem="Ym7-OB-2oH" secondAttribute="centerY" id="Ev2-vh-kKv"/>
-                            <constraint firstItem="hS8-oF-eCg" firstAttribute="centerX" secondItem="Ym7-OB-2oH" secondAttribute="centerX" id="Kpy-kr-C5e"/>
                             <constraint firstItem="ryB-l6-JW1" firstAttribute="centerX" secondItem="Ym7-OB-2oH" secondAttribute="centerX" id="R4d-SL-ZTw"/>
+                            <constraint firstItem="O8P-Vu-Dmj" firstAttribute="top" secondItem="EfN-i3-jLS" secondAttribute="bottom" constant="37" id="YoC-t4-xgr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="O8P-Vu-Dmj" secondAttribute="leading" id="ZpB-rE-UDl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O8P-Vu-Dmj" secondAttribute="trailing" id="anN-7F-0jU"/>
                             <constraint firstItem="jZ9-Kg-eVW" firstAttribute="top" secondItem="ryB-l6-JW1" secondAttribute="bottom" id="b7P-LK-KkK"/>
                             <constraint firstItem="ryB-l6-JW1" firstAttribute="width" secondItem="Ym7-OB-2oH" secondAttribute="width" id="mhj-Ca-DLK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ryB-l6-JW1"/>
-                                <exclude reference="hS8-oF-eCg"/>
+                                <exclude reference="O8P-Vu-Dmj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="b7P-LK-KkK"/>
+                                <exclude reference="YoC-t4-xgr"/>
+                                <exclude reference="ZpB-rE-UDl"/>
+                                <exclude reference="anN-7F-0jU"/>
                                 <exclude reference="R4d-SL-ZTw"/>
                                 <exclude reference="mhj-Ca-DLK"/>
-                                <exclude reference="Ev2-vh-kKv"/>
-                                <exclude reference="Kpy-kr-C5e"/>
+                                <exclude reference="b7P-LK-KkK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ryB-l6-JW1"/>
-                                <include reference="hS8-oF-eCg"/>
+                                <include reference="O8P-Vu-Dmj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="b7P-LK-KkK"/>
+                                <include reference="YoC-t4-xgr"/>
+                                <include reference="ZpB-rE-UDl"/>
+                                <include reference="anN-7F-0jU"/>
                                 <include reference="R4d-SL-ZTw"/>
                                 <include reference="mhj-Ca-DLK"/>
-                                <include reference="Ev2-vh-kKv"/>
-                                <include reference="Kpy-kr-C5e"/>
+                                <include reference="b7P-LK-KkK"/>
                             </mask>
                         </variation>
                     </view>
