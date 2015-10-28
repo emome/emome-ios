@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E702FF1BE148F30001B75D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E702FE1BE148F30001B75D /* Main.storyboard */; };
 		85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */; };
 		900148541BB8726200EB992C /* EmomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900148531BB8726200EB992C /* EmomeTests.swift */; };
 		9001486D1BB984CE00EB992C /* EMOEmotionSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */; };
@@ -17,7 +18,6 @@
 		908C890D1BE06C1100190BB5 /* EMODataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C890C1BE06C1100190BB5 /* EMODataManager.swift */; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
 		90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */; };
-		90C6FD4D1BB0B5CF009F9FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
 		90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2B023C10DB84DBFEFD98AC98 /* Pods-Emome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.release.xcconfig"; sourceTree = "<group>"; };
+		35E702FE1BE148F30001B75D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46D4581E639FC267AAA9CFD7 /* Pods-Emome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.debug.xcconfig"; sourceTree = "<group>"; };
 		85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +58,6 @@
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMOEmotionSelectionViewController.swift; sourceTree = "<group>"; };
-		90C6FD4C1BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C6FD531BB0B5CF009F9FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */,
-				90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */,
 				908C890C1BE06C1100190BB5 /* EMODataManager.swift */,
+				35E702FE1BE148F30001B75D /* Main.storyboard */,
 				907C0F461BDEA9B100C896D3 /* ViewControllers */,
 				90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */,
 				90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */,
@@ -295,9 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E702FF1BE148F30001B75D /* Main.storyboard in Resources */,
 				90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */,
 				90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */,
-				90C6FD4D1BB0B5CF009F9FB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,14 +411,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		90C6FD4B1BB0B5CF009F9FB3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				90C6FD4C1BB0B5CF009F9FB3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
