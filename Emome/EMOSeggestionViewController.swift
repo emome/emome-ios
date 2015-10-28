@@ -106,7 +106,7 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
 	}
 	
 	func pressed(sender: UIButton!) {
-		pageUrls = ["spotify:///user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc", "yelp:///biz/the-city-bakery-new-york"]
+		pageUrls = ["spotify://user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc", "yelp:///biz/the-city-bakery-new-york"]
 		let openURL = NSURL(string: pageUrls[currentPage!]!)
 		UIApplication.sharedApplication().openURL(openURL!)
 	}
