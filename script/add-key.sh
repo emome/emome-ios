@@ -10,6 +10,7 @@ fi
 
 openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.cer.enc -d -a -out ./script/cert/developer.cer
 openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/cert/developer.p12.enc -d -a -out ./script/cert/developer.p12
+openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in ./script/profile/375d900d-6045-47f8-a23a-37a65c4143ce.mobileprovision.enc -d -a -out ./script/cert/375d900d-6045-47f8-a23a-37a65c4143ce.mobileprovision
 
 security create-keychain -p travis ios-build.keychain
 security import ./script/cert/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
@@ -27,4 +28,4 @@ security list-keychains -s ios-build.keychain
 
 echo "Add Provisioning Profiles"
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp ./script/profile/* ~/Library/MobileDevice/Provisioning\ Profiles/
+cp ./script/profile/*.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/

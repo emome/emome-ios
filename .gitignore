@@ -47,3 +47,5 @@ Carthage/Build
 archive/
 script/cert/*.p12
 script/cert/*.cer
+
+**/.DS_Store
