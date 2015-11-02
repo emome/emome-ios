@@ -3,16 +3,19 @@ PODS:
   - Fabric (1.5.5):
     - Fabric/Base (= 1.5.5)
   - Fabric/Base (1.5.5)
+  - Spotify-iOS-SDK (0.11.1)
   - XCGLogger (3.0)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - Spotify-iOS-SDK
   - XCGLogger
 
 SPEC CHECKSUMS:
   Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
   Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
+  Spotify-iOS-SDK: 2e0525121a0605234dccf61c7dfe1bfc7b236836
   XCGLogger: 5802533aff8bafc8b3b9776ab8972576f31d0a4e
 
 COCOAPODS: 0.39.0

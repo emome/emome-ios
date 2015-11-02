@@ -7,71 +7,219 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EC872590EBE6BD3ADF2DF4D911AC795 /* Pods-Emome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B92B3F6C6DBEF1F1E7EB4013A80307F /* Pods-Emome-dummy.m */; };
-		5137539C2DCDC3C8025673DED98A93EE /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535D167DB7544CF74D1F5D00DA1CA72 /* XCGLogger.swift */; };
-		A81F172E885C9C9A6FFA9BCDB7A3B50B /* XCGLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8991B5029E879CF59A22E2F6EADBA22B /* XCGLogger-dummy.m */; };
-		ADF1EF8F2F1625C56DB7D9115913DA80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		CD8F171A53AE05AE7DD1586F2BA9978F /* XCGLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3610AEB18520495151B75FAA8AFCF615 /* XCGLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5575B1FCE12940A601AA8B8FB4D97E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		F9EE3ABA16489C0F0054BE6748A6B69C /* Pods-Emome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A4ACE17DB24694392FD8EA8B4DAA03 /* Pods-Emome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0444532623D1CE6F780721F6C08AD929 /* SPTPlaylistTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = B5122262F9FD100934EA972508D8B7B7 /* SPTPlaylistTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0461E3DADB75EA4428D33E7583C4D621 /* SPTBrowse.h in Headers */ = {isa = PBXBuildFile; fileRef = 125715A893195AA97160573E9790AC6C /* SPTBrowse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A79E85505E216682871415C95F6E53 /* SPTImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0D1B00BADAEDF6DBBC42321F928C3A /* SPTImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A4151E8F9BE8C2820F99D0779559052 /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32CF83D8316EF5BC39EFA422085FCF /* XCGLogger.swift */; };
+		0E2052072DA0D7122B7926AB5F370C4D /* SPTCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5D0A7B8B06817B5ABDC23B1CB34024 /* SPTCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		184D8E901E670E4B60E14CD3BDC91FC2 /* SPTUser.h in Headers */ = {isa = PBXBuildFile; fileRef = EAAA45D9A022F15C71955E352434D630 /* SPTUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		194E8560EB20983EBA6405512996FAAF /* SPTFollow.h in Headers */ = {isa = PBXBuildFile; fileRef = A5815B864E563B7A063353994C462EA0 /* SPTFollow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E0896137EF695056334E3078C5F8722 /* SPTPlayOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 278C6D5A1495D605C32BC400F1B6775C /* SPTPlayOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2716A44FD4EA0D2586E35E82D73A5191 /* SPTSavedTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A522A33D18399F47A619331F5212758 /* SPTSavedTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		345A0E8D81452101DF558D63AAB33C1F /* Pods-Emome-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B92B3F6C6DBEF1F1E7EB4013A80307F /* Pods-Emome-dummy.m */; };
+		3D41C3DD6CDBAAC3FBDED182A29D70CE /* SPTRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = EF179C1391386A3CC7BF75F32541D760 /* SPTRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F7DAAB938B20F55547433D7476240EC /* SPTAudioStreamingController_ErrorCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4960D5B2DFF3A3971810AA5FE4C287FC /* SPTAudioStreamingController_ErrorCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		441D541C7C2887C61535FB7C1E346EC7 /* SPTDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA32A4024FE2F2A0FE6D4975EC7AD14 /* SPTDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		466CBCA81D269E5B206F645DE89895B5 /* SPTFeaturedPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 075D0CDD21ED0C66340B6825AAC14B73 /* SPTFeaturedPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47AF939118CE6C9F1DB77ECDB67410BB /* SPTSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 150E354BC48C11535B096CA4207B0AB9 /* SPTSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C300BE921F83C5738D0FC9D832FCF2A /* SPTDiskCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = BA1A28513FD93E7A125B3CCA06DFD1AF /* SPTDiskCaching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C65BE9F5166B5CEC214315D96120B13 /* SPTArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 202A2FFD25F59A2F776426A1711B9208 /* SPTArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		511BEFF567CE5CA44BA81C33D7571213 /* SPTPartialTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = D02B76B81A7857F4133142D9F8DB0070 /* SPTPartialTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5304B81EB94B5BA7C4B869D70766C559 /* SPTPartialObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FF14319CD5C84AEFD592B291DAEE4111 /* SPTPartialObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		545D2CE650AF684807371138C61D542C /* SPTConnectButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B354EDC233BDFECD4A9EAD4021818B9 /* SPTConnectButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		603B146B3CCB0E168F94318AAFB654D9 /* SPTAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7D36E03AE3B0C03517838AC0C8EFE3 /* SPTAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D7A4FFD99B795E7ACF5D49DEA545B9A /* SPTEmbeddedImages.h in Headers */ = {isa = PBXBuildFile; fileRef = F73FC7E1F76AD8A3F8C17C4933D34CC2 /* SPTEmbeddedImages.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73902CE35089ECEAB4BE0D2507728A5A /* SPTPartialArtist.h in Headers */ = {isa = PBXBuildFile; fileRef = 061D3D96E966F509E998DA8B2E3C3243 /* SPTPartialArtist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7790302A5D2469F24C0AFB64069E9204 /* XCGLogger-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD5AFDCEA32C54164D67B350A3815E7 /* XCGLogger-dummy.m */; };
+		79CFDBFB7FD58A64EB0E936BEA0F02FA /* SPTAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9C3BC6925E182F33399F198CDFE1B1 /* SPTAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BA0910A0931E3738926F1A9F26DBBB1 /* SPTAudioStreamingController.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAD74828291450E47CF1C601E68AF51 /* SPTAudioStreamingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C2E5D119C7758AE4541714841D45F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764C93382B59CEE3ED12979B5766DD1E /* Foundation.framework */; };
+		86A91D52B9B151D0E0A0E64E8C452B8E /* Spotify-iOS-SDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89B9D104648B9641B5672B995901D507 /* Spotify-iOS-SDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F5AE53BA6A519BC4BA17E2374E69467 /* SPTPartialAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 94AE647F8E03EA8E3DFF0D279C8380B8 /* SPTPartialAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91D668E41C37132C89E6B50EF14A692B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC93988D7F091F0DEE5CF44506467A32 /* AVFoundation.framework */; };
+		97F88052BD55FDB606FC7ED858BD1071 /* SPTPlaylistList.h in Headers */ = {isa = PBXBuildFile; fileRef = 925583AB1911EDAAAB06C8EB2D365964 /* SPTPlaylistList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3E0558D1F7D68E2275F6432D042770 /* SPTListPage.h in Headers */ = {isa = PBXBuildFile; fileRef = A0C3F2594B53AF942EB6833200621765 /* SPTListPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAFF8DACADFD71712140A1098A6853A6 /* SPTPartialPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 355D08BDDCB1ABFB19DF11094F0AC382 /* SPTPartialPlaylist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B08D2F19C8E0424B1943C9ED934DB55A /* Spotify.h in Headers */ = {isa = PBXBuildFile; fileRef = 410E74AECD915C21AF402DE9835FA7EA /* Spotify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1A9279B173499FAE05ED3B77DCE4A4D /* SPTSession.h in Headers */ = {isa = PBXBuildFile; fileRef = BFA98DC1498CE1E697905C2EDB0E2B93 /* SPTSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B37EF6F9F86F5071B560C0A54C72C826 /* XCGLogger-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF76C4F26261CC10EE2BB65AE2C5DBB4 /* XCGLogger-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE4F1B1799F874EE81BEFB2ADA26DC3F /* Spotify-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEC0C28A1532E7BC21C78302BAC047A /* Spotify-iOS-SDK-dummy.m */; };
+		BF6DD1859626C738C1C0796F6AF2BA20 /* SPTJSONDecoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB73065055416FA8D4C2E5B3BBEF0B5 /* SPTJSONDecoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C426A89184B0948338B4B62DB9ED53E8 /* SPTYourMusic.h in Headers */ = {isa = PBXBuildFile; fileRef = 77ED63EEB9B13259A29880731DA01B98 /* SPTYourMusic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C85AE19BA0AE15B859E0344B275798F0 /* SPTAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D0B58A08E2EA8D7465B496029DA215C /* SPTAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D991193277C0A2E5841C9F6E4BF68EEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764C93382B59CEE3ED12979B5766DD1E /* Foundation.framework */; };
+		E087A1FD662C4EBC21CC5B2FA760458E /* Pods-Emome-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A4ACE17DB24694392FD8EA8B4DAA03 /* Pods-Emome-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3FC75184294D3117602E36761B16032 /* SPTTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 7815AAA1FE8D5FB08DF584FEDABA145B /* SPTTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAE4838053F678AF53FB6528447791E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764C93382B59CEE3ED12979B5766DD1E /* Foundation.framework */; };
+		EE7C375B447767C48A62FB03201924D2 /* SPTPlaylistSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 218AD2D235566FCEF474399700C20A7A /* SPTPlaylistSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F540270230B843AE038ADB3E9EA33596 /* SPTTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C00E4F00CC62679ED4781E3C484AE51 /* SPTTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC9816274AE81ABE4AE7665097B0C5B1 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B049839FA2D4B919DDC9E0D552D4FC /* Empty.m */; };
+		FD29DE526A4392776202FCE864984AA7 /* SPTCoreAudioController.h in Headers */ = {isa = PBXBuildFile; fileRef = 112047D4C75BB8B058101581C67381DF /* SPTCoreAudioController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4F675DE98B780EC49BF4E98DCEECAAD4 /* PBXContainerItemProxy */ = {
+		6A8C54E76325D91097200BE2DE1FEFA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 73733912BC5C92A3F89EFF7B2D28E010;
+			remoteGlobalIDString = FDDB778454C34FA3165E07950995C85B;
+			remoteInfo = "Spotify-iOS-SDK";
+		};
+		ED6F955F714315A06AB8870F21ED6328 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E81FFA6A4D908B1A3078585DE2813DD;
 			remoteInfo = XCGLogger;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0535D167DB7544CF74D1F5D00DA1CA72 /* XCGLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCGLogger.swift; path = XCGLogger/Library/XCGLogger/XCGLogger.swift; sourceTree = "<group>"; };
-		10BAF3D570B2DA6E3B7637DEE1BAE637 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		170A96B45528D21E23A19D17E3E2AD89 /* Pods_Emome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22575C497D237F3F6C7F699C8F3E05C8 /* XCGLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCGLogger.xcconfig; sourceTree = "<group>"; };
-		3610AEB18520495151B75FAA8AFCF615 /* XCGLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-umbrella.h"; sourceTree = "<group>"; };
+		061D3D96E966F509E998DA8B2E3C3243 /* SPTPartialArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialArtist.h; sourceTree = "<group>"; };
+		075D0CDD21ED0C66340B6825AAC14B73 /* SPTFeaturedPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFeaturedPlaylistList.h; sourceTree = "<group>"; };
+		0A0D1B00BADAEDF6DBBC42321F928C3A /* SPTImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTImage.h; sourceTree = "<group>"; };
+		0D0B58A08E2EA8D7465B496029DA215C /* SPTAuthViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuthViewController.h; sourceTree = "<group>"; };
+		0EB73065055416FA8D4C2E5B3BBEF0B5 /* SPTJSONDecoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTJSONDecoding.h; sourceTree = "<group>"; };
+		112047D4C75BB8B058101581C67381DF /* SPTCoreAudioController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCoreAudioController.h; sourceTree = "<group>"; };
+		125715A893195AA97160573E9790AC6C /* SPTBrowse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTBrowse.h; sourceTree = "<group>"; };
+		150E354BC48C11535B096CA4207B0AB9 /* SPTSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSearch.h; sourceTree = "<group>"; };
+		1C00E4F00CC62679ED4781E3C484AE51 /* SPTTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTypes.h; sourceTree = "<group>"; };
+		1EFD5608628407A8978A59AF4D1FB953 /* Pods_Emome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		202A2FFD25F59A2F776426A1711B9208 /* SPTArtist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTArtist.h; sourceTree = "<group>"; };
+		218AD2D235566FCEF474399700C20A7A /* SPTPlaylistSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistSnapshot.h; sourceTree = "<group>"; };
+		278C6D5A1495D605C32BC400F1B6775C /* SPTPlayOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlayOptions.h; sourceTree = "<group>"; };
+		2B354EDC233BDFECD4A9EAD4021818B9 /* SPTConnectButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTConnectButton.h; sourceTree = "<group>"; };
+		355D08BDDCB1ABFB19DF11094F0AC382 /* SPTPartialPlaylist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialPlaylist.h; sourceTree = "<group>"; };
+		359C3631ECDBF33C8E25917A25450464 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38A4ACE17DB24694392FD8EA8B4DAA03 /* Pods-Emome-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Emome-umbrella.h"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		51DE9EA20A799449882377E6FA85A49D /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F9C3BC6925E182F33399F198CDFE1B1 /* SPTAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAuth.h; sourceTree = "<group>"; };
+		410E74AECD915C21AF402DE9835FA7EA /* Spotify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
+		476010F4B9BD823EC6463A8C24D5EC42 /* XCGLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-prefix.pch"; sourceTree = "<group>"; };
+		4960D5B2DFF3A3971810AA5FE4C287FC /* SPTAudioStreamingController_ErrorCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController_ErrorCodes.h; sourceTree = "<group>"; };
+		4D52B4B96A3D747768F6E242B8CF5118 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		5414E9E6301BCF72B978767D4D13432A /* Pods-Emome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emome.debug.xcconfig"; sourceTree = "<group>"; };
-		5EE2C08222069FE8B1BEFD6A3A2E2E82 /* XCGLogger-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-prefix.pch"; sourceTree = "<group>"; };
-		63EDA765CB632D614D4A88635391FC47 /* XCGLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XCGLogger.modulemap; sourceTree = "<group>"; };
+		6AEC0C28A1532E7BC21C78302BAC047A /* Spotify-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Spotify-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
 		74AF221763F6498945E26481678CB730 /* Pods-Emome-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emome-frameworks.sh"; sourceTree = "<group>"; };
+		764C93382B59CEE3ED12979B5766DD1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		77ED63EEB9B13259A29880731DA01B98 /* SPTYourMusic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTYourMusic.h; sourceTree = "<group>"; };
+		7815AAA1FE8D5FB08DF584FEDABA145B /* SPTTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTTrack.h; sourceTree = "<group>"; };
 		7B87AB72063352B8967C1A0E1B8664C4 /* Pods-Emome-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Emome-acknowledgements.plist"; sourceTree = "<group>"; };
-		8991B5029E879CF59A22E2F6EADBA22B /* XCGLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCGLogger-dummy.m"; sourceTree = "<group>"; };
+		7D1B7C02CE619A039BBA34596CDF77A1 /* Spotify-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Spotify-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		7D5D0A7B8B06817B5ABDC23B1CB34024 /* SPTCircularBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTCircularBuffer.h; sourceTree = "<group>"; };
+		89B9D104648B9641B5672B995901D507 /* Spotify-iOS-SDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-umbrella.h"; sourceTree = "<group>"; };
+		8A522A33D18399F47A619331F5212758 /* SPTSavedTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSavedTrack.h; sourceTree = "<group>"; };
 		8B92B3F6C6DBEF1F1E7EB4013A80307F /* Pods-Emome-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Emome-dummy.m"; sourceTree = "<group>"; };
+		925583AB1911EDAAAB06C8EB2D365964 /* SPTPlaylistList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistList.h; sourceTree = "<group>"; };
+		94AE647F8E03EA8E3DFF0D279C8380B8 /* SPTPartialAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialAlbum.h; sourceTree = "<group>"; };
 		96E3D82016F3396AF61618802FA1BBEE /* Pods-Emome-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Emome-resources.sh"; sourceTree = "<group>"; };
+		9799DACF9F68156C9AD64E275397D7B8 /* XCGLogger.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XCGLogger.modulemap; sourceTree = "<group>"; };
+		9E7D36E03AE3B0C03517838AC0C8EFE3 /* SPTAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAlbum.h; sourceTree = "<group>"; };
+		A0C3F2594B53AF942EB6833200621765 /* SPTListPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTListPage.h; sourceTree = "<group>"; };
+		A2722239214C392895D8A915F0815414 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A298647D332ADA6DA7B855F862C435A9 /* Pods-Emome-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Emome-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B3C4F83C0A80DF5130CF713796327AE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5815B864E563B7A063353994C462EA0 /* SPTFollow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTFollow.h; sourceTree = "<group>"; };
+		A7D23836985190095FA261CA3EF7AE13 /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA32A4024FE2F2A0FE6D4975EC7AD14 /* SPTDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCache.h; sourceTree = "<group>"; };
+		AF76C4F26261CC10EE2BB65AE2C5DBB4 /* XCGLogger-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XCGLogger-umbrella.h"; sourceTree = "<group>"; };
+		B0B049839FA2D4B919DDC9E0D552D4FC /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		B5122262F9FD100934EA972508D8B7B7 /* SPTPlaylistTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPlaylistTrack.h; sourceTree = "<group>"; };
+		BA1A28513FD93E7A125B3CCA06DFD1AF /* SPTDiskCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTDiskCaching.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB32CF83D8316EF5BC39EFA422085FCF /* XCGLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XCGLogger.swift; path = XCGLogger/Library/XCGLogger/XCGLogger.swift; sourceTree = "<group>"; };
+		BFA98DC1498CE1E697905C2EDB0E2B93 /* SPTSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTSession.h; sourceTree = "<group>"; };
+		BFD5AFDCEA32C54164D67B350A3815E7 /* XCGLogger-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XCGLogger-dummy.m"; sourceTree = "<group>"; };
+		C4529F3E031C45688BE61D8F57FF4AE3 /* XCGLogger.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XCGLogger.xcconfig; sourceTree = "<group>"; };
 		C69D64C78C0B4C35118CEC62EA93F351 /* Pods-Emome.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Emome.modulemap"; sourceTree = "<group>"; };
+		CC93988D7F091F0DEE5CF44506467A32 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		D02B76B81A7857F4133142D9F8DB0070 /* SPTPartialTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialTrack.h; sourceTree = "<group>"; };
+		D1098BA6E14A78B315E0568AC506D706 /* Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFEF487FEF4ABABF9EDF27B9290D4765 /* Spotify-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Spotify-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
 		E3A0385EF3A6CAC019C36953913CF57A /* Pods-Emome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Emome.release.xcconfig"; sourceTree = "<group>"; };
+		E7B68C5B636A8EB6B49E4C28BF98E612 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAAA45D9A022F15C71955E352434D630 /* SPTUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTUser.h; sourceTree = "<group>"; };
 		ED8701154105A58CD5D5D15B615CC18C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFDB7EC14FE9B2FD7E29F695F96AF77A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		EF179C1391386A3CC7BF75F32541D760 /* SPTRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTRequest.h; sourceTree = "<group>"; };
+		F73FC7E1F76AD8A3F8C17C4933D34CC2 /* SPTEmbeddedImages.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTEmbeddedImages.h; sourceTree = "<group>"; };
+		F8A458B255216A696D963790F9505A38 /* libSpotify.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libSpotify.a; sourceTree = "<group>"; };
+		FCAD74828291450E47CF1C601E68AF51 /* SPTAudioStreamingController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTAudioStreamingController.h; sourceTree = "<group>"; };
+		FE726EDFA1539E25637F5F2EF6B2D0CE /* Spotify-iOS-SDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Spotify-iOS-SDK.modulemap"; sourceTree = "<group>"; };
+		FF14319CD5C84AEFD592B291DAEE4111 /* SPTPartialObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SPTPartialObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09C3C04BD21E6D672ECFBCDD27E034A2 /* Frameworks */ = {
+		62AF013BC1E77A48B4C6F6042A57FB6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADF1EF8F2F1625C56DB7D9115913DA80 /* Foundation.framework in Frameworks */,
+				D991193277C0A2E5841C9F6E4BF68EEA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3624B92D1760B566A2A21A3DD4667AEA /* Frameworks */ = {
+		637FD49F249AEEA411989161519D4E86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5575B1FCE12940A601AA8B8FB4D97E3 /* Foundation.framework in Frameworks */,
+				91D668E41C37132C89E6B50EF14A692B /* AVFoundation.framework in Frameworks */,
+				7C2E5D119C7758AE4541714841D45F35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83CA4504E77F9E634A11F451BA8C8255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAE4838053F678AF53FB6528447791E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0815C392E5004D469CE99F8D0F13C823 /* XCGLogger */ = {
+			isa = PBXGroup;
+			children = (
+				BB32CF83D8316EF5BC39EFA422085FCF /* XCGLogger.swift */,
+				0D440E29DBD7FFDD9DC6EED2F208D28C /* Support Files */,
+			);
+			path = XCGLogger;
+			sourceTree = "<group>";
+		};
+		0D440E29DBD7FFDD9DC6EED2F208D28C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				359C3631ECDBF33C8E25917A25450464 /* Info.plist */,
+				9799DACF9F68156C9AD64E275397D7B8 /* XCGLogger.modulemap */,
+				C4529F3E031C45688BE61D8F57FF4AE3 /* XCGLogger.xcconfig */,
+				BFD5AFDCEA32C54164D67B350A3815E7 /* XCGLogger-dummy.m */,
+				476010F4B9BD823EC6463A8C24D5EC42 /* XCGLogger-prefix.pch */,
+				AF76C4F26261CC10EE2BB65AE2C5DBB4 /* XCGLogger-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XCGLogger";
+			sourceTree = "<group>";
+		};
+		1D113B964552032227B02F1100F63E5B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7B68C5B636A8EB6B49E4C28BF98E612 /* Info.plist */,
+				FE726EDFA1539E25637F5F2EF6B2D0CE /* Spotify-iOS-SDK.modulemap */,
+				7D1B7C02CE619A039BBA34596CDF77A1 /* Spotify-iOS-SDK.xcconfig */,
+				6AEC0C28A1532E7BC21C78302BAC047A /* Spotify-iOS-SDK-dummy.m */,
+				DFEF487FEF4ABABF9EDF27B9290D4765 /* Spotify-iOS-SDK-prefix.pch */,
+				89B9D104648B9641B5672B995901D507 /* Spotify-iOS-SDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Spotify-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				502F60075FC4331F755C37AE61C739B8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4CE46FB089A15D0BC47C8A93F7877B23 /* Pods-Emome */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,113 +238,129 @@
 			path = "Target Support Files/Pods-Emome";
 			sourceTree = "<group>";
 		};
-		5C5BF6270A70ED9B12826E774CE9FF85 /* Frameworks */ = {
+		4FAD7781C6280C18C4DADA0F8F20F9E8 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				10BAF3D570B2DA6E3B7637DEE1BAE637 /* Crashlytics.framework */,
+				7450038F86714CD3E86E978ABE00883D /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		502F60075FC4331F755C37AE61C739B8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CC93988D7F091F0DEE5CF44506467A32 /* AVFoundation.framework */,
+				764C93382B59CEE3ED12979B5766DD1E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		718F64C1779F0D2B50E21BEE54A7BF93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D52B4B96A3D747768F6E242B8CF5118 /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E89FDA25B6074805BD69D567D84C723 /* Products */ = {
+		7450038F86714CD3E86E978ABE00883D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				170A96B45528D21E23A19D17E3E2AD89 /* Pods_Emome.framework */,
-				51DE9EA20A799449882377E6FA85A49D /* XCGLogger.framework */,
+				A2722239214C392895D8A915F0815414 /* Crashlytics.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				8C66E52D39F8BD0F0370E2B27DB86D0E /* Pods */,
-				5E89FDA25B6074805BD69D567D84C723 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9A79A1CA3D433C6A988FCD5BD697FE01 /* Pods */,
+				E809F4A4329FA8E025C2DBC06ED2676F /* Products */,
 				E1DC86916A598026B989DFE90B8DC111 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		819F7BA21459212BBF417B861547CE5A /* Base */ = {
+		8D25A6FF0A457933EAAC3E0674CFA245 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				898D435AD7D490A49BC2FDFC21627369 /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		898D435AD7D490A49BC2FDFC21627369 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FFDB7EC14FE9B2FD7E29F695F96AF77A /* Fabric.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		89C0C37179D6BE9DC1762FA13F09EA44 /* XCGLogger */ = {
-			isa = PBXGroup;
-			children = (
-				0535D167DB7544CF74D1F5D00DA1CA72 /* XCGLogger.swift */,
-				8CE43491FAAC928D9C30E250CBB768ED /* Support Files */,
-			);
-			path = XCGLogger;
-			sourceTree = "<group>";
-		};
-		8C66E52D39F8BD0F0370E2B27DB86D0E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D7D851DFADC43AC65AD7CBF2053003D0 /* Crashlytics */,
-				9CD26BB26DAA0C68D825515C3BF31091 /* Fabric */,
-				89C0C37179D6BE9DC1762FA13F09EA44 /* XCGLogger */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8CE43491FAAC928D9C30E250CBB768ED /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B3C4F83C0A80DF5130CF713796327AE4 /* Info.plist */,
-				63EDA765CB632D614D4A88635391FC47 /* XCGLogger.modulemap */,
-				22575C497D237F3F6C7F699C8F3E05C8 /* XCGLogger.xcconfig */,
-				8991B5029E879CF59A22E2F6EADBA22B /* XCGLogger-dummy.m */,
-				5EE2C08222069FE8B1BEFD6A3A2E2E82 /* XCGLogger-prefix.pch */,
-				3610AEB18520495151B75FAA8AFCF615 /* XCGLogger-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/XCGLogger";
-			sourceTree = "<group>";
-		};
-		9CD26BB26DAA0C68D825515C3BF31091 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				819F7BA21459212BBF417B861547CE5A /* Base */,
+				A6890B3268D28E062ED24F7573CD9074 /* Base */,
 			);
 			path = Fabric;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		9A79A1CA3D433C6A988FCD5BD697FE01 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+				4FAD7781C6280C18C4DADA0F8F20F9E8 /* Crashlytics */,
+				8D25A6FF0A457933EAAC3E0674CFA245 /* Fabric */,
+				A98EDAD5242A144EFC34E5B02941012F /* Spotify-iOS-SDK */,
+				0815C392E5004D469CE99F8D0F13C823 /* XCGLogger */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6890B3268D28E062ED24F7573CD9074 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				718F64C1779F0D2B50E21BEE54A7BF93 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		A98EDAD5242A144EFC34E5B02941012F /* Spotify-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				B0B049839FA2D4B919DDC9E0D552D4FC /* Empty.m */,
+				410E74AECD915C21AF402DE9835FA7EA /* Spotify.h */,
+				9E7D36E03AE3B0C03517838AC0C8EFE3 /* SPTAlbum.h */,
+				202A2FFD25F59A2F776426A1711B9208 /* SPTArtist.h */,
+				FCAD74828291450E47CF1C601E68AF51 /* SPTAudioStreamingController.h */,
+				4960D5B2DFF3A3971810AA5FE4C287FC /* SPTAudioStreamingController_ErrorCodes.h */,
+				3F9C3BC6925E182F33399F198CDFE1B1 /* SPTAuth.h */,
+				0D0B58A08E2EA8D7465B496029DA215C /* SPTAuthViewController.h */,
+				125715A893195AA97160573E9790AC6C /* SPTBrowse.h */,
+				7D5D0A7B8B06817B5ABDC23B1CB34024 /* SPTCircularBuffer.h */,
+				2B354EDC233BDFECD4A9EAD4021818B9 /* SPTConnectButton.h */,
+				112047D4C75BB8B058101581C67381DF /* SPTCoreAudioController.h */,
+				ADA32A4024FE2F2A0FE6D4975EC7AD14 /* SPTDiskCache.h */,
+				BA1A28513FD93E7A125B3CCA06DFD1AF /* SPTDiskCaching.h */,
+				F73FC7E1F76AD8A3F8C17C4933D34CC2 /* SPTEmbeddedImages.h */,
+				075D0CDD21ED0C66340B6825AAC14B73 /* SPTFeaturedPlaylistList.h */,
+				A5815B864E563B7A063353994C462EA0 /* SPTFollow.h */,
+				0A0D1B00BADAEDF6DBBC42321F928C3A /* SPTImage.h */,
+				0EB73065055416FA8D4C2E5B3BBEF0B5 /* SPTJSONDecoding.h */,
+				A0C3F2594B53AF942EB6833200621765 /* SPTListPage.h */,
+				94AE647F8E03EA8E3DFF0D279C8380B8 /* SPTPartialAlbum.h */,
+				061D3D96E966F509E998DA8B2E3C3243 /* SPTPartialArtist.h */,
+				FF14319CD5C84AEFD592B291DAEE4111 /* SPTPartialObject.h */,
+				355D08BDDCB1ABFB19DF11094F0AC382 /* SPTPartialPlaylist.h */,
+				D02B76B81A7857F4133142D9F8DB0070 /* SPTPartialTrack.h */,
+				925583AB1911EDAAAB06C8EB2D365964 /* SPTPlaylistList.h */,
+				218AD2D235566FCEF474399700C20A7A /* SPTPlaylistSnapshot.h */,
+				B5122262F9FD100934EA972508D8B7B7 /* SPTPlaylistTrack.h */,
+				278C6D5A1495D605C32BC400F1B6775C /* SPTPlayOptions.h */,
+				EF179C1391386A3CC7BF75F32541D760 /* SPTRequest.h */,
+				8A522A33D18399F47A619331F5212758 /* SPTSavedTrack.h */,
+				150E354BC48C11535B096CA4207B0AB9 /* SPTSearch.h */,
+				BFA98DC1498CE1E697905C2EDB0E2B93 /* SPTSession.h */,
+				7815AAA1FE8D5FB08DF584FEDABA145B /* SPTTrack.h */,
+				1C00E4F00CC62679ED4781E3C484AE51 /* SPTTypes.h */,
+				EAAA45D9A022F15C71955E352434D630 /* SPTUser.h */,
+				77ED63EEB9B13259A29880731DA01B98 /* SPTYourMusic.h */,
+				BC3AA5EC66845327CF1DF55C1D3A9CEC /* Frameworks */,
+				1D113B964552032227B02F1100F63E5B /* Support Files */,
+			);
+			path = "Spotify-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		BC3AA5EC66845327CF1DF55C1D3A9CEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8A458B255216A696D963790F9505A38 /* libSpotify.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		D7D851DFADC43AC65AD7CBF2053003D0 /* Crashlytics */ = {
-			isa = PBXGroup;
-			children = (
-				5C5BF6270A70ED9B12826E774CE9FF85 /* Frameworks */,
-			);
-			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		E1DC86916A598026B989DFE90B8DC111 /* Targets Support Files */ = {
@@ -207,35 +371,89 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		E809F4A4329FA8E025C2DBC06ED2676F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EFD5608628407A8978A59AF4D1FB953 /* Pods_Emome.framework */,
+				D1098BA6E14A78B315E0568AC506D706 /* Spotify.framework */,
+				A7D23836985190095FA261CA3EF7AE13 /* XCGLogger.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		88DA4483DC0D98827C217111176B9A37 /* Headers */ = {
+		19869EFFDE7F1DFF4E8CDADD2536DF1C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9EE3ABA16489C0F0054BE6748A6B69C /* Pods-Emome-umbrella.h in Headers */,
+				E087A1FD662C4EBC21CC5B2FA760458E /* Pods-Emome-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC5EC1D349B9D2F948BC3CC2C3CD3925 /* Headers */ = {
+		740BD06A1A7BE7FF48C5F5506C4040E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8F171A53AE05AE7DD1586F2BA9978F /* XCGLogger-umbrella.h in Headers */,
+				86A91D52B9B151D0E0A0E64E8C452B8E /* Spotify-iOS-SDK-umbrella.h in Headers */,
+				B08D2F19C8E0424B1943C9ED934DB55A /* Spotify.h in Headers */,
+				603B146B3CCB0E168F94318AAFB654D9 /* SPTAlbum.h in Headers */,
+				4C65BE9F5166B5CEC214315D96120B13 /* SPTArtist.h in Headers */,
+				7BA0910A0931E3738926F1A9F26DBBB1 /* SPTAudioStreamingController.h in Headers */,
+				3F7DAAB938B20F55547433D7476240EC /* SPTAudioStreamingController_ErrorCodes.h in Headers */,
+				79CFDBFB7FD58A64EB0E936BEA0F02FA /* SPTAuth.h in Headers */,
+				C85AE19BA0AE15B859E0344B275798F0 /* SPTAuthViewController.h in Headers */,
+				0461E3DADB75EA4428D33E7583C4D621 /* SPTBrowse.h in Headers */,
+				0E2052072DA0D7122B7926AB5F370C4D /* SPTCircularBuffer.h in Headers */,
+				545D2CE650AF684807371138C61D542C /* SPTConnectButton.h in Headers */,
+				FD29DE526A4392776202FCE864984AA7 /* SPTCoreAudioController.h in Headers */,
+				441D541C7C2887C61535FB7C1E346EC7 /* SPTDiskCache.h in Headers */,
+				4C300BE921F83C5738D0FC9D832FCF2A /* SPTDiskCaching.h in Headers */,
+				6D7A4FFD99B795E7ACF5D49DEA545B9A /* SPTEmbeddedImages.h in Headers */,
+				466CBCA81D269E5B206F645DE89895B5 /* SPTFeaturedPlaylistList.h in Headers */,
+				194E8560EB20983EBA6405512996FAAF /* SPTFollow.h in Headers */,
+				07A79E85505E216682871415C95F6E53 /* SPTImage.h in Headers */,
+				BF6DD1859626C738C1C0796F6AF2BA20 /* SPTJSONDecoding.h in Headers */,
+				AA3E0558D1F7D68E2275F6432D042770 /* SPTListPage.h in Headers */,
+				8F5AE53BA6A519BC4BA17E2374E69467 /* SPTPartialAlbum.h in Headers */,
+				73902CE35089ECEAB4BE0D2507728A5A /* SPTPartialArtist.h in Headers */,
+				5304B81EB94B5BA7C4B869D70766C559 /* SPTPartialObject.h in Headers */,
+				AAFF8DACADFD71712140A1098A6853A6 /* SPTPartialPlaylist.h in Headers */,
+				511BEFF567CE5CA44BA81C33D7571213 /* SPTPartialTrack.h in Headers */,
+				97F88052BD55FDB606FC7ED858BD1071 /* SPTPlaylistList.h in Headers */,
+				EE7C375B447767C48A62FB03201924D2 /* SPTPlaylistSnapshot.h in Headers */,
+				0444532623D1CE6F780721F6C08AD929 /* SPTPlaylistTrack.h in Headers */,
+				1E0896137EF695056334E3078C5F8722 /* SPTPlayOptions.h in Headers */,
+				3D41C3DD6CDBAAC3FBDED182A29D70CE /* SPTRequest.h in Headers */,
+				2716A44FD4EA0D2586E35E82D73A5191 /* SPTSavedTrack.h in Headers */,
+				47AF939118CE6C9F1DB77ECDB67410BB /* SPTSearch.h in Headers */,
+				B1A9279B173499FAE05ED3B77DCE4A4D /* SPTSession.h in Headers */,
+				E3FC75184294D3117602E36761B16032 /* SPTTrack.h in Headers */,
+				F540270230B843AE038ADB3E9EA33596 /* SPTTypes.h in Headers */,
+				184D8E901E670E4B60E14CD3BDC91FC2 /* SPTUser.h in Headers */,
+				C426A89184B0948338B4B62DB9ED53E8 /* SPTYourMusic.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8776740D7E870E8A5B04D001049DA75B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37EF6F9F86F5071B560C0A54C72C826 /* XCGLogger-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		73733912BC5C92A3F89EFF7B2D28E010 /* XCGLogger */ = {
+		5E81FFA6A4D908B1A3078585DE2813DD /* XCGLogger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74ECA93A59E2DAE165354D02E0497EE1 /* Build configuration list for PBXNativeTarget "XCGLogger" */;
+			buildConfigurationList = F079A6E41EAC8610F1FF47CFDCF89347 /* Build configuration list for PBXNativeTarget "XCGLogger" */;
 			buildPhases = (
-				43EC23B7A7A1E6ABCF1D227F5479192E /* Sources */,
-				09C3C04BD21E6D672ECFBCDD27E034A2 /* Frameworks */,
-				EC5EC1D349B9D2F948BC3CC2C3CD3925 /* Headers */,
+				3C26DCD568519BCC870E7DC9DDB3D829 /* Sources */,
+				83CA4504E77F9E634A11F451BA8C8255 /* Frameworks */,
+				8776740D7E870E8A5B04D001049DA75B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -243,25 +461,43 @@
 			);
 			name = XCGLogger;
 			productName = XCGLogger;
-			productReference = 51DE9EA20A799449882377E6FA85A49D /* XCGLogger.framework */;
+			productReference = A7D23836985190095FA261CA3EF7AE13 /* XCGLogger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8EA1C81BBE06BD2B097EAC8686C4E3DD /* Pods-Emome */ = {
+		6FD609A741604764FE6524C24DF1ADDD /* Pods-Emome */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96BC97B5450C54FB1887037C7BE169F8 /* Build configuration list for PBXNativeTarget "Pods-Emome" */;
+			buildConfigurationList = E78731C00DCDD83313F6FEFFC7901304 /* Build configuration list for PBXNativeTarget "Pods-Emome" */;
 			buildPhases = (
-				1DA8AC92EBCAC5A5DFA15D53B6F1F24D /* Sources */,
-				3624B92D1760B566A2A21A3DD4667AEA /* Frameworks */,
-				88DA4483DC0D98827C217111176B9A37 /* Headers */,
+				49CCB7E052DB3361792C0DDFD887E388 /* Sources */,
+				62AF013BC1E77A48B4C6F6042A57FB6A /* Frameworks */,
+				19869EFFDE7F1DFF4E8CDADD2536DF1C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C77500F20ECB42A579EE5ABF4CA12A30 /* PBXTargetDependency */,
+				F82643168C9F7EA947B95180653A2291 /* PBXTargetDependency */,
+				62EE641404651BF2B7F143CE52219B2C /* PBXTargetDependency */,
 			);
 			name = "Pods-Emome";
 			productName = "Pods-Emome";
-			productReference = 170A96B45528D21E23A19D17E3E2AD89 /* Pods_Emome.framework */;
+			productReference = 1EFD5608628407A8978A59AF4D1FB953 /* Pods_Emome.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDDB778454C34FA3165E07950995C85B /* Spotify-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9ED14DA1BD7840399022D0F63E4D4EB8 /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */;
+			buildPhases = (
+				83DA64A0442D359EB9F7B1D5E318AB5A /* Sources */,
+				637FD49F249AEEA411989161519D4E86 /* Frameworks */,
+				740BD06A1A7BE7FF48C5F5506C4040E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spotify-iOS-SDK";
+			productName = "Spotify-iOS-SDK";
+			productReference = D1098BA6E14A78B315E0568AC506D706 /* Spotify.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -281,49 +517,65 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 5E89FDA25B6074805BD69D567D84C723 /* Products */;
+			productRefGroup = E809F4A4329FA8E025C2DBC06ED2676F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EA1C81BBE06BD2B097EAC8686C4E3DD /* Pods-Emome */,
-				73733912BC5C92A3F89EFF7B2D28E010 /* XCGLogger */,
+				6FD609A741604764FE6524C24DF1ADDD /* Pods-Emome */,
+				FDDB778454C34FA3165E07950995C85B /* Spotify-iOS-SDK */,
+				5E81FFA6A4D908B1A3078585DE2813DD /* XCGLogger */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DA8AC92EBCAC5A5DFA15D53B6F1F24D /* Sources */ = {
+		3C26DCD568519BCC870E7DC9DDB3D829 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EC872590EBE6BD3ADF2DF4D911AC795 /* Pods-Emome-dummy.m in Sources */,
+				7790302A5D2469F24C0AFB64069E9204 /* XCGLogger-dummy.m in Sources */,
+				0A4151E8F9BE8C2820F99D0779559052 /* XCGLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43EC23B7A7A1E6ABCF1D227F5479192E /* Sources */ = {
+		49CCB7E052DB3361792C0DDFD887E388 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A81F172E885C9C9A6FFA9BCDB7A3B50B /* XCGLogger-dummy.m in Sources */,
-				5137539C2DCDC3C8025673DED98A93EE /* XCGLogger.swift in Sources */,
+				345A0E8D81452101DF558D63AAB33C1F /* Pods-Emome-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83DA64A0442D359EB9F7B1D5E318AB5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9816274AE81ABE4AE7665097B0C5B1 /* Empty.m in Sources */,
+				BE4F1B1799F874EE81BEFB2ADA26DC3F /* Spotify-iOS-SDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C77500F20ECB42A579EE5ABF4CA12A30 /* PBXTargetDependency */ = {
+		62EE641404651BF2B7F143CE52219B2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XCGLogger;
-			target = 73733912BC5C92A3F89EFF7B2D28E010 /* XCGLogger */;
-			targetProxy = 4F675DE98B780EC49BF4E98DCEECAAD4 /* PBXContainerItemProxy */;
+			target = 5E81FFA6A4D908B1A3078585DE2813DD /* XCGLogger */;
+			targetProxy = ED6F955F714315A06AB8870F21ED6328 /* PBXContainerItemProxy */;
+		};
+		F82643168C9F7EA947B95180653A2291 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Spotify-iOS-SDK";
+			target = FDDB778454C34FA3165E07950995C85B /* Spotify-iOS-SDK */;
+			targetProxy = 6A8C54E76325D91097200BE2DE1FEFA4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2D7F3EB09F6EF0DD69AEF495FF950F78 /* Release */ = {
+		13AEB513E5598BB4E3DD994AE115FF76 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3A0385EF3A6CAC019C36953913CF57A /* Pods-Emome.release.xcconfig */;
+			baseConfigurationReference = 5414E9E6301BCF72B978767D4D13432A /* Pods-Emome.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -338,11 +590,39 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Emome/Pods-Emome.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = Pods_Emome;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D66F8B03DA109C75D9FAACC0A35F13B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4529F3E031C45688BE61D8F57FF4AE3 /* XCGLogger.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XCGLogger/XCGLogger-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XCGLogger/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XCGLogger;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,37 +670,6 @@
 			};
 			name = Debug;
 		};
-		6ED17A944DB92CC06E55041D9FCCDC7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5414E9E6301BCF72B978767D4D13432A /* Pods-Emome.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Emome/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Emome/Pods-Emome.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Emome;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,9 +704,9 @@
 			};
 			name = Release;
 		};
-		C391FDB5C455E63574A50636E2BF20C3 /* Debug */ = {
+		74D80C10C0CDFF2B933278A15288AB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22575C497D237F3F6C7F699C8F3E05C8 /* XCGLogger.xcconfig */;
+			baseConfigurationReference = C4529F3E031C45688BE61D8F57FF4AE3 /* XCGLogger.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -483,9 +732,9 @@
 			};
 			name = Debug;
 		};
-		FAEA8B6E6C6E0BC26CF057B226C0B01F /* Release */ = {
+		A8B571149BB88367F6110EF73B4B0A73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22575C497D237F3F6C7F699C8F3E05C8 /* XCGLogger.xcconfig */;
+			baseConfigurationReference = E3A0385EF3A6CAC019C36953913CF57A /* Pods-Emome.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -494,14 +743,71 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/XCGLogger/XCGLogger-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XCGLogger/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Emome/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XCGLogger/XCGLogger.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Emome/Pods-Emome.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = XCGLogger;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Emome;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F289DCA4FD5051D652DFDED75ADAC367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D1B7C02CE619A039BBA34596CDF77A1 /* Spotify-iOS-SDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spotify-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Spotify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5849C2BE0AC0D24408A4240EEA01CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D1B7C02CE619A039BBA34596CDF77A1 /* Spotify-iOS-SDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Spotify-iOS-SDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Spotify-iOS-SDK/Spotify-iOS-SDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Spotify;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,20 +828,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74ECA93A59E2DAE165354D02E0497EE1 /* Build configuration list for PBXNativeTarget "XCGLogger" */ = {
+		9ED14DA1BD7840399022D0F63E4D4EB8 /* Build configuration list for PBXNativeTarget "Spotify-iOS-SDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C391FDB5C455E63574A50636E2BF20C3 /* Debug */,
-				FAEA8B6E6C6E0BC26CF057B226C0B01F /* Release */,
+				F289DCA4FD5051D652DFDED75ADAC367 /* Debug */,
+				F5849C2BE0AC0D24408A4240EEA01CC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96BC97B5450C54FB1887037C7BE169F8 /* Build configuration list for PBXNativeTarget "Pods-Emome" */ = {
+		E78731C00DCDD83313F6FEFFC7901304 /* Build configuration list for PBXNativeTarget "Pods-Emome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6ED17A944DB92CC06E55041D9FCCDC7C /* Debug */,
-				2D7F3EB09F6EF0DD69AEF495FF950F78 /* Release */,
+				13AEB513E5598BB4E3DD994AE115FF76 /* Debug */,
+				A8B571149BB88367F6110EF73B4B0A73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F079A6E41EAC8610F1FF47CFDCF89347 /* Build configuration list for PBXNativeTarget "XCGLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74D80C10C0CDFF2B933278A15288AB94 /* Debug */,
+				2D66F8B03DA109C75D9FAACC0A35F13B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

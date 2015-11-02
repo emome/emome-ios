@@ -718,6 +718,108 @@
             </objects>
             <point key="canvasLocation" x="1038" y="1056"/>
         </scene>
+        <!--Spotify Api Test View Controller-->
+        <scene sceneID="uSs-F8-bvQ">
+            <objects>
+                <viewController id="dk4-gh-v5T" customClass="SpotifyApiTestViewController" customModule="Emome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5i-ab-a2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tay-Wr-RYQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V5F-fI-qlp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-Iq-W19">
+                                <rect key="frame" x="81" y="138" width="160" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dk4-gh-v5T" id="Rx0-p3-qpe"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8D-wj-JSR">
+                                <rect key="frame" x="264" y="138" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="submit:" destination="dk4-gh-v5T" eventType="touchUpInside" id="L3s-Us-S6Y"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73o-ne-nl3">
+                                <rect key="frame" x="67" y="216" width="240" height="424"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" tag="40" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playlistCell" rowHeight="65" id="MDb-Za-Kvd">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDb-Za-Kvd" id="czO-iB-12p">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="64.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-H6-0kp">
+                                                    <rect key="frame" x="91" y="21.5" width="59.5" height="20.5"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDq-a4-lBk">
+                                                    <rect key="frame" x="0.0" y="-1" width="81" height="65.5"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="RRv-wS-cAr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="30" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-a9-Nff">
+                                                    <rect key="frame" x="91" y="43" width="141" height="21"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="G5a-db-YVi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="BDq-a4-lBk" firstAttribute="leading" secondItem="czO-iB-12p" secondAttribute="leading" id="2sS-3A-2bg"/>
+                                                <constraint firstItem="AJF-a9-Nff" firstAttribute="top" secondItem="qdJ-H6-0kp" secondAttribute="bottom" constant="1" id="8gw-bb-IDb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AJF-a9-Nff" secondAttribute="bottom" constant="-7.5" id="HYh-vI-rD9"/>
+                                                <constraint firstItem="BDq-a4-lBk" firstAttribute="centerY" secondItem="czO-iB-12p" secondAttribute="centerY" id="WPT-sE-PUG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AJF-a9-Nff" secondAttribute="trailing" id="Yj8-63-8Nt"/>
+                                                <constraint firstItem="AJF-a9-Nff" firstAttribute="leading" secondItem="qdJ-H6-0kp" secondAttribute="leading" id="x0L-65-aGt"/>
+                                                <constraint firstItem="AJF-a9-Nff" firstAttribute="leading" secondItem="BDq-a4-lBk" secondAttribute="trailing" constant="10" id="yt9-b4-Ydd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstItem="BDq-a4-lBk" firstAttribute="height" secondItem="MDb-Za-Kvd" secondAttribute="height" id="s6j-oO-9Mh"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dk4-gh-v5T" id="hEB-4h-ooD"/>
+                                    <outlet property="delegate" destination="dk4-gh-v5T" id="FwS-1h-MTd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="spotifyPlaylistTableView" destination="73o-ne-nl3" id="l6J-mY-5YY"/>
+                        <outlet property="textIn" destination="UoC-Iq-W19" id="QcV-5Q-wiO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7U-i1-fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.5" y="1805.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icon-close" width="29" height="29"/>

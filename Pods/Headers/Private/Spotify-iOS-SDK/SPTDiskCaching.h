@@ -1,0 +1,1 @@
+../../../Spotify-iOS-SDK/SPTDiskCaching.h

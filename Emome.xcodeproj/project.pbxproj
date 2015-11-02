@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35E702FF1BE148F30001B75D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E702FE1BE148F30001B75D /* Main.storyboard */; };
+		35E703051BE6E3CD0001B75D /* SpotifyApiTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E703041BE6E3CD0001B75D /* SpotifyApiTestViewController.swift */; };
 		85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */; };
 		900148541BB8726200EB992C /* EmomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900148531BB8726200EB992C /* EmomeTests.swift */; };
 		9001486D1BB984CE00EB992C /* EMOEmotionSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOEmotionSelectionTests.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		2B023C10DB84DBFEFD98AC98 /* Pods-Emome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.release.xcconfig"; sourceTree = "<group>"; };
 		35E702FE1BE148F30001B75D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35E703041BE6E3CD0001B75D /* SpotifyApiTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyApiTestViewController.swift; sourceTree = "<group>"; };
 		46D4581E639FC267AAA9CFD7 /* Pods-Emome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emome/Pods-Emome.debug.xcconfig"; sourceTree = "<group>"; };
 		85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 		907C0F461BDEA9B100C896D3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				35E703041BE6E3CD0001B75D /* SpotifyApiTestViewController.swift */,
 				90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */,
 				907C0F401BDEA8E700C896D3 /* EMOEmotionMeterViewController.swift */,
 				907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */,
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				907C0F411BDEA8E700C896D3 /* EMOEmotionMeterViewController.swift in Sources */,
+				35E703051BE6E3CD0001B75D /* SpotifyApiTestViewController.swift in Sources */,
 				907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */,
 				907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */,
 				90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */,
@@ -559,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Emome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -573,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Emome/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,1 @@
+../../../Spotify-iOS-SDK/SPTConnectButton.h
