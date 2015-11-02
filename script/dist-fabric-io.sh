@@ -17,7 +17,7 @@ xctool clean -workspace ${WORKSPACE} -scheme ${SCHEME}
 echo "*************************"
 echo "*  Archiving Workspace  *"
 echo "*************************"
-xctool -configuration Debug -workspace ${WORKSPACE} -scheme ${SCHEME} archive -archivePath "${ARCHIVE_PATH}/${APP_NAME}" ONLY_ACTIVE_ARCH=NO CODE_SIGN_REQUIRED=YES CODE_SIGN_IDENTITY="iPhone Developer: HUAI-CHE LU (FN63DK6AQV)"
+xctool -configuration Debug -workspace ${WORKSPACE} -scheme ${SCHEME} archive -archivePath "${ARCHIVE_PATH}/${APP_NAME}" ONLY_ACTIVE_ARCH=NO CODE_SIGN_REQUIRED=YES CODE_SIGN_IDENTITY="iPhone Developer: hc.acsalu@gmail.com (T87LB7SF6L)"
 
 echo "*******************"
 echo "*  Packaging IPA  *"
