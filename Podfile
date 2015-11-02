@@ -7,5 +7,6 @@ target 'Emome' do
     pod 'Crashlytics'
     pod 'XCGLogger'
     pod 'Spotify-iOS-SDK'
+    pod 'SwiftColors'
 end
 
