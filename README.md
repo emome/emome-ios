@@ -7,7 +7,7 @@ Emome aims to improve people's mental health with a lightweight group therapy ex
 
 
 ### Become A Beta Tester
-Please [sign up here](https://betas.to/HsfAvUL8) to get access to the latest build on your device.
+Please [sign up here](https://betas.to/a5Gzqtiv) to get access to the latest build on your device.
 
 ### CocoaPods
 We use [CocoaPods](https://cocoapods.org/) for iOS package management.
