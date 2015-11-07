@@ -80,17 +80,17 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb543358605828982</string>
+				<string>fb543370115827831</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>543358605828982</string>
+	<string>543370115827831</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbauth2</string>
 	</array>
 	<key>FacebookDisplayName</key>
-	<string>Emome</string>
+	<string>Emome Alpha</string>
 </dict>
 </plist>
