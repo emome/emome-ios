@@ -623,7 +623,7 @@
         <!--Me-->
         <scene sceneID="Y3Y-ZS-dJU">
             <objects>
-                <viewController id="xZg-Qh-0Ne" sceneMemberID="viewController">
+                <viewController id="xZg-Qh-0Ne" customClass="EMOAccountViewController" customModule="Emome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vp7-vD-Xai"/>
                         <viewControllerLayoutGuide type="bottom" id="Pij-j0-3oR"/>
@@ -631,14 +631,99 @@
                     <view key="view" contentMode="scaleToFill" id="rj8-g9-vML">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-2c-BTW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="rHO-BF-dQU"/>
+                                    <constraint firstAttribute="height" constant="100" id="y1C-DR-Sui"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rHO-BF-dQU"/>
+                                        <exclude reference="y1C-DR-Sui"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="rHO-BF-dQU"/>
+                                        <include reference="y1C-DR-Sui"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhz-UM-6fq">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCO-E1-Ysw">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PCO-E1-Ysw" firstAttribute="width" secondItem="rj8-g9-vML" secondAttribute="width" id="0D7-hb-rTb"/>
+                            <constraint firstItem="mhz-UM-6fq" firstAttribute="width" secondItem="rj8-g9-vML" secondAttribute="width" id="3qi-Nd-Pav"/>
+                            <constraint firstItem="YIZ-2c-BTW" firstAttribute="top" secondItem="vp7-vD-Xai" secondAttribute="bottom" constant="8" id="7Yh-mU-rAG"/>
+                            <constraint firstItem="mhz-UM-6fq" firstAttribute="centerX" secondItem="rj8-g9-vML" secondAttribute="centerX" id="9cd-U4-S5i"/>
+                            <constraint firstItem="PCO-E1-Ysw" firstAttribute="top" secondItem="mhz-UM-6fq" secondAttribute="bottom" constant="8" id="HFy-Bg-F6r"/>
+                            <constraint firstItem="mhz-UM-6fq" firstAttribute="top" secondItem="YIZ-2c-BTW" secondAttribute="bottom" constant="8" id="KwO-eB-8xN"/>
+                            <constraint firstItem="PCO-E1-Ysw" firstAttribute="centerX" secondItem="rj8-g9-vML" secondAttribute="centerX" id="kdu-yz-kye"/>
+                            <constraint firstItem="YIZ-2c-BTW" firstAttribute="centerX" secondItem="rj8-g9-vML" secondAttribute="centerX" id="qbp-6R-yu3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="YIZ-2c-BTW"/>
+                                <exclude reference="mhz-UM-6fq"/>
+                                <exclude reference="PCO-E1-Ysw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7Yh-mU-rAG"/>
+                                <exclude reference="qbp-6R-yu3"/>
+                                <exclude reference="3qi-Nd-Pav"/>
+                                <exclude reference="9cd-U4-S5i"/>
+                                <exclude reference="KwO-eB-8xN"/>
+                                <exclude reference="0D7-hb-rTb"/>
+                                <exclude reference="HFy-Bg-F6r"/>
+                                <exclude reference="kdu-yz-kye"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="YIZ-2c-BTW"/>
+                                <include reference="mhz-UM-6fq"/>
+                                <include reference="PCO-E1-Ysw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7Yh-mU-rAG"/>
+                                <include reference="qbp-6R-yu3"/>
+                                <include reference="3qi-Nd-Pav"/>
+                                <include reference="9cd-U4-S5i"/>
+                                <include reference="KwO-eB-8xN"/>
+                                <include reference="0D7-hb-rTb"/>
+                                <include reference="HFy-Bg-F6r"/>
+                                <include reference="kdu-yz-kye"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" id="f7F-rd-7Wd"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="YIZ-2c-BTW" id="n4K-Oa-Y7M"/>
+                        <outlet property="userIdLabel" destination="mhz-UM-6fq" id="NHH-UU-2jW"/>
+                        <outlet property="userNameLabel" destination="PCO-E1-Ysw" id="kuI-w6-PUl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7Q-v4-Wpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="2513"/>
+            <point key="canvasLocation" x="1936.5" y="2529"/>
         </scene>
         <!--Scenario Selection View Controller-->
         <scene sceneID="v3c-zi-5eD">
@@ -978,7 +1063,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7U-i1-fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.5" y="1805.5"/>
+            <point key="canvasLocation" x="269.25" y="515.5"/>
         </scene>
     </scenes>
     <resources>

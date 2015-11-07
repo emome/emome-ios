@@ -1,22 +1,52 @@
 PODS:
-  - Crashlytics (3.3.4)
-  - Fabric (1.5.5):
-    - Fabric/Base (= 1.5.5)
-  - Fabric/Base (1.5.5)
+  - Alamofire (3.1.2)
+  - AlamofireImage (2.1.0):
+    - Alamofire (~> 3.1)
+  - Bolts (1.4.0):
+    - Bolts/AppLinks (= 1.4.0)
+    - Bolts/Tasks (= 1.4.0)
+  - Bolts/AppLinks (1.4.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.4.0)
+  - Crashlytics (3.4.0):
+    - Fabric (~> 1.6.0)
+  - Fabric (1.6.0):
+    - Fabric/Base (= 1.6.0)
+  - Fabric/Base (1.6.0)
+  - FBSDKCoreKit (4.7.1):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc (= 4.7.1)
+    - FBSDKCoreKit/no-arc (= 4.7.1)
+  - FBSDKCoreKit/arc (4.7.1):
+    - Bolts (~> 1.1)
+  - FBSDKCoreKit/no-arc (4.7.1):
+    - Bolts (~> 1.1)
+    - FBSDKCoreKit/arc
+  - FBSDKLoginKit (4.7.1):
+    - FBSDKCoreKit
   - Spotify-iOS-SDK (0.11.1)
   - SwiftColors (0.3.1)
   - XCGLogger (3.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
   - Crashlytics
   - Fabric
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - Spotify-iOS-SDK
   - SwiftColors
   - XCGLogger
 
 SPEC CHECKSUMS:
-  Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
-  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
+  Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
+  AlamofireImage: 97e00995920d85b5cb23ee4c3b7f92605f5dc74b
+  Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
+  Crashlytics: 1ee87895c37472eb3f01f409ea1654a464d2f8d4
+  Fabric: d737eda3a26ac940a5430230eedb35f16b226131
+  FBSDKCoreKit: 9141b70960a37930850370495fe565f4a27ac141
+  FBSDKLoginKit: c11ed3c2833472db3bb4a4aecf27af4a6f69b173
   Spotify-iOS-SDK: 2e0525121a0605234dccf61c7dfe1bfc7b236836
   SwiftColors: 61efe0bf991cfed446684e03d1e9f635f1f11a84
   XCGLogger: 5802533aff8bafc8b3b9776ab8972576f31d0a4e
