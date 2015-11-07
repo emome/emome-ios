@@ -84,6 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Emome/Alamofire.framework"
+  install_framework "Pods-Emome/AlamofireImage.framework"
   install_framework "Pods-Emome/Bolts.framework"
   install_framework "Pods-Emome/FBSDKCoreKit.framework"
   install_framework "Pods-Emome/FBSDKLoginKit.framework"
@@ -92,6 +94,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Emome/XCGLogger.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Emome/Alamofire.framework"
+  install_framework "Pods-Emome/AlamofireImage.framework"
   install_framework "Pods-Emome/Bolts.framework"
   install_framework "Pods-Emome/FBSDKCoreKit.framework"
   install_framework "Pods-Emome/FBSDKLoginKit.framework"
