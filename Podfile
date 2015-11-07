@@ -8,5 +8,7 @@ target 'Emome' do
     pod 'XCGLogger'
     pod 'Spotify-iOS-SDK'
     pod 'SwiftColors'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
 end
 

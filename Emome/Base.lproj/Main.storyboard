@@ -623,7 +623,7 @@
         <!--Me-->
         <scene sceneID="Y3Y-ZS-dJU">
             <objects>
-                <viewController id="xZg-Qh-0Ne" sceneMemberID="viewController">
+                <viewController id="xZg-Qh-0Ne" customClass="EMOAccountViewController" customModule="Emome" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vp7-vD-Xai"/>
                         <viewControllerLayoutGuide type="bottom" id="Pij-j0-3oR"/>
@@ -638,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7Q-v4-Wpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="2513"/>
+            <point key="canvasLocation" x="1936.5" y="2529"/>
         </scene>
         <!--Scenario Selection View Controller-->
         <scene sceneID="v3c-zi-5eD">
@@ -978,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g7U-i1-fjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.5" y="1805.5"/>
+            <point key="canvasLocation" x="269.25" y="515.5"/>
         </scene>
     </scenes>
     <resources>
