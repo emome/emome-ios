@@ -46,5 +46,8 @@ class EMOEmotionMeterViewController: UIViewController {
         EMODataManager.sharedInstance.fearValue        = fearMeter.value
     }
 
+    @IBAction func closeEmome() {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

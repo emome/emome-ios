@@ -166,6 +166,11 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 
     @IBAction func finishEmome() {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
