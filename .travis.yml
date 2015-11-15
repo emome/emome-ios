@@ -12,7 +12,8 @@ before_install:
 before_script:
 - ./script/add-key.sh
 script:
-- xctool clean build test -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO
+- xctool clean build -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO
+- xctool test -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO
 after_success:
 - ./script/dist-fabric-io.sh
 after_script:
@@ -20,7 +21,7 @@ after_script:
 env:
   global:
   - WORKSPACE="Emome.xcworkspace"
-  - SCHEME="EmomeTests"
+  - SCHEME="Emome"
   - APP_NAME="Emome"
   - ARCHIVE_PATH=`pwd`/archive
   - PROJECT_BUILD_DIR=${ARCHIVE_PATH}/${APP_NAME}.xcarchive/Products/Applications
