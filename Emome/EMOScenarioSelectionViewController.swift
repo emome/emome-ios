@@ -43,6 +43,10 @@ class EMOScenarioSelectionViewController: UIViewController {
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func resetButton(button: UIButton) {
         button.selected = false
         button.layer.backgroundColor = UIColor.whiteColor().CGColor
@@ -63,6 +67,9 @@ class EMOScenarioSelectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

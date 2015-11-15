@@ -51,6 +51,10 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
 		loadVisiblePages()
 
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 	
 	func loadPage(page: Int) {
 		if page < 0 || page >= pageImages.count {
@@ -162,6 +166,11 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 
     @IBAction func finishEmome() {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
