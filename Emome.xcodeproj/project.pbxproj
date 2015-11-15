@@ -119,12 +119,9 @@
 		907C0F461BDEA9B100C896D3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90979B3B1BF8E84000F0DD67 /* MyIdeas */,
 				35E703041BE6E3CD0001B75D /* SpotifyApiTestViewController.swift */,
-				90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */,
-				907C0F401BDEA8E700C896D3 /* EMOEmotionMeterViewController.swift */,
-				907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */,
-				907C0F441BDEA9AC00C896D3 /* EMOSeggestionViewController.swift */,
-				900C46491BE6D38E00EB4D70 /* EMOEmomeWelcomeViewController.swift */,
+				90979B3A1BF8E83200F0DD67 /* Emome */,
 				90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */,
 			);
 			name = ViewControllers;
@@ -137,6 +134,25 @@
 				907EDAFE1BB9990E00E49E34 /* Info.plist */,
 			);
 			path = EmomeUITests;
+			sourceTree = "<group>";
+		};
+		90979B3A1BF8E83200F0DD67 /* Emome */ = {
+			isa = PBXGroup;
+			children = (
+				900C46491BE6D38E00EB4D70 /* EMOEmomeWelcomeViewController.swift */,
+				907C0F401BDEA8E700C896D3 /* EMOEmotionMeterViewController.swift */,
+				907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */,
+				907C0F441BDEA9AC00C896D3 /* EMOSeggestionViewController.swift */,
+				90C6FD491BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift */,
+			);
+			name = Emome;
+			sourceTree = "<group>";
+		};
+		90979B3B1BF8E84000F0DD67 /* MyIdeas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyIdeas;
 			sourceTree = "<group>";
 		};
 		90C6FD3B1BB0B5CE009F9FB3 = {

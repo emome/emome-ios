@@ -43,6 +43,10 @@ class EMOScenarioSelectionViewController: UIViewController {
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func resetButton(button: UIButton) {
         button.selected = false
         button.layer.backgroundColor = UIColor.whiteColor().CGColor

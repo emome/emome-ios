@@ -21,6 +21,10 @@ class EMOEmotionMeterViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBarHidden = true
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

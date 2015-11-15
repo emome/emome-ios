@@ -51,6 +51,10 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
 		loadVisiblePages()
 
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 	
 	func loadPage(page: Int) {
 		if page < 0 || page >= pageImages.count {
