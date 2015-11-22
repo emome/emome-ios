@@ -13,110 +13,72 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var pageControl: UIPageControl!
 	
-	var pageImages: [UIImage] = []
-	var pageViews: [UIButton?] = []
-	var pageUrls: [String?] = []
+    var pageViews: [UIView?] = []
 	var currentPage: Int? = 0
-	var suggestions: [String?] = []
-	var monsterFigures: [UIImage] = []
+    
+    private var suggestionsFetchingObserver: NSObjectProtocol!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-		// 1
-		pageImages = [UIImage(named: "card-spotify")!,
-			UIImage(named: "card-yelp")!]
-		suggestions = ["Hey, last time I felt sad in a rainy day, I came across this playlist. It really helped.",
-			"How about having some hot chocolate today? I feel much better having it in such a cold day :)"]
-		monsterFigures = [UIImage(named: "img-monster-1")!, UIImage(named: "img-monster-2")!]
-		
-		let pageCount = pageImages.count
-		
-		// 2
-		pageControl.currentPage = 0
-		pageControl.numberOfPages = pageCount
-		
-		// 3
-		for _ in 0..<pageCount {
-			pageViews.append(nil)
-		}
-		
-		// 4
-		let pagesScrollViewSize = scrollView.frame.size
-		scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count),
-			height: pagesScrollViewSize.height)
-		
-		// 5
-		loadVisiblePages()
+        EMODataManager.sharedInstance.fetchSuggestions()
+        suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
+            object: nil,
+            queue: NSOperationQueue.mainQueue()) { notification in
+            self.setUpPages()
+            self.loadVisiblePages()
+        }
 
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    func setUpPages() {
+        let pageCount = EMODataManager.sharedInstance.suggestions.count
+        
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = pageCount
+        
+        for _ in 0..<pageCount {
+            pageViews.append(nil)
+        }
+        
+        let pagesScrollViewSize = scrollView.frame.size
+        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageCount),
+            height: pagesScrollViewSize.height)
+    }
 	
 	func loadPage(page: Int) {
-		if page < 0 || page >= pageImages.count {
+        
+		if page < 0 || page >= pageControl.numberOfPages {
 			// If it's outside the range of what you have to display, then do nothing
 			return
 		}
-		
-		// 1
-		if let pageView = pageViews[page] {
-			// Do nothing. The view is already loaded.
-		} else {
-			// 2
+        
+		if pageViews[page] == nil {
+
 			var frame = scrollView.bounds
 			frame.origin.x = frame.size.width * CGFloat(page)
 			frame.origin.y = 0.0
 			
-			// 3
-			let newPageView = UIButton()
-			newPageView.setImage(pageImages[page], forState: .Normal)
-			newPageView.contentMode = .ScaleAspectFit
-			newPageView.frame = frame
-			scrollView.addSubview(newPageView)
-			
-			var monsterFrame = scrollView.bounds
-			monsterFrame.origin.x = monsterFrame.size.width * CGFloat(page) + 30.0
-			monsterFrame.origin.y = 70.0
-			monsterFrame.size.width = 120.0
-			monsterFrame.size.height = 120.0
-			
-			let monsterView = UIImageView()
-			monsterView.image = monsterFigures[page]
-			monsterView.frame = monsterFrame
-			monsterView.contentMode = .ScaleAspectFit
-			scrollView.addSubview(monsterView)
-			
-			var textFrame = scrollView.bounds
-			textFrame.origin.x = textFrame.size.width * CGFloat(page) + 160.0
-			textFrame.origin.y = 70.0
-			textFrame.size.width = 200.0
-			textFrame.size.height = 120.0
-			
-			let newTextView = UITextView()
-			newTextView.text = suggestions[page]
-			newTextView.frame = textFrame
-			newTextView.font = UIFont.systemFontOfSize(18.0)
-			scrollView.addSubview(newTextView)
-			
-			newPageView.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
-			
-			// 4
-			pageViews[page] = newPageView
+            dispatch_async(GlobalMainQueue) { () -> Void in
+                let newPageView = UIView()
+                newPageView.frame = frame
+                self.scrollView.addSubview(newPageView)
+                
+                let suggestionView = NSBundle.mainBundle().loadNibNamed("EMOSuggestionView", owner: self, options: nil)![0] as! EMOSuggestionView
+                suggestionView.bindWithSuggestion(EMODataManager.sharedInstance.suggestions[page])
+                newPageView.addSubview(suggestionView)
+                suggestionView.center = CGPoint(x: CGRectGetMidX(newPageView.bounds), y: CGRectGetMidY(newPageView.bounds))
+                
+                self.pageViews[page] = newPageView
+            }
 		}
 	}
 	
-	func pressed(sender: UIButton!) {
-		pageUrls = ["spotify://user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc", "yelp:///biz/the-city-bakery-new-york"]
-		let openURL = NSURL(string: pageUrls[currentPage!]!)
-		UIApplication.sharedApplication().openURL(openURL!)
-	}
-	
 	func purgePage(page: Int) {
-		if page < 0 || page >= pageImages.count {
+		if page < 0 || page >= pageControl.numberOfPages {
 			// If it's outside the range of what you have to display, then do nothing
 			return
 		}
@@ -152,7 +114,7 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
 		}
 		
 		// Purge anything after the last page
-		for var index = lastPage+1; index < pageImages.count; ++index {
+		for var index = lastPage+1; index < pageControl.numberOfPages; ++index {
 			purgePage(index)
 		}
 	}

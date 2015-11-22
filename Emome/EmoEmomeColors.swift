@@ -13,4 +13,13 @@ extension UIColor {
     class func emomeThemeColor() -> UIColor {
         return UIColor(hexString: "#55B7D1")!
     }
+    
+    class func colorForActivity(activity: EMOActivityType) -> UIColor {
+        switch activity {
+        case .Spotify:
+            return UIColor(hexString: "#00D969")!
+        case .Yelp:
+            return UIColor(hexString: "#C41200")!
+        }
+    }
 }

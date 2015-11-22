@@ -2,31 +2,29 @@ PODS:
   - Alamofire (3.1.2)
   - AlamofireImage (2.1.0):
     - Alamofire (~> 3.1)
-  - Bolts (1.4.0):
-    - Bolts/AppLinks (= 1.4.0)
-    - Bolts/Tasks (= 1.4.0)
-  - Bolts/AppLinks (1.4.0):
+  - Bolts (1.5.0):
+    - Bolts/AppLinks (= 1.5.0)
+    - Bolts/Tasks (= 1.5.0)
+  - Bolts/AppLinks (1.5.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.4.0)
-  - Crashlytics (3.4.0):
+  - Bolts/Tasks (1.5.0)
+  - Crashlytics (3.4.1):
     - Fabric (~> 1.6.0)
-  - Fabric (1.6.0):
-    - Fabric/Base (= 1.6.0)
-  - Fabric/Base (1.6.0)
-  - FBSDKCoreKit (4.7.1):
+  - Fabric (1.6.1)
+  - FBSDKCoreKit (4.8.0):
     - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc (= 4.7.1)
-    - FBSDKCoreKit/no-arc (= 4.7.1)
-  - FBSDKCoreKit/arc (4.7.1):
+    - FBSDKCoreKit/arc (= 4.8.0)
+    - FBSDKCoreKit/no-arc (= 4.8.0)
+  - FBSDKCoreKit/arc (4.8.0):
     - Bolts (~> 1.1)
-  - FBSDKCoreKit/no-arc (4.7.1):
+  - FBSDKCoreKit/no-arc (4.8.0):
     - Bolts (~> 1.1)
     - FBSDKCoreKit/arc
-  - FBSDKLoginKit (4.7.1):
+  - FBSDKLoginKit (4.8.0):
     - FBSDKCoreKit
-  - Spotify-iOS-SDK (0.11.1)
+  - Spotify-iOS-SDK (0.12.0)
   - SwiftColors (0.3.1)
-  - XCGLogger (3.0)
+  - XCGLogger (3.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -42,13 +40,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7c16ca65f3c7e681fd925fd7f2dec7747ff96855
   AlamofireImage: 97e00995920d85b5cb23ee4c3b7f92605f5dc74b
-  Bolts: 0e9bce58b9b9f5e8a7a4d47b16d2fabec289072b
-  Crashlytics: 1ee87895c37472eb3f01f409ea1654a464d2f8d4
-  Fabric: d737eda3a26ac940a5430230eedb35f16b226131
-  FBSDKCoreKit: 9141b70960a37930850370495fe565f4a27ac141
-  FBSDKLoginKit: c11ed3c2833472db3bb4a4aecf27af4a6f69b173
-  Spotify-iOS-SDK: 2e0525121a0605234dccf61c7dfe1bfc7b236836
+  Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
+  Crashlytics: 41574a245bc6ae10c55d57f385ebd2004e5bee05
+  Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
+  FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
+  FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  Spotify-iOS-SDK: 7fae3bfde830ba9a165d51a3f8cf033d85161a2a
   SwiftColors: 61efe0bf991cfed446684e03d1e9f635f1f11a84
-  XCGLogger: 5802533aff8bafc8b3b9776ab8972576f31d0a4e
+  XCGLogger: e111a313f609432394c3ae378d99511634fd2e3c
 
 COCOAPODS: 0.39.0
