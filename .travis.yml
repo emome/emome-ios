@@ -12,16 +12,21 @@ before_install:
 
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+- gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
 
 before_script:
 - ./script/add-key.sh
+
 script:
-- xcodebuild -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO clean build | xcpretty -c || true
-- xcodebuild -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO test | xcpretty -c
+- set -o pipefail && xcodebuild -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO clean build | xcpretty -f `xcpretty-travis-formatter` || true
+- set -o pipefail && xcodebuild -workspace ${WORKSPACE} -scheme ${SCHEME} -sdk iphonesimulator9.1 -destination platform='iOS Simulator',OS=9.1,name='iPhone 6s' dONLY_ACTIVE_ARCH=NO test | xcpretty -f `xcpretty-travis-formatter`
+
 after_success:
 - ./script/dist-fabric-io.sh
+
 after_script:
 - ./script/remove-key.sh
+
 env:
   global:
   - WORKSPACE="Emome.xcworkspace"
