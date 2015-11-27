@@ -32,6 +32,8 @@
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
 		90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */; };
 		90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */; };
+		90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */; };
+		90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C6FD531BB0B5CF009F9FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeViewController.swift; sourceTree = "<group>"; };
+		90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionColorButton.swift; sourceTree = "<group>"; };
+		90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,8 @@
 			children = (
 				9030FF481BFA415700948793 /* EMOSuggestionView.swift */,
 				9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */,
+				90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */,
+				90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -479,7 +485,9 @@
 				90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */,
 				907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */,
 				907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */,
+				90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */,
 				90C6FD4A1BB0B5CF009F9FB3 /* EMOEmotionSelectionViewController.swift in Sources */,
+				90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */,
 				9030FF491BFA415700948793 /* EMOSuggestionView.swift in Sources */,
 				90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */,
 				90B15D501BEDA029000E1B55 /* EMOAccountViewController.swift in Sources */,

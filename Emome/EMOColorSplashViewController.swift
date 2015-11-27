@@ -9,9 +9,12 @@
 import UIKit
 import QuartzCore
 
+let kAnimationRemoveLayer: String = "animationRemoveLayer"
+
 class EMOColorSplashViewController: UIViewController {
     
     @IBOutlet weak var panelView: UIView!
+    @IBOutlet weak var canvasView: UIView!
     var pusher: UIPushBehavior!
     var animator: UIDynamicAnimator!
     
@@ -21,11 +24,14 @@ class EMOColorSplashViewController: UIViewController {
     
     var isPanelSetUp = false
     
+    var emotionColorButtons: [EMOEmotionColorButton] = []
     var eraserButton: UIButton!
     
     var currentColor: UIColor?
     
     var colorLayers: [CAShapeLayer] = []
+    
+    var shouldRemoveLayerIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +65,14 @@ class EMOColorSplashViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -81,7 +95,11 @@ class EMOColorSplashViewController: UIViewController {
         var x: CGFloat = 0.0
         var tag: Int = 0
         for emotion in EMOEmotion.allValues {
-            let button = UIButton.init(frame: CGRect(x: x, y: 0, width: width, height: height))
+            
+            let button = EMOEmotionColorButton.init(frame: CGRect(x: x, y: 0, width: width, height: height))
+        
+            button.emotionColor = UIColor.colorForEmotion(emotion)
+
             button.setTitle("\(emotion)", forState: .Normal)
             button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
             button.titleEdgeInsets = UIEdgeInsets(top: 60.0, left: 0.0, bottom: 0.0, right: 0.0)
@@ -89,6 +107,8 @@ class EMOColorSplashViewController: UIViewController {
             button.tag = tag
             button.addTarget(self, action: "toolDidSelect:", forControlEvents: .TouchUpInside)
             self.panelView.addSubview(button)
+            
+            self.emotionColorButtons.append(button)
             
             x += width
             tag += 1
@@ -102,65 +122,44 @@ class EMOColorSplashViewController: UIViewController {
     }
     
     func toolDidSelect(sender: UIButton) {
+        
+        for button in self.emotionColorButtons {
+            button.selected = false
+        }
+        self.eraserButton.selected = false
+        sender.selected = true
+        
+        
         if sender == self.eraserButton {
             self.currentColor = nil
             self.newLayer = nil
-            
         } else {
-            print("\(EMOEmotion.allValues[sender.tag]) selected")
+            log.verbose("\(EMOEmotion.allValues[sender.tag]) selected")
             self.currentColor = UIColor.colorForEmotion(EMOEmotion.allValues[sender.tag])
+            
         }
-    }
-    
-    func setUpEmitter() {
-        let emitterLayer = CAEmitterLayer()
-        emitterLayer.emitterPosition = CGPoint(x: self.view.bounds.size.width / 2, y: self.view.bounds.origin.y)
-        emitterLayer.emitterZPosition = 10
-        emitterLayer.emitterSize = CGSize(width: self.view.bounds.size.width, height: 0.0)
-        emitterLayer.emitterShape = kCAEmitterLayerSphere
-        
-        let emitterCell = CAEmitterCell()
-        emitterCell.scale = 0.1
-        emitterCell.scaleRange = 0.2
-        emitterCell.emissionRange = CGFloat(M_PI_2)
-        emitterCell.lifetime = 5.0
-        emitterCell.birthRate = 10
-        emitterCell.velocity = 200
-        emitterCell.velocityRange = 50
-        emitterCell.yAcceleration = 250
-        
-        emitterCell.contents = UIImage(imageLiteral: "ic-cross").CGImage
-        
-        emitterLayer.emitterCells = [emitterCell]
-        
-        self.view.layer.addSublayer(emitterLayer)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
-            print("\(touch.locationInView(self.view))")
+            log.verbose("Touches Began: \(touch.locationInView(self.view))")
             self.touchStartTime = event?.timestamp
             
             if let color = self.currentColor {
                 
                 self.newLayer = CAShapeLayer()
                 self.newLayer!.bounds = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
-                self.newLayer!.position = touch.locationInView(self.view)
+                self.newLayer!.position = touch.locationInView(self.canvasView)
                 self.newLayer!.backgroundColor = color.CGColor
                 self.newLayer!.cornerRadius = 20.0
                 self.newLayer!.opacity = 0.6
-                self.view.layer.addSublayer(self.newLayer!)
+                self.canvasView.layer.addSublayer(self.newLayer!)
                 
                 let scaleAnimation = CABasicAnimation.init(keyPath: "transform")
                 scaleAnimation.fromValue = NSValue.init(CATransform3D: CATransform3DIdentity)
-                scaleAnimation.toValue = NSValue.init(CATransform3D: CATransform3DMakeScale(6.0, 6.0, 1.0))
+                scaleAnimation.toValue = NSValue.init(CATransform3D: CATransform3DMakeScale(10.0, 10.0, 1.0))
                 
-                scaleAnimation.duration = 4.0
+                scaleAnimation.duration = 3.0
                 scaleAnimation.fillMode = kCAFillModeBoth
                 scaleAnimation.removedOnCompletion = false
                 
@@ -168,15 +167,15 @@ class EMOColorSplashViewController: UIViewController {
                 
             } else {
                 
-                let touchedLayer = self.view.layer.presentationLayer()?.hitTest(touch.locationInView(self.view))
+                let touchedLayer = self.canvasView.layer.presentationLayer()?.hitTest(touch.locationInView(self.view))
                 let actualLayer = touchedLayer!.modelLayer() as! CALayer
                 
-                if actualLayer == self.view.layer {
-                    print("self")
+                if actualLayer == self.canvasView.layer {
+                    log.verbose("touch on canvas. remove nothing.")
                 } else {
                     for i in 0..<self.colorLayers.count {
                         if actualLayer == self.colorLayers[i] {
-                            actualLayer.removeFromSuperlayer()
+                            self.removeLayer(actualLayer, animated: true)
                             self.colorLayers.removeAtIndex(i)
                             break
                         }
@@ -192,7 +191,7 @@ class EMOColorSplashViewController: UIViewController {
             
             if let layer = self.newLayer {
                 CATransaction.begin()
-                layer.position = touch.locationInView(self.view)
+                layer.position = touch.locationInView(self.canvasView)
                 CATransaction.commit()
             }
             
@@ -201,38 +200,46 @@ class EMOColorSplashViewController: UIViewController {
 
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
-            print("\(touch.locationInView(self.view))")
+            log.verbose("Touches End: \(touch.locationInView(self.canvasView))")
             
             if let layer = self.newLayer {
                 if let frame = layer.presentationLayer()?.frame {
-                
-//                    CATransaction.begin()
+                    
                     layer.bounds = CGRectMake(0.0, 0.0, frame.size.width, frame.size.height)
                     layer.cornerRadius = frame  .size.width / 2
                     layer.removeAnimationForKey("zoom")
-//                    CATransaction.commit()
                 }
                 
                 self.colorLayers.append(layer)
             }
         }
     }
-//
-//    func radiusForTouchDuraiton(touchDuration: NSTimeInterval) -> CGFloat {
-//        
-//        let ratio: CGFloat = CGFloat(touchDuration / 1.5)
-//        print("ratio \(ratio) duration \(touchDuration)")
-//        return CGFloat(20.0 + ratio * 40.0)
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func removeLayer(layer: CALayer, animated: Bool) {
+        
+        let scaleAnimation = CABasicAnimation.init(keyPath: "transform")
+        scaleAnimation.fromValue = NSValue.init(CATransform3D: CATransform3DIdentity)
+        scaleAnimation.toValue = NSValue.init(CATransform3D: CATransform3DMakeScale(0.0, 0.0, 1.0))
+        scaleAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn)
+        
+        scaleAnimation.duration = 0.2
+        scaleAnimation.fillMode = kCAFillModeBoth
+        scaleAnimation.removedOnCompletion = false
+        
+        scaleAnimation.delegate = self
+        scaleAnimation.setValue(layer, forKey: kAnimationRemoveLayer)
+        
+        layer.addAnimation(scaleAnimation, forKey: "shrink")
     }
-    */
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if let layer = anim.valueForKeyPath(kAnimationRemoveLayer) {
+            layer.removeAllAnimations()
+            layer.removeFromSuperlayer()
+        }
+        
+    }
+    
+    
 
 }
