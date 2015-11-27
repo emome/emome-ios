@@ -10,8 +10,16 @@ import UIKit
 import SwiftColors
 
 extension UIColor {
-    class func emomeThemeColor() -> UIColor {
+    class func emomeHighlightColor() -> UIColor {
         return UIColor(hexString: "#55B7D1")!
+    }
+    
+    class func emomeGrayColor() -> UIColor {
+        return UIColor(hexString: "#9D9D9A")!
+    }
+    
+    class func emomeTextGrayColor() -> UIColor {
+        return UIColor(hexString: "#656565")!
     }
     
     class func colorForActivity(activity: EMOActivityType) -> UIColor {

@@ -23,7 +23,7 @@ class EMOEmotionColorButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
-        self.setTitleColor(UIColor.emomeThemeColor(), forState: .Selected)
+        self.setTitleColor(UIColor.emomeHighlightColor(), forState: .Selected)
     }
 
     required init?(coder aDecoder: NSCoder) {
