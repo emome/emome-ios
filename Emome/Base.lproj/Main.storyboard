@@ -372,20 +372,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qr3-wY-UiY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-QY-quX">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="AqU-a3-GbE"/>
-                                            <constraint firstAttribute="width" constant="54" id="Y8G-Hg-ZsP"/>
-                                        </constraints>
-                                        <state key="normal" image="ic-left-arrow"/>
-                                        <connections>
-                                            <action selector="goBack" destination="eTR-Zb-4JQ" eventType="touchUpInside" id="VSV-g4-7yX"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-zb-mEr">
-                                        <rect key="frame" x="319" y="3" width="48" height="48"/>
+                                        <rect key="frame" x="319" y="16" width="48" height="48"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="48" id="1ZA-do-DN5"/>
@@ -400,14 +388,26 @@
                                             <segue destination="0To-b1-aPH" kind="show" id="Q2b-Da-ZnS"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-QY-quX">
+                                        <rect key="frame" x="8" y="13" width="54" height="54"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="AqU-a3-GbE"/>
+                                            <constraint firstAttribute="width" constant="54" id="Y8G-Hg-ZsP"/>
+                                        </constraints>
+                                        <state key="normal" image="btn-back"/>
+                                        <connections>
+                                            <action selector="goBack" destination="eTR-Zb-4JQ" eventType="touchUpInside" id="VSV-g4-7yX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="l9I-QY-quX" firstAttribute="top" secondItem="qr3-wY-UiY" secondAttribute="top" id="4GN-EQ-DSt"/>
                                     <constraint firstAttribute="trailing" secondItem="get-zb-mEr" secondAttribute="trailing" constant="8" id="D0X-GM-jNO"/>
-                                    <constraint firstItem="get-zb-mEr" firstAttribute="centerY" secondItem="l9I-QY-quX" secondAttribute="centerY" id="NIE-AT-uh9"/>
+                                    <constraint firstItem="l9I-QY-quX" firstAttribute="centerY" secondItem="qr3-wY-UiY" secondAttribute="centerY" id="GQl-vk-ZLz"/>
                                     <constraint firstAttribute="height" constant="80" id="S8r-nD-bBL"/>
-                                    <constraint firstItem="l9I-QY-quX" firstAttribute="leading" secondItem="qr3-wY-UiY" secondAttribute="leading" id="o1b-zg-X7P"/>
+                                    <constraint firstItem="get-zb-mEr" firstAttribute="centerY" secondItem="qr3-wY-UiY" secondAttribute="centerY" id="nm8-jJ-Df2"/>
+                                    <constraint firstItem="l9I-QY-quX" firstAttribute="leading" secondItem="qr3-wY-UiY" secondAttribute="leading" constant="8" id="zUo-6w-1mP"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="what made this bad day?" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8P-Vu-Dmj">
@@ -481,22 +481,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHO-FD-Tgz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-Zw-XeK">
-                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="GA4-Rr-UNb"/>
-                                            <constraint firstAttribute="width" constant="54" id="plJ-bV-Fai"/>
-                                        </constraints>
-                                        <state key="normal" image="ic-left-arrow"/>
-                                        <connections>
-                                            <action selector="goBack" destination="0To-b1-aPH" eventType="touchUpInside" id="meG-DE-y9I"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6w-Es-ZWE">
-                                        <rect key="frame" x="319" y="3" width="48" height="48"/>
+                                        <rect key="frame" x="319" y="16" width="48" height="48"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="a6w-Es-ZWE" secondAttribute="height" multiplier="1:1" id="DtB-Sp-vIW"/>
@@ -504,23 +492,45 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="-55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="ic-check"/>
+                                        <state key="normal" image="btn-done"/>
                                         <connections>
                                             <action selector="finishEmome" destination="0To-b1-aPH" eventType="touchUpInside" id="srL-2a-lOi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-Zw-XeK">
+                                        <rect key="frame" x="8" y="13" width="54" height="54"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="GA4-Rr-UNb"/>
+                                            <constraint firstAttribute="width" constant="54" id="plJ-bV-Fai"/>
+                                        </constraints>
+                                        <state key="normal" image="btn-back"/>
+                                        <connections>
+                                            <action selector="goBack" destination="0To-b1-aPH" eventType="touchUpInside" id="meG-DE-y9I"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="Cey-Zw-XeK" firstAttribute="centerY" secondItem="BHO-FD-Tgz" secondAttribute="centerY" id="3N9-U0-hLQ"/>
                                     <constraint firstItem="Cey-Zw-XeK" firstAttribute="top" secondItem="BHO-FD-Tgz" secondAttribute="top" id="9RP-oc-HRr"/>
+                                    <constraint firstItem="Cey-Zw-XeK" firstAttribute="top" secondItem="BHO-FD-Tgz" secondAttribute="top" constant="13" id="9xc-dM-rEj"/>
                                     <constraint firstItem="a6w-Es-ZWE" firstAttribute="centerY" secondItem="BHO-FD-Tgz" secondAttribute="centerY" id="Chv-HZ-kbi"/>
                                     <constraint firstItem="Cey-Zw-XeK" firstAttribute="leading" secondItem="BHO-FD-Tgz" secondAttribute="leading" id="cKP-4g-nPH"/>
-                                    <constraint firstAttribute="height" constant="54" id="iBq-ee-snQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="iBq-ee-snQ"/>
+                                    <constraint firstItem="Cey-Zw-XeK" firstAttribute="leading" secondItem="BHO-FD-Tgz" secondAttribute="leading" constant="8" id="iyK-Lh-vVw"/>
                                     <constraint firstAttribute="trailing" secondItem="a6w-Es-ZWE" secondAttribute="trailing" constant="8" id="zkN-xh-E3b"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9RP-oc-HRr"/>
+                                        <exclude reference="9xc-dM-rEj"/>
+                                        <exclude reference="cKP-4g-nPH"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-5u-ffd">
-                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-5u-ffd">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="0To-b1-aPH" id="sNe-bb-MTM"/>
@@ -554,6 +564,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="UpM-n5-ija"/>
                                 <exclude reference="nwn-30-qBG"/>
                                 <exclude reference="csu-Vu-5Tw"/>
                                 <exclude reference="oT3-3I-fiQ"/>
@@ -715,10 +726,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn-back" width="35" height="20"/>
         <image name="btn-close" width="24" height="24"/>
+        <image name="btn-done" width="33" height="25"/>
         <image name="btn-next" width="35" height="20"/>
-        <image name="ic-check" width="27" height="22"/>
-        <image name="ic-left-arrow" width="32" height="20"/>
         <image name="img-home" width="375" height="262"/>
         <image name="tab-icon-me" width="25" height="25"/>
     </resources>
