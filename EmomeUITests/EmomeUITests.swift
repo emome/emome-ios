@@ -28,69 +28,25 @@ class EmomeUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testTabBarItems() {
+    func testHomeScreenUIComponents() {
         
         let app = XCUIApplication()
-        XCTAssertEqual(app.tabBars.buttons.count, 4)
-        XCTAssert(app.tabBars.buttons["Emome"].exists)
-        XCTAssert(app.tabBars.buttons["Discover"].exists)
-        XCTAssert(app.tabBars.buttons["My Ideas"].exists)
-        XCTAssert(app.tabBars.buttons["Me"].exists)
+        
+        XCTAssert(app.buttons["express"].exists)
+        XCTAssert(app.buttons["suggest"].exists)
+        XCTAssert(app.buttons["me"].exists)
     }
     
-    func testEmomeTab() {
-        let app = XCUIApplication()
-        XCTAssert(app.tabBars.buttons["Emome"].selected)
-        XCTAssert(app.buttons["let's get started"].exists)
-        app.buttons["let's get started"].tap()
-        
-        XCTAssert(app.staticTexts["hey, I know it's a long day. how are you feeling right now?"].exists)
-    }
-    
-    func testEmometer() {
+    func testColorSplashUIComponents() {
         
         let app = XCUIApplication()
         
-        let startEmomeButton = app.buttons["let's get started"]
-        startEmomeButton.tap()
+        app.buttons["express"].tap()
         
-        XCTAssert(app.staticTexts["hey, I know it's a long day. how are you feeling right now?"].exists)
-        XCTAssert(app.staticTexts["sad"].exists)
-        XCTAssert(app.staticTexts["frustrated"].exists)
-        XCTAssert(app.staticTexts["angry"].exists)
-        XCTAssert(app.staticTexts["fearful"].exists)
-        
-        XCTAssertEqual(app.sliders.count, 4)
-        
-        let closeButton = app.buttons["ic cross"]
-        let nextButton = app.buttons["NEXT"]
-        XCTAssert(closeButton.exists)
-        XCTAssert(nextButton.exists)
-        
-        closeButton.tap()
-        XCTAssert(app.buttons["let's get started"].exists)
-        
-        startEmomeButton.tap()
-        nextButton.tap()
-        
-        // Scenario Selection
-        XCTAssert(app.buttons["NEXT"].exists)
-        XCTAssert(app.buttons["ic left arrow"].exists)
-    }
-    
-    func testWalkThroughEmome() {
-        
-        let app = XCUIApplication()
-        let startEmomeButton = app.buttons["let's get started"]
-        
-        startEmomeButton.tap()
-        
-        let nextButton = app.buttons["NEXT"]
-        nextButton.tap()
-        nextButton.tap()
-        app.buttons["DONE"].tap()
-        
-        XCTAssert(startEmomeButton.exists)
-        
+        XCTAssert(app.buttons["sad"].exists)
+        XCTAssert(app.buttons["frustrated"].exists)
+        XCTAssert(app.buttons["anger"].exists)
+        XCTAssert(app.buttons["anxious"].exists)
+        XCTAssert(app.buttons["btn eraser"].exists)
     }
 }
