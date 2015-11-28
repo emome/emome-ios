@@ -26,7 +26,8 @@ class EMOScenarioSelectionViewController: UIViewController {
             let frame = CGRect(origin: origin, size: CGSizeMake(100.0, 30.0))
             let button = UIButton.init(frame: frame)
             button.setTitle(scenario, forState: .Normal)
-            button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+            button.setTitleColor(UIColor.emomeTextGrayColor(), forState: .Normal)
+            button.setTitleColor(UIColor.emomeHighlightColor(), forState: .Selected)
             button.sizeToFit()
             button.frame = CGRect(origin: origin, size: CGSize(width:button.frame.width + 25.0 * 2, height:button.frame.height))
             button.titleLabel?.textAlignment = .Center
@@ -34,7 +35,7 @@ class EMOScenarioSelectionViewController: UIViewController {
             
             button.layer.borderWidth = 3.0
             button.layer.cornerRadius = 15.0
-            button.layer.borderColor = UIColor.grayColor().CGColor
+            button.layer.borderColor = UIColor.emomeGrayColor().CGColor
             
             self.scenarioButtons.append(button)
             self.view.addSubview(button)
@@ -49,16 +50,13 @@ class EMOScenarioSelectionViewController: UIViewController {
     
     func resetButton(button: UIButton) {
         button.selected = false
-        button.layer.backgroundColor = UIColor.whiteColor().CGColor
-        button.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        button.layer.borderColor = UIColor.grayColor().CGColor
+        button.layer.borderColor = UIColor.emomeGrayColor().CGColor
     }
     
     func scenarioSelected(sender: UIButton) {
         self.selectedScenario = sender.titleLabel?.text
         _ = scenarioButtons.map(resetButton)
-        sender.layer.backgroundColor = UIColor.init(red: 155.0/255.0, green: 214.0/255.0, blue: 235.0/255.0, alpha: 1.0).CGColor
-        sender.layer.borderColor = UIColor.blackColor().CGColor
+        sender.layer.borderColor = UIColor.emomeHighlightColor().CGColor
         sender.selected = true
     }
 

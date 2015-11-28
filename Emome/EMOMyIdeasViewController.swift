@@ -16,8 +16,6 @@ class EMOMyIdeasViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.barStyle = .BlackTranslucent
-        self.navigationController?.navigationBar.barTintColor = UIColor.emomeThemeColor()
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

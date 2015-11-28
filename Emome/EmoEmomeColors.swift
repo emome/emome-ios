@@ -10,8 +10,16 @@ import UIKit
 import SwiftColors
 
 extension UIColor {
-    class func emomeThemeColor() -> UIColor {
+    class func emomeHighlightColor() -> UIColor {
         return UIColor(hexString: "#55B7D1")!
+    }
+    
+    class func emomeGrayColor() -> UIColor {
+        return UIColor(hexString: "#9D9D9A")!
+    }
+    
+    class func emomeTextGrayColor() -> UIColor {
+        return UIColor(hexString: "#656565")!
     }
     
     class func colorForActivity(activity: EMOActivityType) -> UIColor {
@@ -20,6 +28,15 @@ extension UIColor {
             return UIColor(hexString: "#00D969")!
         case .Yelp:
             return UIColor(hexString: "#C41200")!
+        }
+    }
+    
+    class func colorForEmotion(emotion: EMOEmotion) -> UIColor {
+        switch emotion {
+        case .Sad: return UIColor(hexString: "#4179A4")!
+        case .Frustrated: return UIColor(hexString: "#8B6B9E")!
+        case .Angry: return UIColor(hexString: "#C55260")!
+        case .Anxious: return UIColor(hexString: "#D3AA67")!
         }
     }
 }

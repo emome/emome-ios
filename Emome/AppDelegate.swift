@@ -29,8 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Set up logger
         log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: .Debug)
-        
-        UITabBar.appearance().tintColor = UIColor.emomeThemeColor()
 
         return true
     }

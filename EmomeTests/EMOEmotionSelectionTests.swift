@@ -11,8 +11,6 @@ import XCTest
 
 class EMOSelectEmotionTests: XCTestCase {
     
-    let emotionSelectionViewController = EMOEmotionSelectionViewController()
-    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -33,11 +31,6 @@ class EMOSelectEmotionTests: XCTestCase {
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    func testEmotions() {
-        let emotionCount = 5
-        XCTAssertEqual(emotionSelectionViewController.emotions.count, emotionCount)
     }
     
 }
