@@ -27,4 +27,4 @@ xcrun -sdk iphoneos PackageApplication -v  "${PROJECT_BUILD_DIR}"/*.app -o "${AR
 echo "*******************************"
 echo "*  Distributing to Fabric.io  *"
 echo "*******************************"
-./Pods/Crashlytics/Crashlytics.framework/submit $FABRIC_API_KEY $FABRIC_BUILD_SECRET -groupAliases "early-birds" -ipaPath "${ARCHIVE_PATH}/${APP_NAME}.ipa"
+./Pods/Crashlytics/submit $FABRIC_API_KEY $FABRIC_BUILD_SECRET -groupAliases "early-birds" -ipaPath "${ARCHIVE_PATH}/${APP_NAME}.ipa"
