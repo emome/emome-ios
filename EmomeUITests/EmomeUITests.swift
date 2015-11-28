@@ -45,7 +45,7 @@ class EmomeUITests: XCTestCase {
         
         XCTAssert(app.buttons["sad"].exists)
         XCTAssert(app.buttons["frustrated"].exists)
-        XCTAssert(app.buttons["anger"].exists)
+        XCTAssert(app.buttons["angry"].exists)
         XCTAssert(app.buttons["anxious"].exists)
         XCTAssert(app.buttons["btn eraser"].exists)
     }
