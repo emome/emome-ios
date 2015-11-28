@@ -25,10 +25,10 @@ enum EMOActivityType {
 enum EMOEmotion: CustomStringConvertible {
     case Sad
     case Frustrated
-    case Anger
+    case Angery
     case Anxious
     
-    static let allValues = [Sad, Frustrated, Anger, Anxious]
+    static let allValues = [Sad, Frustrated, Angery, Anxious]
     
     var description: String {
         switch self {
@@ -36,8 +36,8 @@ enum EMOEmotion: CustomStringConvertible {
             return "sad"
         case .Frustrated:
             return "frustrated"
-        case .Anger:
-            return "anger"
+        case .Angery:
+            return "angery"
         case .Anxious:
             return "anxious"
         }
