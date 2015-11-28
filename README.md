@@ -1,5 +1,6 @@
 # emome-ios
 [![Build Status](https://travis-ci.org/emome/emome-ios.svg?branch=master)](https://travis-ci.org/emome/emome-ios)
+![Version](https://badge.fury.io/gh/emome%2Femome-ios.svg)
 
 Emome aims to improve people's mental health with a lightweight group therapy experience. When you feel stressed, depressed, or frustrated, we help you recover more quickly by offering what other people did when they were in the same boat.
 
