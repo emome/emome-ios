@@ -20,10 +20,27 @@ class EMODataManager {
         return _sharedInstance
     }
     
-    var sadnessValue: Float = 0.0
-    var frustrationValue: Float = 0.0
-    var angerValue: Float = 0.0
-    var fearValue: Float = 0.0
+    private var _emotionRawMeasurement: [EMOEmotion: Double] = [EMOEmotion: Double]()
+    private var _emotionNormalizedMeasurement: [EMOEmotion: Int] {
+        get {
+            var normalizedMeasurement: [EMOEmotion: Int] = [EMOEmotion: Int]()
+            for emotion in EMOEmotion.allValues {
+                let normalized = Int(round(_emotionRawMeasurement[emotion]! / 0.5))
+                normalizedMeasurement[emotion] = min(normalized, 10)
+            }
+            
+            return normalizedMeasurement
+        }
+    }
+    
+    func setEmotionMeasurement(measurement: Double, emotion: EMOEmotion) {
+        self._emotionRawMeasurement[emotion] = measurement
+    }
+    
+    func getEmotionMeasurement() -> [EMOEmotion: Double] {
+        return self._emotionRawMeasurement
+    }
+    
     var scenario: String = ""
     
     private let concurrentSuggestionQueue = dispatch_queue_create("com.emomeapp.emome.suggestionQueue", DISPATCH_QUEUE_CONCURRENT)
@@ -39,6 +56,9 @@ class EMODataManager {
     
     func fetchSuggestions() {
         log.debug("Start fetching suggestions")
+        
+        log.debug("With emotion measurement: \(self._emotionNormalizedMeasurement)")
+        
         
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .responseJSON { response in

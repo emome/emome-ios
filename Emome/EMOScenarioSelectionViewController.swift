@@ -42,6 +42,8 @@ class EMOScenarioSelectionViewController: UIViewController {
             
             origin.y += 60.0
         }
+        
+        log.debug("\(EMODataManager.sharedInstance.getEmotionMeasurement())")
     }
     
     override func prefersStatusBarHidden() -> Bool {

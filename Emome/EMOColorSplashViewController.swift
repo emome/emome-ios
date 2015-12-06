@@ -13,49 +13,38 @@ let kAnimationRemoveLayer: String = "animationRemoveLayer"
 
 class EMOColorSplashViewController: UIViewController {
     
-    @IBOutlet weak var panelView: UIView!
-    @IBOutlet weak var canvasView: UIView!
-    var pusher: UIPushBehavior!
-    var animator: UIDynamicAnimator!
-    
-    var touchStartTime: NSTimeInterval?
-    
-    var newLayer: CAShapeLayer?
-    
+    // Flags
     var isPanelSetUp = false
     
+    // UI Components
+    @IBOutlet weak var panelView: UIView!
+    @IBOutlet weak var canvasView: UIView!
     var emotionColorButtons: [EMOEmotionColorButton] = []
     var eraserButton: UIButton!
     
+    // Panel Variables
     var currentColor: UIColor?
+    var currentEmotion: EMOEmotion? {
+        
+        didSet {
+            if let emotion = self.currentEmotion {
+                self.currentColor = UIColor.colorForEmotion(emotion)
+            } else {
+                self.currentColor = nil
+            }
+        }
+    }
     
-    var colorLayers: [CAShapeLayer] = []
-    
+    // Canvas Variables
+    var touchStartTime: NSTimeInterval?
+    var newLayer: EMOColorSplashLayer?
+    var colorLayers: [EMOColorSplashLayer] = []
     var shouldRemoveLayerIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = true
-        
-        // Do any additional setup after loading the view.
-//        let circleView = UIView(frame: CGRect(x: 100.0, y: 200.0, width: 40.0, height: 40.0))
-//        circleView.backgroundColor = UIColor.emomeThemeColor()
-//        circleView.layer.cornerRadius = 20.0
-//        self.view.addSubview(circleView)
-//        
-//        self.animator = UIDynamicAnimator.init(referenceView: self.view)
-//        
-//        self.pusher = UIPushBehavior.init(items: [circleView], mode: .Instantaneous)
-//        self.pusher.pushDirection = CGVector(dx: 0.1, dy: 0.1)
-//        self.pusher.active = true
-//        
-//        self.animator.addBehavior(self.pusher)
-//        
-//        let collision = UICollisionBehavior.init(items: [circleView])
-//        collision.translatesReferenceBoundsIntoBoundary = true
-//        self.animator.addBehavior(collision)
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -131,12 +120,11 @@ class EMOColorSplashViewController: UIViewController {
         
         
         if sender == self.eraserButton {
-            self.currentColor = nil
+            self.currentEmotion = nil
             self.newLayer = nil
         } else {
             log.verbose("\(EMOEmotion.allValues[sender.tag]) selected")
-            self.currentColor = UIColor.colorForEmotion(EMOEmotion.allValues[sender.tag])
-            
+            self.currentEmotion = EMOEmotion.allValues[sender.tag]
         }
     }
     
@@ -147,7 +135,7 @@ class EMOColorSplashViewController: UIViewController {
             
             if let color = self.currentColor {
                 
-                self.newLayer = CAShapeLayer()
+                self.newLayer = EMOColorSplashLayer()
                 self.newLayer!.bounds = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
                 self.newLayer!.position = touch.locationInView(self.canvasView)
                 self.newLayer!.backgroundColor = color.CGColor
@@ -201,10 +189,17 @@ class EMOColorSplashViewController: UIViewController {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             log.verbose("Touches End: \(touch.locationInView(self.canvasView))")
+            let touchDuration = (event?.timestamp)! - self.touchStartTime!
+            
+            log.debug("\(touchDuration)")
+            self.touchStartTime = nil
             
             if let layer = self.newLayer {
+                
+                layer.emotion = self.currentEmotion!
+                layer.weight = touchDuration
+                
                 if let frame = layer.presentationLayer()?.frame {
-                    
                     layer.bounds = CGRectMake(0.0, 0.0, frame.size.width, frame.size.height)
                     layer.cornerRadius = frame  .size.width / 2
                     layer.removeAnimationForKey("zoom")
@@ -240,6 +235,17 @@ class EMOColorSplashViewController: UIViewController {
         
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        for emotion in EMOEmotion.allValues {
+            
+            let measurement = self.colorLayers.filter { (layer) -> Bool in
+                return layer.emotion == emotion
+                }.reduce(0.0) { (totalWeight, layer) -> Double in
+                    return totalWeight + layer.weight
+            }
+            
+            EMODataManager.sharedInstance.setEmotionMeasurement(measurement, emotion: emotion)
+        }
+    }
 
 }
