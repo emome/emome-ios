@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Emome/Spotify.framework"
   install_framework "Pods-Emome/SwiftColors.framework"
   install_framework "Pods-Emome/XCGLogger.framework"
+  install_framework "Pods-Emome/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Emome/Alamofire.framework"
@@ -102,4 +103,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Emome/Spotify.framework"
   install_framework "Pods-Emome/SwiftColors.framework"
   install_framework "Pods-Emome/XCGLogger.framework"
+  install_framework "Pods-Emome/pop.framework"
 fi
