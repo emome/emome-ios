@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Alamofire
 import AlamofireImage
 
-class EMOAccountViewController: UIViewController, FBSDKLoginButtonDelegate {
+class EMOAccountViewController: EMOBaseViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userIdLabel: UILabel!

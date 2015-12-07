@@ -104,6 +104,9 @@
                                 <state key="normal" title="suggest">
                                     <color key="titleColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="zr7-So-pvW" kind="presentation" id="OBb-5g-bLF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoK-Kl-XoQ" customClass="EMOHomeActionButton" customModule="Emome" customModuleProvider="target">
                                 <rect key="frame" x="98" y="441" width="180" height="35"/>
@@ -160,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUd-gG-Dme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.5" y="2649.5"/>
+            <point key="canvasLocation" x="1747.5" y="2649.5"/>
         </scene>
         <!--Color Splash View Controller-->
         <scene sceneID="j27-Ld-N8N">
@@ -250,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBY-3G-JMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2696" y="2650"/>
+            <point key="canvasLocation" x="2745.5" y="2326.5"/>
         </scene>
         <!--Me-->
         <scene sceneID="Y3Y-ZS-dJU">
@@ -355,7 +358,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7Q-v4-Wpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.5" y="3499.5"/>
+            <point key="canvasLocation" x="1747.5" y="3518.5"/>
+        </scene>
+        <!--Choose Seggestion Type View Controller-->
+        <scene sceneID="hh1-kH-aOZ">
+            <objects>
+                <viewController id="EBV-f7-Gni" customClass="EMOChooseSeggestionTypeViewController" customModule="Emome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bRI-Gb-Vos"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Pv-Ow-Yb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0J6-bw-dLO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-N2-ZQL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsX-XT-Xgi">
+                                        <rect key="frame" x="319" y="16" width="48" height="48"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EsX-XT-Xgi" secondAttribute="height" multiplier="1:1" id="VA6-Hn-mxO"/>
+                                            <constraint firstAttribute="width" constant="48" id="fa2-QX-ip1"/>
+                                        </constraints>
+                                        <state key="normal" image="btn-next"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPZ-xC-ggQ">
+                                        <rect key="frame" x="8" y="16" width="48" height="48"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kPZ-xC-ggQ" secondAttribute="height" multiplier="1:1" id="XyU-mk-o3a"/>
+                                            <constraint firstAttribute="width" constant="48" id="YoF-E6-KTB"/>
+                                        </constraints>
+                                        <state key="normal" image="btn-close"/>
+                                        <connections>
+                                            <action selector="backToHome:" destination="QTv-rf-DmD" eventType="touchUpInside" id="Exp-Zo-y7e"/>
+                                            <action selector="backToHome:" destination="EBV-f7-Gni" eventType="touchUpInside" id="dYe-b3-nJH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EsX-XT-Xgi" secondAttribute="trailing" constant="8" id="5uo-zK-eej"/>
+                                    <constraint firstItem="kPZ-xC-ggQ" firstAttribute="leading" secondItem="vhz-N2-ZQL" secondAttribute="leading" constant="8" id="Gdx-Wr-JtN"/>
+                                    <constraint firstItem="EsX-XT-Xgi" firstAttribute="centerY" secondItem="vhz-N2-ZQL" secondAttribute="centerY" id="Tti-Gd-AcZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="qok-gn-PVw"/>
+                                    <constraint firstItem="kPZ-xC-ggQ" firstAttribute="centerY" secondItem="vhz-N2-ZQL" secondAttribute="centerY" id="v3w-vZ-oeG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vhz-N2-ZQL" firstAttribute="centerX" secondItem="0J6-bw-dLO" secondAttribute="centerX" id="8ws-sn-1FY"/>
+                            <constraint firstItem="vhz-N2-ZQL" firstAttribute="top" secondItem="bRI-Gb-Vos" secondAttribute="bottom" id="jXz-5j-cYC"/>
+                            <constraint firstItem="vhz-N2-ZQL" firstAttribute="width" secondItem="0J6-bw-dLO" secondAttribute="width" id="ps9-Vu-jAF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pXx-2y-Ftt"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fly-MU-6Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745.5" y="3062.5"/>
         </scene>
         <!--Scenario Selection View Controller-->
         <scene sceneID="v3c-zi-5eD">
@@ -466,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfC-S2-Pa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4114" y="2650"/>
+            <point key="canvasLocation" x="3183.5" y="2326.5"/>
         </scene>
         <!--Seggestion View Controller-->
         <scene sceneID="7ey-Ak-6fh">
@@ -579,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTX-HS-WeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4860" y="2649"/>
+            <point key="canvasLocation" x="3634.5" y="2326.5"/>
         </scene>
         <!--Spotify Api Test View Controller-->
         <scene sceneID="uSs-F8-bvQ">
@@ -703,7 +771,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViJ-8V-Nz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="2650"/>
+            <point key="canvasLocation" x="1065" y="2650"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bED-Qk-59d">
@@ -722,7 +790,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEq-kX-N2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="2650"/>
+            <point key="canvasLocation" x="2278.5" y="2326.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g8v-A1-US1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zr7-So-pvW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PCO-qb-OuM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EBV-f7-Gni" kind="relationship" relationship="rootViewController" id="ajf-uM-r97"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUV-3M-ixS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2278.5" y="3062.5"/>
         </scene>
     </scenes>
     <resources>

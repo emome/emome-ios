@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
+class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
 
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var pageControl: UIPageControl!
@@ -28,10 +28,6 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
             self.loadVisiblePages()
         }
 
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
     
     func setUpPages() {

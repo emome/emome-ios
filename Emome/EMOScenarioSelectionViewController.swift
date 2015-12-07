@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class EMOScenarioSelectionViewController: UIViewController {
+class EMOScenarioSelectionViewController: EMOBaseViewController {
     
     var scenarios = ["bossy boss", "rainy day sucks", "tired of routine tasks", "insomnia"]
     var selectedScenario:String?
@@ -44,10 +44,6 @@ class EMOScenarioSelectionViewController: UIViewController {
         }
         
         log.debug("\(EMODataManager.sharedInstance.getEmotionMeasurement())")
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
     
     func resetButton(button: UIButton) {

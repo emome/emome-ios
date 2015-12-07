@@ -11,7 +11,7 @@ import QuartzCore
 
 let kAnimationRemoveLayer: String = "animationRemoveLayer"
 
-class EMOColorSplashViewController: UIViewController {
+class EMOColorSplashViewController: EMOBaseViewController {
     
     // Flags
     var isPanelSetUp = false
@@ -43,8 +43,6 @@ class EMOColorSplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBarHidden = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -52,18 +50,6 @@ class EMOColorSplashViewController: UIViewController {
             setUpPanel()
             self.isPanelSetUp = true
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
     
     @IBAction func backToHome(sender: AnyObject) {

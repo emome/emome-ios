@@ -15,6 +15,8 @@
 		9030FF4B1BFA416300948793 /* EMOSuggestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */; };
 		9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF4D1BFA419100948793 /* EMOSuggestion.swift */; };
 		9030FF511BFAC92300948793 /* EMOEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF501BFAC92300948793 /* EMOEnums.swift */; };
+		90330AA71C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */; };
+		90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90330AA81C14A7E600A23B28 /* EMOBaseViewController.swift */; };
 		903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A2DE01C07B27C00C8964A /* EMOColorSplashViewController.swift */; };
 		906190B61BE6E4BC0061E103 /* EmoEmomeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906190B51BE6E4BC0061E103 /* EmoEmomeColors.swift */; };
 		907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */; };
@@ -63,6 +65,8 @@
 		9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMOSuggestionView.xib; sourceTree = "<group>"; };
 		9030FF4D1BFA419100948793 /* EMOSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSuggestion.swift; sourceTree = "<group>"; };
 		9030FF501BFAC92300948793 /* EMOEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEnums.swift; sourceTree = "<group>"; };
+		90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOChooseSeggestionTypeViewController.swift; sourceTree = "<group>"; };
+		90330AA81C14A7E600A23B28 /* EMOBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOBaseViewController.swift; sourceTree = "<group>"; };
 		903A2DE01C07B27C00C8964A /* EMOColorSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOColorSplashViewController.swift; sourceTree = "<group>"; };
 		906190B51BE6E4BC0061E103 /* EmoEmomeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoEmomeColors.swift; sourceTree = "<group>"; };
 		907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOScenarioSelectionViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		907C0F461BDEA9B100C896D3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90330AA81C14A7E600A23B28 /* EMOBaseViewController.swift */,
 				90EFFD8C1C090E9E005AD750 /* Emome */,
 				90979B3B1BF8E84000F0DD67 /* Suggest */,
 				90DC3F4A1BFD057F0064DE5D /* Me */,
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */,
+				90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */,
 			);
 			name = Suggest;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */,
 				9030FF491BFA415700948793 /* EMOSuggestionView.swift in Sources */,
 				90DF63801C14974C00AC74AC /* EMOColorSplashLayer.swift in Sources */,
+				90330AA71C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift in Sources */,
 				90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */,
 				90B15D501BEDA029000E1B55 /* EMOAccountViewController.swift in Sources */,
 				906190B61BE6E4BC0061E103 /* EmoEmomeColors.swift in Sources */,
@@ -485,6 +492,7 @@
 				90B9A8161C016A510008DAF4 /* GCDUtils.swift in Sources */,
 				9030FF511BFAC92300948793 /* EMOEnums.swift in Sources */,
 				9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */,
+				90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
