@@ -8,6 +8,10 @@
 
 import Foundation
 
+let kEMOSuggestionId = "_id"
+let kEMOSuggestionUserId = "user_id"
+let kEMOScenarioUserId = "scenario_id"
+
 class EMOSuggestion {
     
     let id: String
@@ -34,4 +38,12 @@ class EMOSuggestion {
         self.description = description
         self.url = url
     }
+    
+//    class func suggestionFromDictionary(dictionary: NSDictionary) -> EMOSuggestion {
+//        
+//        
+//        // Create Suggestion instances and append them to returning array
+//        
+//        return suggestion
+//    }
 }

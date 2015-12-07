@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class EMOSuggestionView: UIView {
     
@@ -17,6 +18,15 @@ class EMOSuggestionView: UIView {
     @IBOutlet weak var coverImageView: UIImageView!
     var url: NSURL!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.layer.cornerRadius = 5.0
+        self.clipsToBounds = true
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeMake(0.0, 3.0)
+    }
 
     func bindWithSuggestion(suggestion: EMOSuggestion) {
         

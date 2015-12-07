@@ -8,9 +8,11 @@
 
 import Foundation
 import Alamofire
+import FBSDKCoreKit
 
 // Notification when suggestions are fetched
 let DataManagerSuggestionsFetchedNotification = "com.emomeapp.emome.DataManagerSuggestionsFetched"
+let EmomeAPIBaseUrl = "http://52.3.174.167"
 
 
 private let _sharedInstance = EMODataManager()
@@ -21,12 +23,12 @@ class EMODataManager {
     }
     
     private var _emotionRawMeasurement: [EMOEmotion: Double] = [EMOEmotion: Double]()
-    private var _emotionNormalizedMeasurement: [EMOEmotion: Int] {
+    private var _emotionNormalizedMeasurement: [String: Int] {
         get {
-            var normalizedMeasurement: [EMOEmotion: Int] = [EMOEmotion: Int]()
+            var normalizedMeasurement: [String: Int] = [String: Int]()
             for emotion in EMOEmotion.allValues {
                 let normalized = Int(round(_emotionRawMeasurement[emotion]! / 0.5))
-                normalizedMeasurement[emotion] = min(normalized, 10)
+                normalizedMeasurement[emotion.description] = min(normalized, 10)
             }
             
             return normalizedMeasurement
@@ -43,6 +45,8 @@ class EMODataManager {
     
     var scenario: String = ""
     
+    
+    // Suggestion
     private let concurrentSuggestionQueue = dispatch_queue_create("com.emomeapp.emome.suggestionQueue", DISPATCH_QUEUE_CONCURRENT)
     
     private var _suggestions: [EMOSuggestion] = []
@@ -57,18 +61,23 @@ class EMODataManager {
     func fetchSuggestions() {
         log.debug("Start fetching suggestions")
         
-        log.debug("With emotion measurement: \(self._emotionNormalizedMeasurement)")
+        let parameters: [String: AnyObject] = [
+            "user_id": "",
+            "scenario_id": 0,
+            "emotion": self._emotionNormalizedMeasurement
+        ]
         
-        
-        Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
             .responseJSON { response in
                 log.debug("\(response.result)")   // result of response serialization
                 
                 if let JSON = response.result.value {
                     log.debug("JSON: \(JSON)")
+                    
                 }
                 
                 dispatch_barrier_async(self.concurrentSuggestionQueue, { () -> Void in
+                    self._suggestions.removeAll()
                     self._suggestions.append(EMOSuggestion.init(id: "0", userId: "0", activityType: .Spotify,
                         title: "Life Sucks", category: "Playlist", description: "40 songs, 72 min",
                         url: NSURL(string: "spotify://user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc")))
@@ -82,7 +91,41 @@ class EMODataManager {
                     }
                 })
         }
+    }
+    
+    func makeSuggestion() {
+        log.debug("Start making suggestions")
         
+        let parameters: [String: AnyObject] = [
+            "user_id": "",
+            "scenario_id": 0,
+            "emotion": self._emotionNormalizedMeasurement
+        ]
+        
+        Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
+            .responseJSON { response in
+                log.debug("\(response.result)")   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    log.debug("JSON: \(JSON)")
+                    
+                }
+                
+                dispatch_barrier_async(self.concurrentSuggestionQueue, { () -> Void in
+//                    self._suggestions.removeAll()
+//                    self._suggestions.append(EMOSuggestion.init(id: "0", userId: "0", activityType: .Spotify,
+//                        title: "Life Sucks", category: "Playlist", description: "40 songs, 72 min",
+//                        url: NSURL(string: "spotify://user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc")))
+//                    
+//                    self._suggestions.append(EMOSuggestion.init(id: "1", userId: "1", activityType: .Yelp,
+//                        title: "City Bakery", category: "Bakery", description: "Hot Chocolate",
+//                        url: NSURL(string: "yelp:///biz/the-city-bakery-new-york")))
+                    
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.postSuggestionsFetchedNotification()
+                    }
+                })
+        }
     }
     
     func addSuggestion(suggestion: EMOSuggestion) {

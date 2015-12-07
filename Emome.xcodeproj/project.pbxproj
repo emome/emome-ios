@@ -11,6 +11,7 @@
 		35E703051BE6E3CD0001B75D /* SpotifyApiTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E703041BE6E3CD0001B75D /* SpotifyApiTestViewController.swift */; };
 		85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */; };
 		9001486D1BB984CE00EB992C /* EMOEmotionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001486C1BB984CE00EB992C /* EMOEmotionTests.swift */; };
+		90152C6A1C15D78B009047EB /* EMOSuggestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90152C691C15D78B009047EB /* EMOSuggestionTests.swift */; };
 		9030FF491BFA415700948793 /* EMOSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF481BFA415700948793 /* EMOSuggestionView.swift */; };
 		9030FF4B1BFA416300948793 /* EMOSuggestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */; };
 		9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030FF4D1BFA419100948793 /* EMOSuggestion.swift */; };
@@ -61,6 +62,7 @@
 		900148511BB8726200EB992C /* EmomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900148551BB8726200EB992C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9001486C1BB984CE00EB992C /* EMOEmotionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionTests.swift; sourceTree = "<group>"; };
+		90152C691C15D78B009047EB /* EMOSuggestionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSuggestionTests.swift; sourceTree = "<group>"; };
 		9030FF481BFA415700948793 /* EMOSuggestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSuggestionView.swift; sourceTree = "<group>"; };
 		9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMOSuggestionView.xib; sourceTree = "<group>"; };
 		9030FF4D1BFA419100948793 /* EMOSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSuggestion.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9001486C1BB984CE00EB992C /* EMOEmotionTests.swift */,
+				90152C691C15D78B009047EB /* EMOSuggestionTests.swift */,
 				900148551BB8726200EB992C /* Info.plist */,
 			);
 			path = EmomeTests;
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9001486D1BB984CE00EB992C /* EMOEmotionTests.swift in Sources */,
+				90152C6A1C15D78B009047EB /* EMOSuggestionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

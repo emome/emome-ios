@@ -687,11 +687,11 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDb-Za-Kvd" id="czO-iB-12p">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PlayList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-H6-0kp">
-                                                    <rect key="frame" x="91" y="22" width="60" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlayList" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-H6-0kp">
+                                                    <rect key="frame" x="91" y="21" width="60" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -700,7 +700,7 @@
                                                         <rect key="frame" x="91" y="22" width="60" height="21"/>
                                                     </variation>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDq-a4-lBk">
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDq-a4-lBk">
                                                     <rect key="frame" x="0.0" y="-1" width="81" height="66"/>
                                                     <animations/>
                                                     <constraints>
@@ -759,6 +759,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qlv-0t-BoB" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzI-yJ-ffG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -771,7 +772,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViJ-8V-Nz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="2650"/>
+            <point key="canvasLocation" x="789.5" y="2649.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bED-Qk-59d">
