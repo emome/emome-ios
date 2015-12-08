@@ -64,35 +64,30 @@ class EMODataManager {
     func fetchSuggestions(withEmotionMeasurement measurement: [EMOEmotion: Double], scenarioId: String) {
         log.debug("Start fetching suggestions")
         
+        let emotionDict = self.normalizeEmotionMeasurement(measurement)
+        let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
+        
         let parameters: [String: AnyObject] = [
+            "user_id": "123123123",
             "scenario_id": scenarioId,
-            "emotion": self.normalizeEmotionMeasurement(measurement)
+            "emotion": emotionJSONString
         ]
+
+        print("\(parameters)")
         
         
         Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
-            .responseJSON { response in
-                log.debug("\(response.result)")   // result of response serialization
+            .responseCollection { (response: Response<[EMOSuggestion], NSError>) in
                 
-                if let JSON = response.result.value {
-                    log.debug("JSON: \(JSON)")
+                if let suggestions = response.result.value {
+                    dispatch_barrier_async(self.concurrentSuggestionQueue, { () -> Void in
+                        self._suggestions = suggestions
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.postNotification(DataManagerSuggestionsFetchedNotification)
+                        }
+                    })
                 }
-                
-                dispatch_barrier_async(self.concurrentSuggestionQueue, { () -> Void in
-                    self._suggestions.removeAll()
-                    self._suggestions.append(EMOSuggestion.init(id: "0", userId: "0", activityType: .Spotify,
-                        title: "Life Sucks", category: "Playlist", description: "40 songs, 72 min",
-                        url: NSURL(string: "spotify://user:spotify:playlist:5eSMIpsnkXJhXEPyRQCTSc")))
-                    
-                    self._suggestions.append(EMOSuggestion.init(id: "1", userId: "1", activityType: .Yelp,
-                        title: "City Bakery", category: "Bakery", description: "Hot Chocolate",
-                        url: NSURL(string: "yelp:///biz/the-city-bakery-new-york")))
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.postNotification(DataManagerSuggestionsFetchedNotification)
-                    }
-                })
-        }
+            }
         
     }
     
@@ -152,7 +147,7 @@ class EMODataManager {
         self.clearScenarios()
         Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/scenario", parameters: nil)
             .responseJSON { response in
-                log.debug("\(response.result)")   // result of response serialization
+                log.debug("scenarios \(response.result)")   // result of response serialization
                 if let JSON = response.result.value as? [String: String] {
                     log.debug("Scenarios: \(JSON)")
                     dispatch_barrier_async(self.concurrentScenarioQueue, { () -> Void in

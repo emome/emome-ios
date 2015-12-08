@@ -32,6 +32,8 @@ extension UIColor {
             return UIColor(hexString: "#00D969")!
         case .Yelp:
             return UIColor(hexString: "#C41200")!
+        case .Other:
+            return UIColor.clearColor()
         }
     }
     

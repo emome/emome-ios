@@ -11,6 +11,7 @@ import Foundation
 enum EMOActivityType {
     case Spotify
     case Yelp
+    case Other
     
     var actionTitle: String {
         switch self {
@@ -18,6 +19,8 @@ enum EMOActivityType {
             return "Listen on Spotify"
         case .Yelp:
             return "View on Yelp"
+        case .Other:
+            return ""
         }
     }
 }

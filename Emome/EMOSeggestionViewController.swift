@@ -31,7 +31,11 @@ class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         self.addObserverForSuggestionsFetching()
-        EMODataManager.sharedInstance.fetchSuggestions(withEmotionMeasurement: EMODataManager.sharedInstance.getEmotionMeasurement(), scenarioId: EMODataManager.sharedInstance.selectedScenarioId!)
+        
+        let scenarioId = EMODataManager.sharedInstance.selectedScenarioId == nil ? "0" :
+            EMODataManager.sharedInstance.selectedScenarioId!
+        
+        EMODataManager.sharedInstance.fetchSuggestions(withEmotionMeasurement: EMODataManager.sharedInstance.getEmotionMeasurement(), scenarioId: scenarioId)
     }
     
     func setUpPages() {

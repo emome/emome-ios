@@ -32,7 +32,7 @@ class EMOSuggestionView: UIView {
         
         self.titleLabel.text = suggestion.title
         self.categoryLabel.text = suggestion.category
-        self.descriptionLabel.text = suggestion.description
+        self.descriptionLabel.text = suggestion.message
         
         self.actionButton.backgroundColor = UIColor.colorForActivity(suggestion.activityType)
         self.actionButton.setTitle("\(suggestion.activityType.actionTitle)", forState: .Normal)

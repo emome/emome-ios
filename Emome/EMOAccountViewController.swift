@@ -30,6 +30,8 @@ class EMOAccountViewController: EMOBaseViewController, FBSDKLoginButtonDelegate 
         if FBSDKAccessToken.currentAccessToken() != nil {
             fetchUserInfo()
         }
+        
+        self.profileImageView.layer.cornerRadius = 50.0
     }
     
     func fetchUserInfo() {
