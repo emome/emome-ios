@@ -54,7 +54,10 @@ class EMOAccountViewController: EMOBaseViewController, FBSDKLoginButtonDelegate 
                 Alamofire.request(.POST, "http://52.3.174.167/login", parameters: ["_id": id])
                          .responseJSON { response in
                     log.debug("\(response.result.value)")
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(id, forKey: keyUserId)
                 }
+                
             } else {
                 log.debug("FBGraphRequest error: \(error)")
             }

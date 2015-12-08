@@ -26,6 +26,7 @@
 		908C890D1BE06C1100190BB5 /* EMODataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C890C1BE06C1100190BB5 /* EMODataManager.swift */; };
 		90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */; };
 		90B15D501BEDA029000E1B55 /* EMOAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */; };
+		90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C171C175FDD0050730F /* EMOConsts.swift */; };
 		90B9A8161C016A510008DAF4 /* GCDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9A8151C016A510008DAF4 /* GCDUtils.swift */; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		908C890C1BE06C1100190BB5 /* EMODataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMODataManager.swift; sourceTree = "<group>"; };
 		90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOMyIdeasViewController.swift; sourceTree = "<group>"; };
 		90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOAccountViewController.swift; sourceTree = "<group>"; };
+		90B58C171C175FDD0050730F /* EMOConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOConsts.swift; sourceTree = "<group>"; };
 		90B9A8151C016A510008DAF4 /* GCDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDUtils.swift; sourceTree = "<group>"; };
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				906190B51BE6E4BC0061E103 /* EmoEmomeColors.swift */,
 				90B9A8151C016A510008DAF4 /* GCDUtils.swift */,
+				90B58C171C175FDD0050730F /* EMOConsts.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				908C890D1BE06C1100190BB5 /* EMODataManager.swift in Sources */,
 				90B9A8161C016A510008DAF4 /* GCDUtils.swift in Sources */,
 				9030FF511BFAC92300948793 /* EMOEnums.swift in Sources */,
+				90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */,
 				9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */,
 				90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */,
 			);

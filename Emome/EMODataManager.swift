@@ -67,8 +67,9 @@ class EMODataManager {
         let emotionDict = self.normalizeEmotionMeasurement(measurement)
         let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
         
+        
         let parameters: [String: AnyObject] = [
-            "user_id": "123123123",
+            "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)!,
             "scenario_id": scenarioId,
             "emotion": emotionJSONString
         ]
