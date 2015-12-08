@@ -130,10 +130,6 @@ class EMODataManager {
         NSNotificationCenter.defaultCenter().postNotificationName(notificationName, object: nil)
     }
     
-    private func postSuggestionsFetchedNotification() {
-       
-    }
-    
     
     /*
     // Scenario Data
@@ -149,7 +145,7 @@ class EMODataManager {
         return scneariosCopy
     }
     
-    
+    var selectedScenarioId: String?
     var scenario: EMOScenario!
     
     func fetchScenarios() {

@@ -79,11 +79,7 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let idx = self.selectedScenarioIdx {
-            let scenarioId = self.scenarios[idx].id
-            
-            if let vc = segue.destinationViewController as? EMOSeggestionViewController {
-                
-            }
+            EMODataManager.sharedInstance.selectedScenarioId = self.scenarios[idx].id
         }
     }
 }
