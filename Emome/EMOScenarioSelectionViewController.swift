@@ -11,8 +11,8 @@ import QuartzCore
 
 class EMOScenarioSelectionViewController: EMOBaseViewController {
     
-    var scenarios = ["bossy boss", "rainy day sucks", "tired of routine tasks", "insomnia"]
-    var selectedScenario:String?
+    var scenarios: [EMOScenario]! = nil
+    var selectedScenarioIdx: Int! = nil
     var scenarioButtons: [UIButton] = []
 
     override func viewDidLoad() {
@@ -22,7 +22,10 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
         
         var origin = CGPoint(x: 15.0, y: 150.0)
         
-        for scenario in EMODataManager.sharedInstance.scnearios {
+        self.scenarios = EMODataManager.sharedInstance.scnearios
+        
+        for i in 0..<self.scenarios.count {
+            let scenario = self.scenarios[i]
             let frame = CGRect(origin: origin, size: CGSizeMake(100.0, 30.0))
             let button = UIButton.init(frame: frame)
             button.setTitle(scenario.title, forState: .Normal)
@@ -36,6 +39,8 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
             button.layer.borderWidth = 3.0
             button.layer.cornerRadius = 15.0
             button.layer.borderColor = UIColor.emomeGrayColor().CGColor
+            
+            button.tag = i + 1000
             
             self.scenarioButtons.append(button)
             self.view.addSubview(button)
@@ -52,7 +57,7 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
     }
     
     func scenarioSelected(sender: UIButton) {
-        self.selectedScenario = sender.titleLabel?.text
+        self.selectedScenarioIdx = sender.tag - 1000
         _ = scenarioButtons.map(resetButton)
         sender.layer.borderColor = UIColor.emomeHighlightColor().CGColor
         sender.selected = true
@@ -73,8 +78,12 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let scenario = self.selectedScenario {
-//            EMODataManager.sharedInstance.scenario = scenario
-//        }
+        if let idx = self.selectedScenarioIdx {
+            let scenarioId = self.scenarios[idx].id
+            
+            if let vc = segue.destinationViewController as? EMOSeggestionViewController {
+                
+            }
+        }
     }
 }

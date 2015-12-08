@@ -35,6 +35,7 @@
 		90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */; };
 		90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */; };
 		90F758621C168AB9003F9C69 /* EMOScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758611C168AB9003F9C69 /* EMOScenario.swift */; };
+		90F758641C172C65003F9C69 /* EMODataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758631C172C65003F9C69 /* EMODataManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionColorButton.swift; sourceTree = "<group>"; };
 		90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeActionButton.swift; sourceTree = "<group>"; };
 		90F758611C168AB9003F9C69 /* EMOScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOScenario.swift; sourceTree = "<group>"; };
+		90F758631C172C65003F9C69 /* EMODataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMODataManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				9001486C1BB984CE00EB992C /* EMOEmotionTests.swift */,
 				90152C691C15D78B009047EB /* EMOSuggestionTests.swift */,
+				90F758631C172C65003F9C69 /* EMODataManagerTests.swift */,
 				900148551BB8726200EB992C /* Info.plist */,
 			);
 			path = EmomeTests;
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F758641C172C65003F9C69 /* EMODataManagerTests.swift in Sources */,
 				9001486D1BB984CE00EB992C /* EMOEmotionTests.swift in Sources */,
 				90152C6A1C15D78B009047EB /* EMOSuggestionTests.swift in Sources */,
 			);

@@ -18,16 +18,20 @@ class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
     
     private var suggestionsFetchingObserver: NSObjectProtocol!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        EMODataManager.sharedInstance.fetchSuggestions()
-        suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
+    func addObserverForSuggestionsFetching() {
+        self.suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
             object: nil,
             queue: NSOperationQueue.mainQueue()) { notification in
-            self.setUpPages()
-            self.loadVisiblePages()
+                self.setUpPages()
+                self.loadVisiblePages()
         }
-
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.addObserverForSuggestionsFetching()
+        EMODataManager.sharedInstance.fetchSuggestions(withEmotionMeasurement: [EMOEmotion.Sad: 2.0], scenarioId: "0")
     }
     
     func setUpPages() {
