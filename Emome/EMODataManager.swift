@@ -155,6 +155,7 @@ class EMODataManager {
     var scenario: EMOScenario!
     
     func fetchScenarios() {
+        self.clearScenarios()
         Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/scenario", parameters: nil)
             .responseJSON { response in
                 log.debug("\(response.result)")   // result of response serialization
@@ -167,5 +168,11 @@ class EMODataManager {
                     })
                 }
             }
+    }
+    
+    func clearScenarios() {
+        dispatch_barrier_async(self.concurrentScenarioQueue, { () -> Void in
+            self._scnearios.removeAll()
+        })
     }
 }
