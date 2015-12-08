@@ -22,7 +22,7 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
         
         var origin = CGPoint(x: 15.0, y: 150.0)
         
-        self.scenarios = EMODataManager.sharedInstance.scnearios
+        self.scenarios = EMODataManager.sharedInstance.scenarios
         
         for i in 0..<self.scenarios.count {
             let scenario = self.scenarios[i]

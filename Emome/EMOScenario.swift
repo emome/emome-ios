@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Alamofire
 
 
-struct EMOScenario{ //: ResponseObjectSerializable, ResponseCollectionSerializable {
+struct EMOScenario: ResponseObjectSerializable, ResponseCollectionSerializable {
     let id: String
     let title: String
     
@@ -19,23 +18,23 @@ struct EMOScenario{ //: ResponseObjectSerializable, ResponseCollectionSerializab
         self.title = title
     }
     
-//    init?(response: NSHTTPURLResponse, representation: AnyObject) {
-//        self.id = response.
-//        self.title = representation.valueForKeyPath("name") as! String
-//    }
-//    
-//    static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [EMOScenario] {
-//        var scenarios: [EMOScenario] = []
-//        
-//        if let representation = representation as? [String: AnyObject] {
-//            for scenarioId in representation {
-//                if let scenario = EMOScenario(response: response, representation: [])
-//                    User(response: response, representation: userRepresentation) {
-//                    users.append(user)
-//                }
-//            }
-//        }
-//        
-//        return users
-//    }
+    init?(response: NSHTTPURLResponse, representation: AnyObject) {
+        let pair = representation as! [String: String]
+        self.id = [String](pair.keys)[0]
+        self.title = representation.valueForKeyPath(self.id) as! String
+    }
+    
+    static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [EMOScenario] {
+        var scenarios: [EMOScenario] = []
+        
+        if let representation = representation as? [[String: String]] {
+            for scenarioRepresenation in representation {
+                if let scenario = EMOScenario(response: response, representation: scenarioRepresenation) {
+                    scenarios.append(scenario)
+                }
+            }
+        }
+        
+        return scenarios
+    }
 }

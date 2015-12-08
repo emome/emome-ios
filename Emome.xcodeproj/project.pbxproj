@@ -36,6 +36,7 @@
 		90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */; };
 		90F758621C168AB9003F9C69 /* EMOScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758611C168AB9003F9C69 /* EMOScenario.swift */; };
 		90F758641C172C65003F9C69 /* EMODataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758631C172C65003F9C69 /* EMODataManagerTests.swift */; };
+		90F758661C175615003F9C69 /* EMORequestParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758651C175615003F9C69 /* EMORequestParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeActionButton.swift; sourceTree = "<group>"; };
 		90F758611C168AB9003F9C69 /* EMOScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOScenario.swift; sourceTree = "<group>"; };
 		90F758631C172C65003F9C69 /* EMODataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMODataManagerTests.swift; sourceTree = "<group>"; };
+		90F758651C175615003F9C69 /* EMORequestParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMORequestParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				9030FF4D1BFA419100948793 /* EMOSuggestion.swift */,
 				90F758611C168AB9003F9C69 /* EMOScenario.swift */,
 				9030FF501BFAC92300948793 /* EMOEnums.swift */,
+				90F758651C175615003F9C69 /* EMORequestParser.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */,
 				903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */,
 				90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */,
+				90F758661C175615003F9C69 /* EMORequestParser.swift in Sources */,
 				907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */,
 				907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */,
 				90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */,

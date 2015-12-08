@@ -131,11 +131,11 @@ class EMODataManager {
     */
     private let concurrentScenarioQueue = dispatch_queue_create("com.emomeapp.emome.scenarioQueue", DISPATCH_QUEUE_CONCURRENT)
     
-    var _scnearios: [EMOScenario] = []
-    var scnearios: [EMOScenario] {
+    var _scenarios: [EMOScenario] = []
+    var scenarios: [EMOScenario] {
         var scneariosCopy: [EMOScenario]!
         dispatch_sync(self.concurrentScenarioQueue) { () -> Void in
-            scneariosCopy = self._scnearios
+            scneariosCopy = self._scenarios
         }
         return scneariosCopy
     }
@@ -148,20 +148,23 @@ class EMODataManager {
         Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/scenario", parameters: nil)
             .responseJSON { response in
                 log.debug("scenarios \(response.result)")   // result of response serialization
-                if let JSON = response.result.value as? [String: String] {
+                if let JSON = response.result.value as? [String: AnyObject] {
                     log.debug("Scenarios: \(JSON)")
-                    dispatch_barrier_async(self.concurrentScenarioQueue, { () -> Void in
-                        for (scenarioId, scenarioTitle) in JSON {
-                            self._scnearios.append(EMOScenario.init(withId: scenarioId, title: scenarioTitle))
-                        }
-                    })
+                    
+                    if let scenarioData = JSON["data"] as? [String: String] {
+                        dispatch_barrier_async(self.concurrentScenarioQueue, { () -> Void in
+                            for (scenarioId, scenarioTitle) in scenarioData {
+                                self._scenarios.append(EMOScenario.init(withId: scenarioId, title: scenarioTitle))
+                            }
+                        })
+                    }
                 }
             }
     }
     
     func clearScenarios() {
         dispatch_barrier_sync(self.concurrentScenarioQueue, { () -> Void in
-            self._scnearios.removeAll()
+            self._scenarios.removeAll()
         })
     }
 }
