@@ -34,6 +34,7 @@
 		90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */; };
 		90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */; };
 		90EFFD8B1C090258005AD750 /* EMOHomeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */; };
+		90F758621C168AB9003F9C69 /* EMOScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F758611C168AB9003F9C69 /* EMOScenario.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeViewController.swift; sourceTree = "<group>"; };
 		90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionColorButton.swift; sourceTree = "<group>"; };
 		90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeActionButton.swift; sourceTree = "<group>"; };
+		90F758611C168AB9003F9C69 /* EMOScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOScenario.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			children = (
 				908C890C1BE06C1100190BB5 /* EMODataManager.swift */,
 				9030FF4D1BFA419100948793 /* EMOSuggestion.swift */,
+				90F758611C168AB9003F9C69 /* EMOScenario.swift */,
 				9030FF501BFAC92300948793 /* EMOEnums.swift */,
 			);
 			name = Data;
@@ -479,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E703051BE6E3CD0001B75D /* SpotifyApiTestViewController.swift in Sources */,
+				90F758621C168AB9003F9C69 /* EMOScenario.swift in Sources */,
 				90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */,
 				903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */,
 				90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */,

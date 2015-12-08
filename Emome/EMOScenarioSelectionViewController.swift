@@ -20,12 +20,12 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
 
         // Do any additional setup after loading the view.
         
-        var origin = CGPoint(x: 15.0, y: 180.0)
+        var origin = CGPoint(x: 15.0, y: 150.0)
         
-        for scenario in scenarios {
+        for scenario in EMODataManager.sharedInstance.scnearios {
             let frame = CGRect(origin: origin, size: CGSizeMake(100.0, 30.0))
             let button = UIButton.init(frame: frame)
-            button.setTitle(scenario, forState: .Normal)
+            button.setTitle(scenario.title, forState: .Normal)
             button.setTitleColor(UIColor.emomeTextGrayColor(), forState: .Normal)
             button.setTitleColor(UIColor.emomeHighlightColor(), forState: .Selected)
             button.sizeToFit()
@@ -73,8 +73,8 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let scenario = self.selectedScenario {
-            EMODataManager.sharedInstance.scenario = scenario
-        }
+//        if let scenario = self.selectedScenario {
+//            EMODataManager.sharedInstance.scenario = scenario
+//        }
     }
 }

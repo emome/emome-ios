@@ -78,6 +78,11 @@ class EMOAccountViewController: EMOBaseViewController, FBSDKLoginButtonDelegate 
         self.userNameLabel.text = nil
     }
 
+    @IBAction func backToHome(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

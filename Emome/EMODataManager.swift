@@ -43,8 +43,6 @@ class EMODataManager {
         return self._emotionRawMeasurement
     }
     
-    var scenario: String = ""
-    
     
     // Suggestion
     private let concurrentSuggestionQueue = dispatch_queue_create("com.emomeapp.emome.suggestionQueue", DISPATCH_QUEUE_CONCURRENT)
@@ -136,5 +134,38 @@ class EMODataManager {
     
     private func postSuggestionsFetchedNotification() {
         NSNotificationCenter.defaultCenter().postNotificationName(DataManagerSuggestionsFetchedNotification, object: nil)
+    }
+    
+    
+    /*
+    // Scenario Data
+    */
+    private let concurrentScenarioQueue = dispatch_queue_create("com.emomeapp.emome.scenarioQueue", DISPATCH_QUEUE_CONCURRENT)
+    
+    var _scnearios: [EMOScenario] = []
+    var scnearios: [EMOScenario] {
+        var scneariosCopy: [EMOScenario]!
+        dispatch_sync(self.concurrentScenarioQueue) { () -> Void in
+            scneariosCopy = self._scnearios
+        }
+        return scneariosCopy
+    }
+    
+    
+    var scenario: EMOScenario!
+    
+    func fetchScenarios() {
+        Alamofire.request(.GET, "\(EmomeAPIBaseUrl)/scenario", parameters: nil)
+            .responseJSON { response in
+                log.debug("\(response.result)")   // result of response serialization
+                if let JSON = response.result.value as? [String: String] {
+                    log.debug("Scenarios: \(JSON)")
+                    dispatch_barrier_async(self.concurrentScenarioQueue, { () -> Void in
+                        for (scenarioId, scenarioTitle) in JSON {
+                            self._scnearios.append(EMOScenario.init(withId: scenarioId, title: scenarioTitle))
+                        }
+                    })
+                }
+            }
     }
 }
