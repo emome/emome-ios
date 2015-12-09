@@ -22,6 +22,7 @@ PODS:
     - FBSDKCoreKit/arc
   - FBSDKLoginKit (4.8.0):
     - FBSDKCoreKit
+  - pop (1.0.8)
   - Spotify-iOS-SDK (0.13.0)
   - SwiftColors (0.3.3)
   - XCGLogger (3.1.1)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Fabric
   - FBSDKCoreKit
   - FBSDKLoginKit
+  - pop (~> 1.0)
   - Spotify-iOS-SDK
   - SwiftColors
   - XCGLogger
@@ -45,6 +47,7 @@ SPEC CHECKSUMS:
   Fabric: bf0ceb04e7c924090efc5f8c55e4fbcca189e0a0
   FBSDKCoreKit: 66a935d17b6e00b6b64e604f2eb9b72c9ab7deb8
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   Spotify-iOS-SDK: 0ba94c0ac207567be704fe1edd541f63a7ca66cd
   SwiftColors: c02dc874cda6319a20e2fd75385e1ccffc17b941
   XCGLogger: e111a313f609432394c3ae378d99511634fd2e3c

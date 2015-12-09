@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
+class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
 
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var pageControl: UIPageControl!
@@ -18,20 +18,24 @@ class EMOSeggestionViewController: UIViewController, UIScrollViewDelegate {
     
     private var suggestionsFetchingObserver: NSObjectProtocol!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        EMODataManager.sharedInstance.fetchSuggestions()
-        suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
+    func addObserverForSuggestionsFetching() {
+        self.suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
             object: nil,
             queue: NSOperationQueue.mainQueue()) { notification in
-            self.setUpPages()
-            self.loadVisiblePages()
+                self.setUpPages()
+                self.loadVisiblePages()
         }
-
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.addObserverForSuggestionsFetching()
+        
+        let scenarioId = EMODataManager.sharedInstance.selectedScenarioId == nil ? "0" :
+            EMODataManager.sharedInstance.selectedScenarioId!
+        
+        EMODataManager.sharedInstance.fetchSuggestions(withEmotionMeasurement: EMODataManager.sharedInstance.getEmotionMeasurement(), scenarioId: scenarioId)
     }
     
     func setUpPages() {

@@ -12,5 +12,6 @@ target 'Emome' do
     pod 'SwiftColors'
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
+    pod 'pop', '~> 1.0'
 end
 

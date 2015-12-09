@@ -9,10 +9,10 @@
 import UIKit
 import QuartzCore
 
-class EMOScenarioSelectionViewController: UIViewController {
+class EMOScenarioSelectionViewController: EMOBaseViewController {
     
-    var scenarios = ["bossy boss", "rainy day sucks", "tired of routine tasks", "insomnia"]
-    var selectedScenario:String?
+    var scenarios: [EMOScenario]! = nil
+    var selectedScenarioIdx: Int! = nil
     var scenarioButtons: [UIButton] = []
 
     override func viewDidLoad() {
@@ -20,12 +20,15 @@ class EMOScenarioSelectionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        var origin = CGPoint(x: 15.0, y: 180.0)
+        var origin = CGPoint(x: 15.0, y: 150.0)
         
-        for scenario in scenarios {
+        self.scenarios = EMODataManager.sharedInstance.scenarios
+        
+        for i in 0..<self.scenarios.count {
+            let scenario = self.scenarios[i]
             let frame = CGRect(origin: origin, size: CGSizeMake(100.0, 30.0))
             let button = UIButton.init(frame: frame)
-            button.setTitle(scenario, forState: .Normal)
+            button.setTitle(scenario.title, forState: .Normal)
             button.setTitleColor(UIColor.emomeTextGrayColor(), forState: .Normal)
             button.setTitleColor(UIColor.emomeHighlightColor(), forState: .Selected)
             button.sizeToFit()
@@ -37,6 +40,8 @@ class EMOScenarioSelectionViewController: UIViewController {
             button.layer.cornerRadius = 15.0
             button.layer.borderColor = UIColor.emomeGrayColor().CGColor
             
+            button.tag = i + 1000
+            
             self.scenarioButtons.append(button)
             self.view.addSubview(button)
             
@@ -46,17 +51,13 @@ class EMOScenarioSelectionViewController: UIViewController {
         log.debug("\(EMODataManager.sharedInstance.getEmotionMeasurement())")
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
     func resetButton(button: UIButton) {
         button.selected = false
         button.layer.borderColor = UIColor.emomeGrayColor().CGColor
     }
     
     func scenarioSelected(sender: UIButton) {
-        self.selectedScenario = sender.titleLabel?.text
+        self.selectedScenarioIdx = sender.tag - 1000
         _ = scenarioButtons.map(resetButton)
         sender.layer.borderColor = UIColor.emomeHighlightColor().CGColor
         sender.selected = true
@@ -77,8 +78,16 @@ class EMOScenarioSelectionViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let scenario = self.selectedScenario {
-            EMODataManager.sharedInstance.scenario = scenario
+        
+        if let idx = self.selectedScenarioIdx {
+            
+            let scenarioId = self.scenarios[idx].id
+            
+            if segue.identifier == "Scenario2Message" {
+                EMODataManager.sharedInstance.scenarioIdForPostingSuggestion = scenarioId
+            } else {
+                EMODataManager.sharedInstance.selectedScenarioId = scenarioId
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Alamofire
 import AlamofireImage
 
-class EMOAccountViewController: UIViewController, FBSDKLoginButtonDelegate {
+class EMOAccountViewController: EMOBaseViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userIdLabel: UILabel!
@@ -30,6 +30,8 @@ class EMOAccountViewController: UIViewController, FBSDKLoginButtonDelegate {
         if FBSDKAccessToken.currentAccessToken() != nil {
             fetchUserInfo()
         }
+        
+        self.profileImageView.layer.cornerRadius = 50.0
     }
     
     func fetchUserInfo() {
@@ -48,6 +50,14 @@ class EMOAccountViewController: UIViewController, FBSDKLoginButtonDelegate {
                     }
                     
                 })
+                
+                Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/login", parameters: ["_id": id])
+                         .responseJSON { response in
+                    log.debug("\(response.result.value)")
+                    let defaults = NSUserDefaults.standardUserDefaults()
+                    defaults.setObject(id, forKey: keyUserId)
+                }
+                
             } else {
                 log.debug("FBGraphRequest error: \(error)")
             }
@@ -73,6 +83,11 @@ class EMOAccountViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.userNameLabel.text = nil
     }
 
+    @IBAction func backToHome(sender: AnyObject) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
