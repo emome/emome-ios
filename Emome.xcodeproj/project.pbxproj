@@ -24,7 +24,6 @@
 		907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C0F441BDEA9AC00C896D3 /* EMOSeggestionViewController.swift */; };
 		907EDAFD1BB9990E00E49E34 /* EmomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */; };
 		908C890D1BE06C1100190BB5 /* EMODataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C890C1BE06C1100190BB5 /* EMODataManager.swift */; };
-		90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */; };
 		90B15D501BEDA029000E1B55 /* EMOAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */; };
 		90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C171C175FDD0050730F /* EMOConsts.swift */; };
 		90B58C1D1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C1B1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift */; };
@@ -87,7 +86,6 @@
 		907EDAFC1BB9990E00E49E34 /* EmomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmomeUITests.swift; sourceTree = "<group>"; };
 		907EDAFE1BB9990E00E49E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908C890C1BE06C1100190BB5 /* EMODataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMODataManager.swift; sourceTree = "<group>"; };
-		90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOMyIdeasViewController.swift; sourceTree = "<group>"; };
 		90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOAccountViewController.swift; sourceTree = "<group>"; };
 		90B58C171C175FDD0050730F /* EMOConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOConsts.swift; sourceTree = "<group>"; };
 		90B58C1B1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 		90979B3B1BF8E84000F0DD67 /* Suggest */ = {
 			isa = PBXGroup;
 			children = (
-				90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */,
 				90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */,
 				90B58C1F1C17DAE40050730F /* EMOSpecifyEmotionViewController.swift */,
 				90B58C231C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift */,
@@ -512,7 +509,6 @@
 			files = (
 				35E703051BE6E3CD0001B75D /* SpotifyApiTestViewController.swift in Sources */,
 				90F758621C168AB9003F9C69 /* EMOScenario.swift in Sources */,
-				90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */,
 				903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */,
 				90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */,
 				90B58C1D1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift in Sources */,

@@ -8,10 +8,18 @@
 
 import Foundation
 
-enum EMOActivityType {
+enum EMOActivityType: CustomStringConvertible {
     case Spotify
     case Yelp
     case Other
+    
+    var description: String {
+        switch self {
+        case .Spotify: return "Spotify"
+        case .Yelp: return "Yelp"
+        case .Other: return "Other"
+        }
+    }
     
     var actionTitle: String {
         switch self {

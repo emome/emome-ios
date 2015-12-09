@@ -121,7 +121,17 @@ class EMOChooseSeggestionTypeViewController: EMOBaseViewController, UISearchBarD
         let track = self.tracks[indexPath.row]
         
         log.verbose("\(track.name) clicked")
+        EMODataManager.sharedInstance.actionTypeForPostingSuggestion = .Spotify
+        EMODataManager.sharedInstance.actionDataForPostingSuggestion = [
+            "track_id": track.identifier,
+            "track_name": track.name,
+            "url": track.uri.URLString,
+            "cover_img_url": track.album.largestCover.imageURL.URLString,
+        ]
+        
         self.performSegueWithIdentifier("ChooseEmotion", sender: self)
+        
+        
     }
 
 }

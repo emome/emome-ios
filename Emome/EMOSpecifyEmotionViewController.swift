@@ -12,20 +12,22 @@ class EMOSpecifyEmotionViewController: EMOBaseViewController {
 
     @IBOutlet weak var sadSlider: UISlider!
     @IBOutlet weak var frustratedSlider: UISlider!
-    
     @IBOutlet weak var angrySlider: UISlider!
-    @IBOutlet weak var anxiousSlideBar: UISlider!
+    @IBOutlet weak var anxiousSlider: EMOEmotionSlider!
     
-    
+    var emotionSlidersDict: [EMOEmotion: UISlider] = [EMOEmotion: UISlider]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emotionSlidersDict[.Sad] = self.sadSlider
+        self.emotionSlidersDict[.Frustrated] = self.frustratedSlider
+        self.emotionSlidersDict[.Angry] = self.angrySlider
+        self.emotionSlidersDict[.Anxious] = self.anxiousSlider
 
-        // Do any additional setup after loading the view.
-        self.sadSlider.tintColor = UIColor.colorForEmotion(.Sad)
-        self.frustratedSlider.tintColor = UIColor.colorForEmotion(.Frustrated)
-        self.angrySlider.tintColor = UIColor.colorForEmotion(.Angry)
-        self.anxiousSlideBar.tintColor = UIColor.colorForEmotion(.Anxious)
+        for emotion in EMOEmotion.allValues {
+            self.emotionSlidersDict[emotion]?.tintColor = UIColor.colorForEmotion(emotion)
+        }
     }
     
     @IBAction func backToContentSearch() {
@@ -33,14 +35,18 @@ class EMOSpecifyEmotionViewController: EMOBaseViewController {
     }
     
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        for emotion in EMOEmotion.allValues {    
+            let value = self.emotionSlidersDict[emotion]?.value
+            
+            EMODataManager.sharedInstance
+                .emotionRawMeasurementForPostingSuggestion[emotion] = Double(value!)
+            
+        }
     }
-    */
+
 
 }

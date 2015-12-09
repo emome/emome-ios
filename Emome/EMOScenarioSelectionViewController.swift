@@ -78,8 +78,16 @@ class EMOScenarioSelectionViewController: EMOBaseViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if let idx = self.selectedScenarioIdx {
-            EMODataManager.sharedInstance.selectedScenarioId = self.scenarios[idx].id
+            
+            let scenarioId = self.scenarios[idx].id
+            
+            if segue.identifier == "Scenario2Message" {
+                EMODataManager.sharedInstance.scenarioIdForPostingSuggestion = scenarioId
+            } else {
+                EMODataManager.sharedInstance.selectedScenarioId = scenarioId
+            }
         }
     }
 }

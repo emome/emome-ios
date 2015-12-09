@@ -1,4 +1,4 @@
-    //
+//
 //  EMOSearchResultCollectionViewCell.swift
 //  
 //
@@ -25,11 +25,13 @@ class EMOSearchResultCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOffset = CGSizeMake(0.0, 3.0)
         self.layer.shadowOpacity = 0.5
         
-        self.featureImageView.clipsToBounds = true
-        let maskPath = UIBezierPath.init(roundedRect: self.featureImageView.bounds, byRoundingCorners: [.TopLeft, .TopRight], cornerRadii: CGSize(width: 5.0, height: 5.0))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = maskPath.CGPath
-        self.featureImageView.layer.mask = maskLayer
+        if self.featureImageView != nil {
+            self.featureImageView.clipsToBounds = true
+            let maskPath = UIBezierPath.init(roundedRect: self.featureImageView.bounds, byRoundingCorners: [.TopLeft, .TopRight], cornerRadii: CGSize(width: 5.0, height: 5.0))
+            let maskLayer = CAShapeLayer()
+            maskLayer.path = maskPath.CGPath
+            self.featureImageView.layer.mask = maskLayer
+        }
     }
 
 }

@@ -503,22 +503,22 @@
                                     <constraint firstItem="95x-W8-GAf" firstAttribute="centerY" secondItem="NRX-cj-ukM" secondAttribute="centerY" id="zXS-gb-Iou"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-hf-GkR" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-hf-GkR" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
                                 <rect key="frame" x="18" y="131" width="339" height="31"/>
                                 <animations/>
                                 <color key="thumbTintColor" red="0.57409620098039205" green="0.57409620098039205" blue="0.57409620098039205" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-Lc-P8S" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-Lc-P8S" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
                                 <rect key="frame" x="18" y="234" width="339" height="31"/>
                                 <animations/>
                                 <color key="thumbTintColor" red="0.57409620098039205" green="0.57409620098039205" blue="0.57409620098039205" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="NFh-oK-Bhm" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="NFh-oK-Bhm" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
                                 <rect key="frame" x="18" y="340" width="339" height="31"/>
                                 <animations/>
                                 <color key="thumbTintColor" red="0.57409620098039205" green="0.57409620098039205" blue="0.57409620098039205" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="axB-M8-g5Z" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="axB-M8-g5Z" customClass="EMOEmotionSlider" customModule="Emome" customModuleProvider="target">
                                 <rect key="frame" x="18" y="456" width="339" height="31"/>
                                 <animations/>
                                 <color key="thumbTintColor" red="0.57409620098039205" green="0.57409620098039205" blue="0.57409620098039205" alpha="1" colorSpace="calibratedRGB"/>
@@ -535,7 +535,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="angrySlider" destination="NFh-oK-Bhm" id="SrR-4p-LAr"/>
-                        <outlet property="anxiousSlideBar" destination="axB-M8-g5Z" id="fgs-3g-3US"/>
+                        <outlet property="anxiousSlider" destination="axB-M8-g5Z" id="F7R-0g-zaQ"/>
                         <outlet property="frustratedSlider" destination="yuL-Lc-P8S" id="Qu5-Um-ltN"/>
                         <outlet property="sadSlider" destination="uRp-hf-GkR" id="dWS-Uz-jBe"/>
                     </connections>
@@ -960,7 +960,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="yef-rj-b6a" kind="show" id="O5E-yd-cH9"/>
+                                            <segue destination="yef-rj-b6a" kind="show" identifier="Scenario2Message" id="O5E-yd-cH9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-dW-dfD">

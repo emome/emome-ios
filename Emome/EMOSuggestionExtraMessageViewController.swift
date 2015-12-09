@@ -40,7 +40,7 @@ class EMOSuggestionExtraMessageViewController: EMOBaseViewController, UITextView
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DoneMakeSuggestion" {
-            EMODataManager.sharedInstance
+            EMODataManager.sharedInstance.messageForPostingSuggestion = self.messageTextView.text
         }
     }
 

@@ -13,12 +13,13 @@ import FBSDKCoreKit
 // Notification when suggestions are fetched
 let DataManagerSuggestionsFetchedNotification = "com.emomeapp.emome.DataManagerSuggestionsFetched"
 let DataManagerSuggestionPostedNotification = "com.emomeapp.emome.DataManagerSuggestionPosted"
-let EmomeAPIBaseUrl = "http://52.3.174.167"
+let EmomeAPIBaseUrl = "http://localhost:5000" //"http://52.3.174.167"
 
 
 private let _sharedInstance = EMODataManager()
 
 class EMODataManager {
+    
     class var sharedInstance: EMODataManager {
         return _sharedInstance
     }
@@ -48,9 +49,7 @@ class EMODataManager {
         return self._emotionRawMeasurement
     }
     
-    /*
-    // Suggestion
-    */
+    // MARK: - Fetch Suggestions
     
     private let concurrentSuggestionQueue = dispatch_queue_create("com.emomeapp.emome.suggestionQueue", DISPATCH_QUEUE_CONCURRENT)
     
@@ -93,39 +92,8 @@ class EMODataManager {
             }
         
     }
-
-    func postSuggestion() {
-        log.debug("Start sending suggestions")
-        
-        let emotionDict = self.normalizeEmotionMeasurement(self._emotionRawMeasurement)
-        let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
-        
-        let parameters: [String: AnyObject] = [
-            "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)!,
-            "scenario_id": "0",
-            "emotion": emotionJSONString,
-            "content": "{\"type\":\"Spotify\", \"data\":\"some random stuff\"}",
-            "message": "Too tired to say anything"
-        ]
-        
-        Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
-            .responseJSON { response in
-                log.debug("\(response.result)")   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    log.debug("JSON: \(JSON)")
-                    
-                }
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.postNotification(DataManagerSuggestionPostedNotification)
-                }
-        }
-    }
     
-    /*
-    // History
-    */
+    // MARK: - Save History
     
     func saveActionHistry(ofSuggestionId suggestionId: String) {
         
@@ -155,9 +123,8 @@ class EMODataManager {
     }
     
     
-    /*
-    // Scenario Data
-    */
+    // MARK: - Fetch Scenarios
+    
     private let concurrentScenarioQueue = dispatch_queue_create("com.emomeapp.emome.scenarioQueue", DISPATCH_QUEUE_CONCURRENT)
     
     var _scenarios: [EMOScenario] = []
@@ -195,5 +162,57 @@ class EMODataManager {
         dispatch_barrier_sync(self.concurrentScenarioQueue, { () -> Void in
             self._scenarios.removeAll()
         })
+    }
+    
+    
+    
+    // MARK: - Post Suggestion
+
+    var emotionRawMeasurementForPostingSuggestion: [EMOEmotion: Double] = [EMOEmotion: Double]()
+    var scenarioIdForPostingSuggestion: String? = nil
+    var messageForPostingSuggestion: String? = nil
+    var actionTypeForPostingSuggestion: EMOActivityType? = nil
+    var actionDataForPostingSuggestion: [String: String] = [String: String]()
+    
+    func postSuggestion() {
+        log.debug("Start sending suggestions")
+        
+        let emotionDict = self.normalizeEmotionMeasurement(self.emotionRawMeasurementForPostingSuggestion)
+        let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
+        
+        var dataJSONString = ""
+        for (key, value) in self.actionDataForPostingSuggestion {
+            dataJSONString.appendContentsOf("\"\(key)\": \"\(value))\",")
+        }
+        
+        dataJSONString = "{" + dataJSONString.substringToIndex(dataJSONString.endIndex.predecessor()) + "}"
+        let contentJSONString = "{\"type\":\"\((self.actionTypeForPostingSuggestion?.description)!)\", \"data\":\(dataJSONString)}"
+        log.verbose("content \(contentJSONString)")
+        
+        let parameters: [String: AnyObject] = [
+            "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)! as! String,
+            "scenario_id": self.scenarioIdForPostingSuggestion!,
+            "emotion": emotionJSONString,
+            "content": contentJSONString,
+            "message": self.scenarioIdForPostingSuggestion!
+        ]
+        
+        log.verbose("\(parameters)")
+        
+        Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
+            .responseJSON { response in
+                log.debug("\(response.result)")   // result of response serialization
+                
+                
+                log.verbose("\(NSString.init(data: (response.request?.HTTPBody)!, encoding: NSUTF8StringEncoding))")
+                
+                if let JSON = response.result.value {
+                    log.debug("JSON: \(JSON)")
+                }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.postNotification(DataManagerSuggestionPostedNotification)
+                }
+        }
     }
 }
