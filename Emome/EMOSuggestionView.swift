@@ -26,6 +26,8 @@ class EMOSuggestionView: UIView {
         self.layer.shadowOpacity = 0.6
         self.layer.shadowColor = UIColor.blackColor().CGColor
         self.layer.shadowOffset = CGSizeMake(0.0, 3.0)
+        
+        self.userInteractionEnabled = true
     }
 
     func bindWithSuggestion(suggestion: EMOSuggestion) {

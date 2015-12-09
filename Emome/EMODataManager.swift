@@ -12,7 +12,7 @@ import FBSDKCoreKit
 
 // Notification when suggestions are fetched
 let DataManagerSuggestionsFetchedNotification = "com.emomeapp.emome.DataManagerSuggestionsFetched"
-let DataManagerSuggestionMadeNotification = "com.emomeapp.emome.DataManagerSuggestionMade"
+let DataManagerSuggestionPostedNotification = "com.emomeapp.emome.DataManagerSuggestionPosted"
 let EmomeAPIBaseUrl = "http://52.3.174.167"
 
 
@@ -48,8 +48,10 @@ class EMODataManager {
         return self._emotionRawMeasurement
     }
     
-    
+    /*
     // Suggestion
+    */
+    
     private let concurrentSuggestionQueue = dispatch_queue_create("com.emomeapp.emome.suggestionQueue", DISPATCH_QUEUE_CONCURRENT)
     
     private var _suggestions: [EMOSuggestion] = []
@@ -91,14 +93,19 @@ class EMODataManager {
             }
         
     }
-    
-    func makeSuggestion() {
-        log.debug("Start making suggestions")
+
+    func postSuggestion() {
+        log.debug("Start sending suggestions")
+        
+        let emotionDict = self.normalizeEmotionMeasurement(self._emotionRawMeasurement)
+        let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
         
         let parameters: [String: AnyObject] = [
-            "user_id": "",
-            "scenario_id": 0,
-//            "emotion": self._emotionNormalizedMeasurement
+            "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)!,
+            "scenario_id": "0",
+            "emotion": emotionJSONString,
+            "content": "{\"type\":\"Spotify\", \"data\":\"some random stuff\"}",
+            "message": "Too tired to say anything"
         ]
         
         Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/suggestion", parameters: parameters)
@@ -111,14 +118,35 @@ class EMODataManager {
                 }
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.postNotification(DataManagerSuggestionMadeNotification)
+                    self.postNotification(DataManagerSuggestionPostedNotification)
                 }
         }
     }
     
-    func addSuggestion(suggestion: EMOSuggestion) {
-        dispatch_barrier_async(self.concurrentSuggestionQueue) { () -> Void in
-            self._suggestions.append(suggestion)
+    /*
+    // History
+    */
+    
+    func saveActionHistry(ofSuggestionId suggestionId: String) {
+        
+        let emotionDict = self.normalizeEmotionMeasurement(self._emotionRawMeasurement)
+        let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
+        
+        let parameters: [String: AnyObject] = [
+            "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)!,
+            "scenario_id": self.selectedScenarioId!,
+            "suggestion_id": suggestionId,
+            "emotion": emotionJSONString
+        ]
+        
+        Alamofire.request(.POST, "\(EmomeAPIBaseUrl)/history", parameters: parameters)
+            .responseJSON { response in
+                log.debug("\(response.result)")
+                
+                if let JSON = response.result.value {
+                    log.debug("JSON: \(JSON)")
+                    
+                }
         }
     }
     

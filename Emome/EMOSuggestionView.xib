@@ -38,7 +38,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4r-61-mlh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4r-61-mlh">
                     <rect key="frame" x="150" y="37" width="168" height="21"/>
                     <animations/>
                     <constraints>
@@ -61,6 +61,7 @@
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.99617152737948711" green="0.99617152737948711" blue="0.99617152737948711" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="TSj-43-yhU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3p8-c4-eMf"/>
                 <constraint firstItem="R4r-61-mlh" firstAttribute="top" secondItem="GDo-Ja-rex" secondAttribute="bottom" constant="8" id="7g3-1T-J1w"/>
@@ -85,8 +86,10 @@
                 <outlet property="coverImageView" destination="zdG-aU-5E8" id="kO7-pL-4Vs"/>
                 <outlet property="descriptionLabel" destination="XNh-7p-aoN" id="lky-Dd-0I7"/>
                 <outlet property="titleLabel" destination="GDo-Ja-rex" id="KL0-Ze-BrY"/>
+                <outletCollection property="gestureRecognizers" destination="mcL-3d-ftF" appends="YES" id="iie-z6-Cim"/>
             </connections>
             <point key="canvasLocation" x="196" y="439"/>
         </view>
+        <tapGestureRecognizer id="mcL-3d-ftF"/>
     </objects>
 </document>

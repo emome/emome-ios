@@ -27,6 +27,12 @@
 		90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */; };
 		90B15D501BEDA029000E1B55 /* EMOAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */; };
 		90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C171C175FDD0050730F /* EMOConsts.swift */; };
+		90B58C1D1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C1B1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift */; };
+		90B58C1E1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90B58C1C1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.xib */; };
+		90B58C201C17DAE40050730F /* EMOSpecifyEmotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C1F1C17DAE40050730F /* EMOSpecifyEmotionViewController.swift */; };
+		90B58C221C17E3170050730F /* EMOEmotionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C211C17E3170050730F /* EMOEmotionSlider.swift */; };
+		90B58C241C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C231C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift */; };
+		90B58C261C17F7570050730F /* EMOPostingSuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B58C251C17F7570050730F /* EMOPostingSuggestionViewController.swift */; };
 		90B9A8161C016A510008DAF4 /* GCDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9A8151C016A510008DAF4 /* GCDUtils.swift */; };
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
@@ -84,6 +90,12 @@
 		90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOMyIdeasViewController.swift; sourceTree = "<group>"; };
 		90B15D4F1BEDA029000E1B55 /* EMOAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOAccountViewController.swift; sourceTree = "<group>"; };
 		90B58C171C175FDD0050730F /* EMOConsts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOConsts.swift; sourceTree = "<group>"; };
+		90B58C1B1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
+		90B58C1C1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMOSearchResultCollectionViewCell.xib; sourceTree = "<group>"; };
+		90B58C1F1C17DAE40050730F /* EMOSpecifyEmotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSpecifyEmotionViewController.swift; sourceTree = "<group>"; };
+		90B58C211C17E3170050730F /* EMOEmotionSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionSlider.swift; sourceTree = "<group>"; };
+		90B58C231C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSuggestionExtraMessageViewController.swift; sourceTree = "<group>"; };
+		90B58C251C17F7570050730F /* EMOPostingSuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOPostingSuggestionViewController.swift; sourceTree = "<group>"; };
 		90B9A8151C016A510008DAF4 /* GCDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDUtils.swift; sourceTree = "<group>"; };
 		90C6FD441BB0B5CE009F9FB3 /* Emome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,11 +160,14 @@
 		9030FF4C1BFA416900948793 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				90B58C1B1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift */,
+				90B58C1C1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.xib */,
 				9030FF481BFA415700948793 /* EMOSuggestionView.swift */,
 				9030FF4A1BFA416300948793 /* EMOSuggestionView.xib */,
 				90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */,
 				90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */,
 				90DF637F1C14974C00AC74AC /* EMOColorSplashLayer.swift */,
+				90B58C211C17E3170050730F /* EMOEmotionSlider.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -196,6 +211,9 @@
 			children = (
 				90979B3C1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift */,
 				90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */,
+				90B58C1F1C17DAE40050730F /* EMOSpecifyEmotionViewController.swift */,
+				90B58C231C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift */,
+				90B58C251C17F7570050730F /* EMOPostingSuggestionViewController.swift */,
 			);
 			name = Suggest;
 			sourceTree = "<group>";
@@ -399,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35E702FF1BE148F30001B75D /* Main.storyboard in Resources */,
+				90B58C1E1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.xib in Resources */,
 				90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */,
 				9030FF4B1BFA416300948793 /* EMOSuggestionView.xib in Resources */,
 				90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */,
@@ -496,6 +515,8 @@
 				90979B3D1BF8EADB00F0DD67 /* EMOMyIdeasViewController.swift in Sources */,
 				903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */,
 				90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */,
+				90B58C1D1C17C1DE0050730F /* EMOSearchResultCollectionViewCell.swift in Sources */,
+				90B58C221C17E3170050730F /* EMOEmotionSlider.swift in Sources */,
 				90F758661C175615003F9C69 /* EMORequestParser.swift in Sources */,
 				907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */,
 				907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */,
@@ -512,6 +533,9 @@
 				9030FF511BFAC92300948793 /* EMOEnums.swift in Sources */,
 				90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */,
 				9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */,
+				90B58C241C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift in Sources */,
+				90B58C201C17DAE40050730F /* EMOSpecifyEmotionViewController.swift in Sources */,
+				90B58C261C17F7570050730F /* EMOPostingSuggestionViewController.swift in Sources */,
 				90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

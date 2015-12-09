@@ -35,7 +35,7 @@ class EMOHomeViewController: UIViewController {
         
         if let identifier = segue.identifier {
             switch identifier {
-            case "GetSuggestions":
+            case "Home2GetSuggestions", "Home2MakeSuggestions":
                 EMODataManager.sharedInstance.fetchScenarios()
             default:
                 break
