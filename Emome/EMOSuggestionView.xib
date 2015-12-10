@@ -32,30 +32,30 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDo-Ja-rex">
-                    <rect key="frame" x="150" y="8" width="168" height="22"/>
+                    <rect key="frame" x="150" y="8" width="168" height="18"/>
                     <animations/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4r-61-mlh">
-                    <rect key="frame" x="150" y="37" width="168" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4r-61-mlh">
+                    <rect key="frame" x="150" y="34" width="168" height="21"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="9Yj-HY-7GO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNh-7p-aoN">
-                    <rect key="frame" x="150" y="66" width="168" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNh-7p-aoN">
+                    <rect key="frame" x="150" y="66" width="168" height="60"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="20" id="wKj-xN-emc"/>
+                        <constraint firstAttribute="height" constant="60" id="wKj-xN-emc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -65,7 +65,7 @@
             <constraints>
                 <constraint firstItem="TSj-43-yhU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3p8-c4-eMf"/>
                 <constraint firstItem="R4r-61-mlh" firstAttribute="top" secondItem="GDo-Ja-rex" secondAttribute="bottom" constant="8" id="7g3-1T-J1w"/>
-                <constraint firstItem="XNh-7p-aoN" firstAttribute="top" secondItem="R4r-61-mlh" secondAttribute="bottom" constant="7" id="BmM-b8-ieV"/>
+                <constraint firstItem="XNh-7p-aoN" firstAttribute="top" secondItem="R4r-61-mlh" secondAttribute="bottom" constant="11" id="BmM-b8-ieV"/>
                 <constraint firstAttribute="trailing" secondItem="GDo-Ja-rex" secondAttribute="trailing" constant="8" id="EvK-WF-wwe"/>
                 <constraint firstItem="GDo-Ja-rex" firstAttribute="leading" secondItem="zdG-aU-5E8" secondAttribute="trailing" constant="10" id="Kzg-c5-ixU"/>
                 <constraint firstItem="zdG-aU-5E8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SL2-c5-hxc"/>
@@ -82,9 +82,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="actionButton" destination="TSj-43-yhU" id="qSJ-vs-dfR"/>
-                <outlet property="categoryLabel" destination="R4r-61-mlh" id="E0V-eU-i9K"/>
-                <outlet property="coverImageView" destination="zdG-aU-5E8" id="kO7-pL-4Vs"/>
-                <outlet property="descriptionLabel" destination="XNh-7p-aoN" id="lky-Dd-0I7"/>
+                <outlet property="descriptionLabel" destination="R4r-61-mlh" id="YgE-iU-fmU"/>
+                <outlet property="featureImageView" destination="zdG-aU-5E8" id="Aps-K1-y4S"/>
+                <outlet property="messageLabel" destination="XNh-7p-aoN" id="scW-nI-Dny"/>
                 <outlet property="titleLabel" destination="GDo-Ja-rex" id="KL0-Ze-BrY"/>
                 <outletCollection property="gestureRecognizers" destination="mcL-3d-ftF" appends="YES" id="iie-z6-Cim"/>
             </connections>

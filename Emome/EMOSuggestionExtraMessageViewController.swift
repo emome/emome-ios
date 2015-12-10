@@ -19,22 +19,9 @@ class EMOSuggestionExtraMessageViewController: EMOBaseViewController, UITextView
         self.messageTextView.becomeFirstResponder()
     }
     
-//    func textViewDidBeginEditing(textView: UITextView) {
-//        if textView.text == "any extra word helps..." {
-//            textView.text = ""
-//            textView.textColor = UIColor.emomeTextGrayColor()
-//        }
-//        textView.resignFirstResponder()
-//    }
-//    
-//    func textViewDidEndEditing(textView: UITextView) {
-//        if textView.text == "" {
-//            textView.text = "any extra word helps..."
-//            textView.textColor = UIColor.lightGrayColor()
-//        }
-//        textView.resignFirstResponder()
-//    }
-    
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     
     // MARK: - Navigation

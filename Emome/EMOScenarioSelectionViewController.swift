@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import pop
 
 class EMOScenarioSelectionViewController: EMOBaseViewController {
     

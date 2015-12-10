@@ -9,3 +9,9 @@
 import Foundation
 
 let keyUserId = "UserId"
+
+let DataManagerSuggestionsFetchedNotification = "com.emomeapp.emome.DataManagerSuggestionsFetched"
+let DataManagerSuggestionPostedNotification = "com.emomeapp.emome.DataManagerSuggestionPosted"
+let DataManagerFeedbackUpdatedNotification = "com.emomeapp.emome.DataManagerFeedbackUpdated"
+
+let EmomeAPIBaseUrl = "http://52.3.174.167:5000"

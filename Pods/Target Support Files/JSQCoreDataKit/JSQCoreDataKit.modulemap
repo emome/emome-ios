@@ -1,0 +1,6 @@
+framework module JSQCoreDataKit {
+  umbrella header "JSQCoreDataKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

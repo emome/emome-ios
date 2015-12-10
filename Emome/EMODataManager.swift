@@ -9,12 +9,7 @@
 import Foundation
 import Alamofire
 import FBSDKCoreKit
-
-// Notification when suggestions are fetched
-let DataManagerSuggestionsFetchedNotification = "com.emomeapp.emome.DataManagerSuggestionsFetched"
-let DataManagerSuggestionPostedNotification = "com.emomeapp.emome.DataManagerSuggestionPosted"
-let EmomeAPIBaseUrl = "http://localhost:5000" //"http://52.3.174.167"
-
+import CoreData
 
 private let _sharedInstance = EMODataManager()
 
@@ -84,6 +79,9 @@ class EMODataManager {
                 if let suggestions = response.result.value {
                     dispatch_barrier_async(self.concurrentSuggestionQueue, { () -> Void in
                         self._suggestions = suggestions
+                        
+                        log.verbose("Fetched Suggestions: \(suggestions[0].id)")
+                        
                         dispatch_async(dispatch_get_main_queue()) {
                             self.postNotification(DataManagerSuggestionsFetchedNotification)
                         }
@@ -95,15 +93,16 @@ class EMODataManager {
     
     // MARK: - Save History
     
-    func saveActionHistry(ofSuggestionId suggestionId: String) {
+    func saveActionHistryofSuggestion(suggestion: EMOSuggestion) {
         
         let emotionDict = self.normalizeEmotionMeasurement(self._emotionRawMeasurement)
         let emotionJSONString = "{\"\(EMOEmotion.Sad)\":\(emotionDict[EMOEmotion.Sad.description]!), \"\(EMOEmotion.Frustrated)\":\(emotionDict[EMOEmotion.Frustrated.description]!), \"\(EMOEmotion.Angry)\":\(emotionDict[EMOEmotion.Angry.description]!), \"\(EMOEmotion.Anxious)\":\(emotionDict[EMOEmotion.Anxious.description]!)}"
         
+        let scenarioId = self.selectedScenarioId!
         let parameters: [String: AnyObject] = [
             "user_id": NSUserDefaults.standardUserDefaults().valueForKey(keyUserId)!,
-            "scenario_id": self.selectedScenarioId!,
-            "suggestion_id": suggestionId,
+            "scenario_id": scenarioId,
+            "suggestion_id": suggestion.id,
             "emotion": emotionJSONString
         ]
         
@@ -113,10 +112,94 @@ class EMODataManager {
                 
                 if let JSON = response.result.value {
                     log.debug("JSON: \(JSON)")
+                    let status = JSON["status"] as! String
+                        
+                        if status == "success" {
+                            let historyId = JSON["data"] as! String
+                            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            let managedContext = appDelegate.managedObjectContext
+                            
+                            let entity =  NSEntityDescription.entityForName("History",
+                                inManagedObjectContext:managedContext)
+                            
+                            let history = NSManagedObject(entity: entity!,
+                                insertIntoManagedObjectContext: managedContext)
+                            
+                            history.setValue(historyId, forKey: "id")
+                            history.setValue(NSDate(), forKey: "createdAt")
+                            history.setValue(suggestion.id, forKey: "suggestionId")
+                            history.setValue(suggestion.featureImageUrlString, forKey: "suggestionImageUrlString")
+                            history.setValue(suggestion.title, forKey: "suggestionTitle")
+                            history.setValue(suggestion.description, forKey: "suggestionDescription")
+                            history.setValue(scenarioId, forKey: "scenarioId")
+                            history.setValue(emotionDict["\(EMOEmotion.Sad)"], forKey: "sadValue")
+                            history.setValue(emotionDict["\(EMOEmotion.Frustrated)"], forKey: "frustratedValue")
+                            history.setValue(emotionDict["\(EMOEmotion.Angry)"], forKey: "angryValue")
+                            history.setValue(emotionDict["\(EMOEmotion.Anxious)"], forKey: "anxiousValue")
+                            history.setValue(false, forKey: "hasFeedback")
+                            
+                            //4
+                            do {
+                                try managedContext.save()
+                            } catch let error as NSError  {
+                                log.debug("Could not save \(error), \(error.userInfo)")
+                            }
+                        }
+                        
+                }
+        }
+    }
+    
+    func updateFeedBackOfHistory(historyId: String) {
+        
+        let parameters: [String: AnyObject] = [
+            "rating": 3,
+            "history_id": historyId
+        ]
+        
+        
+        Alamofire.request(.PUT, "\(EmomeAPIBaseUrl)/history/\(historyId)", parameters: parameters)
+            .responseJSON { response in
+                log.debug("\(response.result)")
+                
+                if let JSON = response.result.value {
+                    log.debug("JSON: \(JSON)")
+                    let status = JSON["status"] as! String
+                    
+                    if status == "success" {
+                        
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        let managedContext = appDelegate.managedObjectContext
+                        let predicate = NSPredicate(format: "id == %@", historyId)
+                        let fetchRequest = NSFetchRequest(entityName: "History")
+                        fetchRequest.predicate = predicate
+                        
+                        do {
+                            let fetchedEntities = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+                            fetchedEntities.first?.setValue(true, forKey: "hasFeedback")
+                        } catch {
+                            
+                        }
+                        
+                        do {
+                            try managedContext.save()
+                        } catch let error as NSError  {
+                            log.debug("Could not save \(error), \(error.userInfo)")
+                        }
+                        
+                        dispatch_async(dispatch_get_main_queue()) {
+//                            NSNotificationCenter.defaultCenter().postNotificationName(DataManagerFeedbackUpdatedNotification, object: <#T##AnyObject?#>, userInfo: <#T##[NSObject : AnyObject]?#>)
+//                            
+//                            
+//                            self.postNotification(DataManagerSuggestionsFetchedNotification)
+                            self.postNotification(DataManagerFeedbackUpdatedNotification)
+                        }
+                    }
                     
                 }
         }
     }
+    
     
     private func postNotification(notificationName: String) {
         NSNotificationCenter.defaultCenter().postNotificationName(notificationName, object: nil)
@@ -194,7 +277,7 @@ class EMODataManager {
             "scenario_id": self.scenarioIdForPostingSuggestion!,
             "emotion": emotionJSONString,
             "content": contentJSONString,
-            "message": self.scenarioIdForPostingSuggestion!
+            "message": self.messageForPostingSuggestion!
         ]
         
         log.verbose("\(parameters)")
@@ -214,5 +297,11 @@ class EMODataManager {
                     self.postNotification(DataManagerSuggestionPostedNotification)
                 }
         }
+    }
+}
+
+private extension EMODataManager {
+    func saveEmotion() {
+        
     }
 }
