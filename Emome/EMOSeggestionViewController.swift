@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Swift
 
-class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
+class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate, EMOSuggestionViewDelegate {
 
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var pageControl: UIPageControl!
 	
+    var suggestions: [EMOSuggestion]!
     var pageViews: [UIView?] = []
 	var currentPage: Int? = 0
+    var savedHistoryIndeces: Set<Int> = Set<Int>()
     
     private var suggestionsFetchingObserver: NSObjectProtocol!
 	
@@ -22,6 +25,7 @@ class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
         self.suggestionsFetchingObserver = NSNotificationCenter.defaultCenter().addObserverForName(DataManagerSuggestionsFetchedNotification,
             object: nil,
             queue: NSOperationQueue.mainQueue()) { notification in
+                self.suggestions = EMODataManager.sharedInstance.suggestions
                 self.setUpPages()
                 self.loadVisiblePages()
         }
@@ -36,6 +40,25 @@ class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
             EMODataManager.sharedInstance.selectedScenarioId!
         
         EMODataManager.sharedInstance.fetchSuggestions(withEmotionMeasurement: EMODataManager.sharedInstance.getEmotionMeasurement(), scenarioId: scenarioId)
+    }
+    
+    func suggestionViewDidSelect(suggestionView: EMOSuggestionView) {
+        let index = self.pageViews.indexOf {
+            if $0 == nil {
+                return false
+            } else {
+                return suggestionView.isDescendantOfView($0! as UIView)
+            }
+        }
+        
+        if index != nil {
+            if !self.savedHistoryIndeces.contains(index!) {
+                self.savedHistoryIndeces.insert(index!)
+                EMODataManager.sharedInstance.saveActionHistryofSuggestion(self.suggestions[index!])
+            } else {
+                log.verbose("\(index!) history already saved!")
+            }
+        }
     }
     
     func setUpPages() {
@@ -72,9 +95,13 @@ class EMOSeggestionViewController: EMOBaseViewController, UIScrollViewDelegate {
                 self.scrollView.addSubview(newPageView)
                 
                 let suggestionView = NSBundle.mainBundle().loadNibNamed("EMOSuggestionView", owner: self, options: nil)![0] as! EMOSuggestionView
-                suggestionView.bindWithSuggestion(EMODataManager.sharedInstance.suggestions[page])
+                suggestionView.bindWithSuggestion(self.suggestions[page])
                 newPageView.addSubview(suggestionView)
                 suggestionView.center = CGPoint(x: CGRectGetMidX(newPageView.bounds), y: CGRectGetMidY(newPageView.bounds))
+                
+//                newPageView.userInteractionEnabled = true
+//                newPageView.addGestureRecognizer(self.gestureRecognizer)
+                suggestionView.delegate = self
                 
                 self.pageViews[page] = newPageView
             }

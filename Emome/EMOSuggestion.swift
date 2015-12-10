@@ -11,39 +11,18 @@ import Foundation
 final class EMOSuggestion: ResponseObjectSerializable, ResponseCollectionSerializable {
     
     let id: String
-    let userId: String
     let title: String
-    let category: String?
+    let description: String
     let message: String
     let activityType: EMOActivityType
     let url: NSURL?
-    
-    init(id: String,
-        userId: String,
-        activityType: EMOActivityType,
-        title: String,
-        category: String,
-        description: String,
-        url: NSURL?) {
-    
-        self.id = id
-        self.userId = userId
-        self.activityType = activityType
-        self.title = title
-        self.category = category
-        self.message = description
-        self.url = url
-    }
+    let featureImageUrlString: String
     
     init?(response: NSHTTPURLResponse, representation: AnyObject) {
         self.id = representation.valueForKey("suggestion_id") as! String
         self.message = representation.valueForKey("message") as! String
-        self.title = "Sample Title"
-        self.userId = ""
-        self.category = ""
-        self.url = nil
-        let dataDict = representation.valueForKey("content") as! [String: AnyObject]
-        switch dataDict["type"] as! String {
+        let contentDict = representation.valueForKey("content") as! [String: AnyObject]
+        switch contentDict["type"] as! String {
         case "Yelp":
             self.activityType = .Yelp
         case "Spotify":
@@ -51,10 +30,26 @@ final class EMOSuggestion: ResponseObjectSerializable, ResponseCollectionSeriali
         default:
             self.activityType = .Other
         }
+        
+        let dataDict = contentDict["data"] as! [String: String]
+        
+        self.title = dataDict["track_name"]!
+        self.description = dataDict["artist"]!
+        
+        var uriString = dataDict["url"]!
+        uriString = uriString.substringToIndex(uriString.endIndex.predecessor())
+        
+        self.url =  NSURL(string: "spotify://\(uriString)")
+        let coverImageUrlString = dataDict["cover_img_url"]!
+        self.featureImageUrlString = coverImageUrlString
+        
+//        self.url = dataDict["data"] as! String)
     }
     
     static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [EMOSuggestion] {
         var suggestions: [EMOSuggestion] = []
+        
+        log.debug("Before parsing: \(representation)")
         
         if let representation = representation as? [[String: AnyObject]] {
             for suggestionRepresentation in representation {

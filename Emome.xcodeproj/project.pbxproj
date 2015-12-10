@@ -19,6 +19,7 @@
 		90330AA71C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */; };
 		90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90330AA81C14A7E600A23B28 /* EMOBaseViewController.swift */; };
 		903A2DE11C07B27C00C8964A /* EMOColorSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903A2DE01C07B27C00C8964A /* EMOColorSplashViewController.swift */; };
+		903BA55C1C18F5E3001BD564 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903BA55B1C18F5E3001BD564 /* CoreData.framework */; };
 		906190B61BE6E4BC0061E103 /* EmoEmomeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906190B51BE6E4BC0061E103 /* EmoEmomeColors.swift */; };
 		907C0F431BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */; };
 		907C0F451BDEA9AC00C896D3 /* EMOSeggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907C0F441BDEA9AC00C896D3 /* EMOSeggestionViewController.swift */; };
@@ -36,6 +37,8 @@
 		90C6FD481BB0B5CF009F9FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6FD471BB0B5CF009F9FB3 /* AppDelegate.swift */; };
 		90C6FD4F1BB0B5CF009F9FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */; };
 		90C6FD521BB0B5CF009F9FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C6FD501BB0B5CF009F9FB3 /* LaunchScreen.storyboard */; };
+		90D46DC41C18FA820081BAB2 /* EmomeCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D46DC21C18FA820081BAB2 /* EmomeCoreData.xcdatamodeld */; };
+		90D46DC61C193DE10081BAB2 /* EMOUIViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D46DC51C193DE10081BAB2 /* EMOUIViewUtils.swift */; };
 		90DF63801C14974C00AC74AC /* EMOColorSplashLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DF637F1C14974C00AC74AC /* EMOColorSplashLayer.swift */; };
 		90EFFD851C0806BF005AD750 /* EMOHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */; };
 		90EFFD871C08C9CB005AD750 /* EMOEmotionColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */; };
@@ -79,6 +82,7 @@
 		90330AA61C14A7BA00A23B28 /* EMOChooseSeggestionTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOChooseSeggestionTypeViewController.swift; sourceTree = "<group>"; };
 		90330AA81C14A7E600A23B28 /* EMOBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOBaseViewController.swift; sourceTree = "<group>"; };
 		903A2DE01C07B27C00C8964A /* EMOColorSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOColorSplashViewController.swift; sourceTree = "<group>"; };
+		903BA55B1C18F5E3001BD564 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		906190B51BE6E4BC0061E103 /* EmoEmomeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoEmomeColors.swift; sourceTree = "<group>"; };
 		907C0F421BDEA94C00C896D3 /* EMOScenarioSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOScenarioSelectionViewController.swift; sourceTree = "<group>"; };
 		907C0F441BDEA9AC00C896D3 /* EMOSeggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOSeggestionViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 		90C6FD4E1BB0B5CF009F9FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90C6FD511BB0B5CF009F9FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C6FD531BB0B5CF009F9FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D46DC31C18FA820081BAB2 /* EmomeCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmomeCoreData.xcdatamodel; sourceTree = "<group>"; };
+		90D46DC51C193DE10081BAB2 /* EMOUIViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOUIViewUtils.swift; sourceTree = "<group>"; };
 		90DF637F1C14974C00AC74AC /* EMOColorSplashLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOColorSplashLayer.swift; sourceTree = "<group>"; };
 		90EFFD841C0806BF005AD750 /* EMOHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOHomeViewController.swift; sourceTree = "<group>"; };
 		90EFFD861C08C9CA005AD750 /* EMOEmotionColorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMOEmotionColorButton.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903BA55C1C18F5E3001BD564 /* CoreData.framework in Frameworks */,
 				85902B3DCE963DC4D680B59D /* Pods_Emome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +173,7 @@
 				90EFFD8A1C090258005AD750 /* EMOHomeActionButton.swift */,
 				90DF637F1C14974C00AC74AC /* EMOColorSplashLayer.swift */,
 				90B58C211C17E3170050730F /* EMOEmotionSlider.swift */,
+				90D46DC51C193DE10081BAB2 /* EMOUIViewUtils.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 				90F758611C168AB9003F9C69 /* EMOScenario.swift */,
 				9030FF501BFAC92300948793 /* EMOEnums.swift */,
 				90F758651C175615003F9C69 /* EMORequestParser.swift */,
+				90D46DC21C18FA820081BAB2 /* EmomeCoreData.xcdatamodeld */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 		A1E2B34085E0F8003C70AC32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				903BA55B1C18F5E3001BD564 /* CoreData.framework */,
 				85FF42BE84B4AE0D14439A0B /* Pods_Emome.framework */,
 			);
 			name = Frameworks;
@@ -526,12 +536,14 @@
 				906190B61BE6E4BC0061E103 /* EmoEmomeColors.swift in Sources */,
 				908C890D1BE06C1100190BB5 /* EMODataManager.swift in Sources */,
 				90B9A8161C016A510008DAF4 /* GCDUtils.swift in Sources */,
+				90D46DC41C18FA820081BAB2 /* EmomeCoreData.xcdatamodeld in Sources */,
 				9030FF511BFAC92300948793 /* EMOEnums.swift in Sources */,
 				90B58C181C175FDD0050730F /* EMOConsts.swift in Sources */,
 				9030FF4E1BFA419100948793 /* EMOSuggestion.swift in Sources */,
 				90B58C241C17EE450050730F /* EMOSuggestionExtraMessageViewController.swift in Sources */,
 				90B58C201C17DAE40050730F /* EMOSpecifyEmotionViewController.swift in Sources */,
 				90B58C261C17F7570050730F /* EMOPostingSuggestionViewController.swift in Sources */,
+				90D46DC61C193DE10081BAB2 /* EMOUIViewUtils.swift in Sources */,
 				90330AA91C14A7E600A23B28 /* EMOBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,6 +780,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		90D46DC21C18FA820081BAB2 /* EmomeCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90D46DC31C18FA820081BAB2 /* EmomeCoreData.xcdatamodel */,
+			);
+			currentVersion = 90D46DC31C18FA820081BAB2 /* EmomeCoreData.xcdatamodel */;
+			path = EmomeCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 90C6FD3C1BB0B5CE009F9FB3 /* Project object */;
 }
