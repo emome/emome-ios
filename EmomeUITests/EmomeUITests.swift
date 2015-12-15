@@ -32,7 +32,7 @@ class EmomeUITests: XCTestCase {
         
         let app = XCUIApplication()
         
-        XCTAssert(app.buttons["express"].exists)
+        XCTAssert(app.buttons["consult"].exists)
         XCTAssert(app.buttons["suggest"].exists)
         XCTAssert(app.buttons["me"].exists)
     }
@@ -41,7 +41,7 @@ class EmomeUITests: XCTestCase {
         
         let app = XCUIApplication()
         
-        app.buttons["express"].tap()
+        app.buttons["consult"].tap()
         
         XCTAssert(app.buttons["sad"].exists)
         XCTAssert(app.buttons["frustrated"].exists)
